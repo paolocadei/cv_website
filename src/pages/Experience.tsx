@@ -78,7 +78,7 @@ const Experience = () => {
                 <h3 className="text-lg font-semibold text-slate-800 mb-3">Role Description</h3>
                 <p className="text-gray-700">
                   Worked as part of the Customer Data Team on multiple innovative projects involving cloud infrastructure, 
-                  machine learning, and data pipeline automation.
+                  machine learning, data pipeline automation, LLMs, Vector Databases, CI/CD, and more.
                 </p>
               </div>
 
