@@ -43,7 +43,8 @@ const Education = () => {
                       <GraduationCap className="w-8 h-8 text-orange-600" />
                     </div>
                     <div className="flex flex-col">
-                      <h2 className="text-2xl font-bold text-slate-800 text-left">Master's Degree</h2>
+                    <div>
+                      <h2 className="text-2xl font-bold text-slate-800">Master's Degree</h2>
                       <p className="text-blue-600 font-semibold">Data Science and Business Analytics</p>
                     </div>
 
