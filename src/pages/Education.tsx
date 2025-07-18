@@ -43,11 +43,9 @@ const Education = () => {
                       <GraduationCap className="w-8 h-8 text-orange-600" />
                     </div>
                     <div className="flex flex-col">
-                    <div>
-                      <h2 className="text-2xl font-bold text-slate-800">Master's Degree</h2>
-                      <p className="text-blue-600 font-semibold">Data Science and Business Analytics</p>
+                      <h2 className="text-2xl font-bold text-slate-800 text-left">Master's Degree</h2>
+                      <p className="text-orange-600 font-semibold text-left">Data Science and Business Analytics</p>
                     </div>
-
                   </div>
                   <div className="flex items-center text-gray-600">
                     <Calendar className="w-5 h-5 mr-2" />
