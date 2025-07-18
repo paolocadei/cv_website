@@ -1,9 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { 
-  User, GraduationCap, Briefcase, FolderOpen, Heart, Code, 
-  ArrowRight, Download, Mail, Globe
+import {
+  User, GraduationCap, Briefcase, FolderOpen, Heart, Code,
+  ArrowRight, Download, Mail
 } from 'lucide-react';
+import paoloPhoto from '../images/IMG_20210627_131204.jpg'; // ✅ Import local image
 
 const Home = () => {
   return (
@@ -38,7 +39,7 @@ const Home = () => {
             <div className="lg:w-1/3 flex justify-center">
               <div className="w-64 h-64 rounded-full bg-white/20 backdrop-blur-sm border-4 border-white/30 shadow-2xl overflow-hidden">
                 <img 
-                  src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=400" 
+                  src={paoloPhoto} 
                   alt="Paolo Cadei" 
                   className="w-full h-full object-cover"
                 />
@@ -77,7 +78,6 @@ const Home = () => {
         <div className="container mx-auto px-6">
           <h2 className="text-4xl font-bold text-center mb-12 text-slate-800">Explore My Profile</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            
             {/* About Card */}
             <Link to="/about" className="group">
               <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-8 h-full group-hover:scale-105">
@@ -191,7 +191,6 @@ const Home = () => {
                 </div>
               </div>
             </Link>
-
           </div>
         </div>
       </section>
