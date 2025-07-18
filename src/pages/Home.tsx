@@ -65,7 +65,7 @@ const Home = () => {
               <div className="text-gray-600">Technical Skills</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl font-bold text-orange-600 mb-2">3</div>
+              <div className="text-4xl font-bold text-orange-600 mb-2">4</div>
               <div className="text-gray-600">Languages</div>
             </div>
           </div>
