@@ -78,7 +78,7 @@ const About = () => {
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
               {[
                 'Python', 'SQL', 'Tableau', 'Microsoft Office', 
-                'R', 'dbt', 'GCP (Google Cloud Platform)', 'Terraform'
+                'R', 'dbt', 'GCP', 'Terraform', 'Snowflake', 'Vector Databases', 'RAG Frameworks'
               ].map((skill) => (
                 <div key={skill} className="bg-gradient-to-r from-orange-500 to-orange-600 text-white px-4 py-3 rounded-lg text-center font-semibold hover:from-orange-600 hover:to-orange-700 transition-all transform hover:scale-105">
                   {skill}
