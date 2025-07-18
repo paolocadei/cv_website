@@ -26,7 +26,7 @@ const About = () => {
                 <h2 className="text-3xl font-bold text-slate-800 mb-4">Paolo Cadei</h2>
                 <p className="text-xl text-orange-600 mb-4">Data Analyst/Engineer</p>
                 <p className="text-gray-700 leading-relaxed text-lg">
-                  I’m a recent Data Science & Business Analytics graduate from the University of Amsterdam. I love all things data — especially when it involves building cool stuff with code, automating tasks, or exploring the power of AI and large language models. Outside of work, you’ll find me reading, bouldering, meditating, or deep into a board game.
+                  I’m a recent Data Science & Business Analytics graduate from the University of Amsterdam. I love all things data — especially when it involves building cool stuff with code, automating tasks, or exploring the power of AI and large language models. Outside of work, you’ll find me reading, bouldering, meditating, or deep into a board game, amongst other things :)
                 </p>
               </div>
             </div>
