@@ -1,5 +1,5 @@
 import React from 'react';
-import { GraduationCap, Calendar, Award, MapPin } from 'lucide-react';
+import { GraduationCap, Calendar, Award, MapPin, ExternalLink } from 'lucide-react';
 
 const Education = () => {
   return (
@@ -65,7 +65,7 @@ const Education = () => {
                 </div>
               </div>
 
-              <div className="bg-gray-50 rounded-lg p-6">
+              <div className="bg-gray-50 rounded-lg p-6 mb-4">
                 <h3 className="text-lg font-semibold text-slate-800 mb-3">Program Highlights</h3>
                 <ul className="space-y-2 text-gray-700">
                   <li className="flex items-start">
@@ -89,6 +89,18 @@ const Education = () => {
                     Research methodology and thesis project
                   </li>
                 </ul>
+              </div>
+
+              <div className="flex justify-center">
+                <a
+                  href="https://ase.uva.nl/content/masters/data-science-and-business-analytics-business-analytics/study-programme/study-programme.html"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center px-6 py-3 bg-orange-600 text-white font-semibold rounded-lg hover:bg-orange-700 transition-colors duration-200"
+                >
+                  <ExternalLink className="w-5 h-5 mr-2" />
+                  View Course Catalogue
+                </a>
               </div>
             </div>
 
@@ -121,7 +133,7 @@ const Education = () => {
                 </div>
               </div>
 
-              <div className="bg-gray-50 rounded-lg p-6">
+              <div className="bg-gray-50 rounded-lg p-6 mb-4">
                 <h3 className="text-lg font-semibold text-slate-800 mb-3">Program Highlights</h3>
                 <ul className="space-y-2 text-gray-700">
                   <li className="flex items-start">
@@ -149,6 +161,18 @@ const Education = () => {
                     Capstone project in business analytics
                   </li>
                 </ul>
+              </div>
+
+              <div className="flex justify-center">
+                <a
+                  href="https://www.uva.nl/en/programmes/bachelors/business-analytics/study-programme/study-programme.html"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors duration-200"
+                >
+                  <ExternalLink className="w-5 h-5 mr-2" />
+                  View Course Catalogue
+                </a>
               </div>
             </div>
           </div>
