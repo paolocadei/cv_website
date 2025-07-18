@@ -15,7 +15,7 @@ const Home = () => {
           <div className="flex flex-col lg:flex-row items-center justify-between">
             <div className="lg:w-2/3 mb-8 lg:mb-0">
               <h1 className="text-5xl md:text-6xl font-bold mb-4 leading-tight">
-                Welcome to My Portfolio
+                Welcome to Your Data Guy’s Portfolio
               </h1>
               <p className="text-2xl md:text-3xl font-light mb-6 tracking-wide">
                 Paolo Cadei -  all things data & AI fan
