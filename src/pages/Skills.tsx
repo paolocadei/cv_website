@@ -127,61 +127,6 @@ const Skills = () => {
             })}
           </div>
 
-          {/* Languages Section */}
-          <div className="bg-white rounded-xl shadow-lg p-8 mt-12">
-            <div className="flex items-center mb-8">
-              <div className="bg-gradient-to-r from-pink-50 to-pink-100 text-pink-600 border-pink-200 p-4 rounded-lg mr-4 border">
-                <Globe className="w-8 h-8 text-pink-600" />
-              </div>
-              <h2 className="text-2xl font-bold text-slate-800">Languages</h2>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div className="space-y-6">
-                <div className="flex items-center justify-between">
-                  <span className="text-lg font-semibold text-slate-800">English</span>
-                  <div className="flex space-x-1">
-                    {[1,2,3,4,5].map((dot) => (
-                      <div key={dot} className="w-3 h-3 rounded-full bg-pink-500"></div>
-                    ))}
-                  </div>
-                </div>
-                <div className="flex items-center justify-between">
-                  <span className="text-lg font-semibold text-slate-800">Italian</span>
-                  <div className="flex space-x-1">
-                    {[1,2,3,4,5].map((dot) => (
-                      <div key={dot} className="w-3 h-3 rounded-full bg-pink-500"></div>
-                    ))}
-                  </div>
-                </div>
-              </div>
-              <div className="space-y-6">
-                <div className="flex items-center justify-between">
-                  <span className="text-lg font-semibold text-slate-800">Spanish</span>
-                  <div className="flex space-x-1">
-                    {[1,2,3].map((dot) => (
-                      <div key={dot} className="w-3 h-3 rounded-full bg-pink-500"></div>
-                    ))}
-                    {[4,5].map((dot) => (
-                      <div key={dot} className="w-3 h-3 rounded-full bg-gray-300"></div>
-                    ))}
-                  </div>
-                </div>
-                <div className="flex items-center justify-between">
-                  <span className="text-lg font-semibold text-slate-800">French</span>
-                  <div className="flex space-x-1">
-                    {[1,2].map((dot) => (
-                      <div key={dot} className="w-3 h-3 rounded-full bg-pink-500"></div>
-                    ))}
-                    {[3,4,5].map((dot) => (
-                      <div key={dot} className="w-3 h-3 rounded-full bg-gray-300"></div>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
           {/* Certifications & Learning */}
           <div className="bg-gradient-to-r from-slate-800 to-slate-900 text-white rounded-xl p-8 mt-12">
             <h2 className="text-2xl font-bold mb-4">Continuous Learning</h2>
