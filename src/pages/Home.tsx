@@ -15,7 +15,7 @@ const Home = () => {
           <div className="flex flex-col lg:flex-row items-center justify-between">
             <div className="lg:w-2/3 mb-8 lg:mb-0">
               <h1 className="text-5xl md:text-6xl font-bold mb-4 leading-tight">
-                Welcome to Your Data Guy’s Portfolio
+                Welcome to My Portfolio
               </h1>
               <p className="text-2xl md:text-3xl font-light mb-6 tracking-wide">
                 Paolo Cadei -  all things data & AI fan
@@ -23,7 +23,7 @@ const Home = () => {
               <p className="text-lg md:text-xl mb-8 leading-relaxed opacity-90">
                 Love all things data — especially passionate about LLMs, AI, and anything that automates and makes life easier. Currently pursuing a Master's in Data Science and Business Analytics at the University of Amsterdam, with hands-on experience in business intelligence, data engineering, and machine learning.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center sm:justify-start">
                 <button className="bg-white text-orange-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-center justify-center">
                   <Download className="w-5 h-5 mr-2" />
                   Download CV
@@ -205,7 +205,7 @@ const Home = () => {
               <Mail className="w-5 h-5 mr-2" />
               Get in Touch
             </button>
-            <button className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-slate-800 transition-colors flex items-center justify-center">
+            <button className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-slate-800 transition-colors flex items-center justify-center">x
               <Download className="w-5 h-5 mr-2" />
               Download Resume
             </button>

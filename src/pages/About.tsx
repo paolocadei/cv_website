@@ -26,9 +26,7 @@ const About = () => {
                 <h2 className="text-3xl font-bold text-slate-800 mb-4">Paolo Cadei</h2>
                 <p className="text-xl text-orange-600 mb-4">Data Analyst/Engineer</p>
                 <p className="text-gray-700 leading-relaxed text-lg">
-                  I am a Data Science Master's student, soon to graduate, at the Universiteit van Amsterdam. 
-                  I love finding patterns and answering questions in a data-driven manner, particularly if coding is required. 
-                  In my free time, I love reading, bouldering, meditating and playing board games.
+                  I’m a recent Data Science & Business Analytics graduate from the University of Amsterdam. I love all things data — especially when it involves building cool stuff with code, automating tasks, or exploring the power of AI and large language models. Outside of work, you’ll find me reading, bouldering, meditating, or deep into a board game, amongst other things :)
                 </p>
               </div>
             </div>
@@ -77,10 +75,10 @@ const About = () => {
             </h3>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
               {[
-                'Python', 'SQL', 'Tableau', 'Microsoft Office', 
-                'R', 'dbt', 'GCP (Google Cloud Platform)', 'Terraform'
+                'Python', '(Postgre)SQL', 'Tableau', 'Microsoft Office', 
+                'R', 'dbt', 'GCP', 'Terraform', 'Snowflake', 'Vector Databases', 'RAG Frameworks', 'Web Scraping'
               ].map((skill) => (
-                <div key={skill} className="bg-gradient-to-r from-orange-500 to-orange-600 text-white px-4 py-3 rounded-lg text-center font-semibold hover:from-orange-600 hover:to-orange-700 transition-all transform hover:scale-105">
+                <div key={skill} className="bg-gradient-to-r from-orange-500 to-orange-600 text-white px-4 py-3 rounded-lg text-center font-semibold hover:from-orange-600 hover:to-orange-700 transition-all transform hover:scale-105 flex items-center justify-center min-h-[3rem]">
                   {skill}
                 </div>
               ))}
