@@ -30,9 +30,9 @@ const Skills = () => {
       color: "purple",
       skills: [
         { name: "GCP (Google Cloud Platform)", level: 80, description: "Cloud infrastructure, data pipelines" },
-        { name: "Terraform", level: 70, description: "Infrastructure as code, automation" },
-        { name: "Docker", level: 65, description: "Containerization, deployment" },
-        { name: "CI/CD", level: 70, description: "Automated testing and deployment" }
+        { name: "Terraform", level: 40, description: "Infrastructure as code, automation" },
+        { name: "Docker", level: 30, description: "Containerization, deployment" },
+        { name: "CI/CD", level: 85, description: "Automated testing and deployment" }
       ]
     },
     {
@@ -50,10 +50,10 @@ const Skills = () => {
       icon: Terminal,
       color: "indigo",
       skills: [
-        { name: "Git", level: 75, description: "Version control, collaboration" },
+        { name: "Git", level: 85, description: "Version control, collaboration" },
         { name: "YAML", level: 70, description: "Configuration management" },
         { name: "Scrapy", level: 80, description: "Web scraping frameworks" },
-        { name: "Selenium", level: 75, description: "Web automation, dynamic scraping" }
+        { name: "Selenium", level: 80, description: "Web automation, dynamic scraping" }
       ]
     }
   ];
