@@ -26,9 +26,7 @@ const About = () => {
                 <h2 className="text-3xl font-bold text-slate-800 mb-4">Paolo Cadei</h2>
                 <p className="text-xl text-orange-600 mb-4">Data Analyst/Engineer</p>
                 <p className="text-gray-700 leading-relaxed text-lg">
-                  I am a Data Science Master's student, soon to graduate, at the Universiteit van Amsterdam. 
-                  I love finding patterns and answering questions in a data-driven manner, particularly if coding is required. 
-                  In my free time, I love reading, bouldering, meditating and playing board games.
+                  I’m a recent Data Science & Business Analytics graduate from the University of Amsterdam. I love all things data — especially when it involves building cool stuff with code, automating tasks, or exploring the power of AI and large language models. Outside of work, you’ll find me reading, bouldering, meditating, or deep into a board game.
                 </p>
               </div>
             </div>
