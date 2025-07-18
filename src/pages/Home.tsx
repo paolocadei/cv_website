@@ -17,7 +17,7 @@ const Home = () => {
                 Welcome to My Portfolio
               </h1>
               <p className="text-2xl md:text-3xl font-light mb-6 tracking-wide">
-                Paolo Cadei - Student Data Analyst/Engineer
+                Paolo Cadei - Data Analyst/Engineer
               </p>
               <p className="text-lg md:text-xl mb-8 leading-relaxed opacity-90">
                 Passionate about transforming data into actionable insights. Currently pursuing 
