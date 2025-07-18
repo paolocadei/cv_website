@@ -42,10 +42,11 @@ const Education = () => {
                     <div className="bg-orange-100 p-3 rounded-lg mr-4">
                       <GraduationCap className="w-8 h-8 text-orange-600" />
                     </div>
-                    <div>
-                      <h2 className="text-2xl font-bold text-slate-800">Master's Degree</h2>
-                      <p className="text-orange-600 font-semibold">Data Science and Business Analytics</p>
+                    <div className="flex flex-col">
+                      <h2 className="text-2xl font-bold text-slate-800 text-left">Master's Degree</h2>
+                      <p className="text-orange-600 font-semibold text-left">Data Science and Business Analytics</p>
                     </div>
+
                   </div>
                   <div className="flex items-center text-gray-600">
                     <Calendar className="w-5 h-5 mr-2" />
@@ -183,8 +184,8 @@ const Education = () => {
                       <GraduationCap className="w-8 h-8 text-purple-600" />
                     </div>
                     <div>
-                    <h2 className="text-2xl font-bold text-slate-800">Transition Period</h2>
-                        <p className="text-purple-600 font-semibold">International Business Management</p>
+                      <h2 className="text-2xl font-bold text-slate-800">Transition Period</h2>
+                      <p className="text-purple-600 font-semibold">International Business Management</p>
                     </div>
                   </div>
                   <div className="flex items-center text-gray-600">
