@@ -21,7 +21,7 @@ const Home = () => {
                 Paolo Cadei - Data Analyst/Engineer
               </p>
               <p className="text-lg md:text-xl mb-8 leading-relaxed opacity-90">
-                Love all things data — passionate about LLMs, AI, and anything that automates and makes life easier. Currently pursuing a Master's in Data Science and Business Analytics at the University of Amsterdam, with hands-on experience in business intelligence, data engineering, and machine learning.
+                Love all things data — especially passionate about LLMs, AI, and anything that automates and makes life easier. Currently pursuing a Master's in Data Science and Business Analytics at the University of Amsterdam, with hands-on experience in business intelligence, data engineering, and machine learning.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <button className="bg-white text-orange-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-center justify-center">
