@@ -183,8 +183,8 @@ const Education = () => {
                       <GraduationCap className="w-8 h-8 text-purple-600" />
                     </div>
                     <div>
-                      <h2 className="text-2xl font-bold text-slate-800">Transition Period</h2>
-                      <p className="text-purple-600 font-semibold">International Business Management</p>
+                    <h2 className="text-2xl font-bold text-slate-800">Transition Period</h2>
+                        <p className="text-purple-600 font-semibold">International Business Management</p>
                     </div>
                   </div>
                   <div className="flex items-center text-gray-600">
