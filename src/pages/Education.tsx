@@ -10,6 +10,54 @@ const Education = () => {
           <div className="text-center mb-12">
             <h1 className="text-4xl font-bold text-slate-800 mb-4">Education</h1>
             <p className="text-xl text-gray-600">My Academic Journey</p>
+            {/* High School */}
+            <div className="bg-white rounded-xl shadow-lg p-8 border-l-4 border-green-500">
+              <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-6">
+                <div className="flex items-center mb-4 lg:mb-0">
+                  <div className="bg-green-100 p-3 rounded-lg mr-4">
+                    <GraduationCap className="w-8 h-8 text-green-600" />
+                  </div>
+                  <div>
+                    <h2 className="text-2xl font-bold text-slate-800">High School Diploma</h2>
+                    <p className="text-green-600 font-semibold">Liceo Linguistico</p>
+                  </div>
+                </div>
+                <div className="flex items-center text-gray-600">
+                  <Calendar className="w-5 h-5 mr-2" />
+                  <span className="font-semibold">2014 - 2019</span>
+                </div>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                <div className="flex items-center">
+                  <MapPin className="w-5 h-5 text-gray-500 mr-2" />
+                  <span className="text-gray-700">Liceo DaVigo Nicoloso, Recco (GE), Italy</span>
+                </div>
+              </div>
+
+              <div className="bg-gray-50 rounded-lg p-6">
+                <h3 className="text-lg font-semibold text-slate-800 mb-3">Program Highlights</h3>
+                <ul className="space-y-2 text-gray-700">
+                  <li className="flex items-start">
+                    <span className="w-2 h-2 bg-green-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                    Advanced study of multiple foreign languages
+                  </li>
+                  <li className="flex items-start">
+                    <span className="w-2 h-2 bg-green-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                    Literature and cultural studies
+                  </li>
+                  <li className="flex items-start">
+                    <span className="w-2 h-2 bg-green-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                    International communication and linguistics
+                  </li>
+                  <li className="flex items-start">
+                    <span className="w-2 h-2 bg-green-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                    Foundation in humanities and social sciences
+                  </li>
+                </ul>
+              </div>
+            </div>
+
           </div>
 
           {/* Academic Achievements */}
@@ -99,7 +147,7 @@ const Education = () => {
                   className="inline-flex items-center px-6 py-3 bg-orange-600 text-white font-semibold rounded-lg hover:bg-orange-700 transition-colors duration-200"
                 >
                   <ExternalLink className="w-5 h-5 mr-2" />
-                  Click To Know More
+                  View Course Catalogue
                 </a>
               </div>
             </div>
@@ -146,7 +194,7 @@ const Education = () => {
                   </li>
                   <li className="flex items-start">
                     <span className="w-2 h-2 bg-blue-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                    Programming for data analysis (Python, R)
+                    Programming for data analysis (Python, R, SQL)
                   </li>
                   <li className="flex items-start">
                     <span className="w-2 h-2 bg-blue-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
@@ -171,7 +219,7 @@ const Education = () => {
                   className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors duration-200"
                 >
                   <ExternalLink className="w-5 h-5 mr-2" />
-                  Click to Know More
+                  View Course Catalogue
                 </a>
               </div>
             </div>
