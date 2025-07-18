@@ -12,6 +12,28 @@ const Experience = () => {
             <p className="text-xl text-gray-600">My Career Journey in Data Science & Analytics</p>
           </div>
 
+          {/* Career Summary */}
+          <div className="bg-white rounded-xl shadow-lg p-8 mt-8">
+            <h2 className="text-2xl font-bold text-slate-800 mb-6">Career Highlights</h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div className="text-center p-6 bg-gradient-to-br from-orange-50 to-orange-100 rounded-lg">
+                <div className="text-3xl font-bold text-orange-600 mb-2">3+</div>
+                <div className="text-gray-700 font-semibold">Years Experience</div>
+                <div className="text-sm text-gray-600 mt-1">Data Engineering & BI</div>
+              </div>
+              <div className="text-center p-6 bg-gradient-to-br from-blue-50 to-blue-100 rounded-lg">
+                <div className="text-3xl font-bold text-blue-600 mb-2">3</div>
+                <div className="text-gray-700 font-semibold">Companies</div>
+                <div className="text-sm text-gray-600 mt-1">From Startup to Enterprise</div>
+              </div>
+              <div className="text-center p-6 bg-gradient-to-br from-green-50 to-green-100 rounded-lg">
+                <div className="text-3xl font-bold text-green-600 mb-2">10+</div>
+                <div className="text-gray-700 font-semibold">Technologies</div>
+                <div className="text-sm text-gray-600 mt-1">Mastered & Applied</div>
+              </div>
+            </div>
+          </div>
+
           {/* Experience Timeline */}
           <div className="space-y-8">
 
@@ -158,28 +180,6 @@ const Experience = () => {
               </div>
             </div>
 
-          </div>
-
-          {/* Career Summary */}
-          <div className="bg-white rounded-xl shadow-lg p-8 mt-8">
-            <h2 className="text-2xl font-bold text-slate-800 mb-6">Career Highlights</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <div className="text-center p-6 bg-gradient-to-br from-orange-50 to-orange-100 rounded-lg">
-                <div className="text-3xl font-bold text-orange-600 mb-2">3+</div>
-                <div className="text-gray-700 font-semibold">Years Experience</div>
-                <div className="text-sm text-gray-600 mt-1">Data Engineering & BI</div>
-              </div>
-              <div className="text-center p-6 bg-gradient-to-br from-blue-50 to-blue-100 rounded-lg">
-                <div className="text-3xl font-bold text-blue-600 mb-2">3</div>
-                <div className="text-gray-700 font-semibold">Companies</div>
-                <div className="text-sm text-gray-600 mt-1">From Startup to Enterprise</div>
-              </div>
-              <div className="text-center p-6 bg-gradient-to-br from-green-50 to-green-100 rounded-lg">
-                <div className="text-3xl font-bold text-green-600 mb-2">10+</div>
-                <div className="text-gray-700 font-semibold">Technologies</div>
-                <div className="text-sm text-gray-600 mt-1">Mastered & Applied</div>
-              </div>
-            </div>
           </div>
         </div>
       </div>
