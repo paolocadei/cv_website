@@ -144,7 +144,9 @@ const Experience = () => {
                     <ul className="space-y-2 text-gray-700 ml-4">
                       <li className="flex items-start">
                         <span className="w-2 h-2 bg-green-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                        Analysed complex, high-volume, high-dimensionality data from varying sources using <strong>Python and SQL </strong> .
+                        <span>
+                          Analysed complex, high-volume, high-dimensionality data from varying sources using <strong>Python</strong> and <strong>SQL</strong>.
+                        </span>
                       </li>
                       <li className="flex items-start">
                         <span className="w-2 h-2 bg-green-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
