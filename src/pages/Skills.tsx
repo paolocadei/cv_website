@@ -17,10 +17,11 @@ const Skills = () => {
       icon: Database,
       color: "green",
       skills: [
-        { name: "dbt", level: 85, description: "Data transformation, modeling, documentation" },
+        { name: "dbt", level: 85, description: "ETL and documentation" },
         { name: "Tableau", level: 80, description: "Interactive dashboards, data visualization" },
         { name: "BigQuery", level: 75, description: "Large-scale data processing and analytics" },
-        { name: "PostgreSQL", level: 80, description: "Database management and optimization" }
+        { name: "PostgreSQL", level: 90, description: "Database management and optimization" }
+        { name: "Snowflake", level: 70, description: "Large scale ETL"}
       ]
     },
     {
