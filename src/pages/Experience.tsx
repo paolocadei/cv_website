@@ -87,7 +87,7 @@ const Experience = () => {
                 <ul className="space-y-3 text-gray-700">
                   {[
                     '<strong>dbt + BigQuery</strong> setup (using <strong>Terraform, GCP, CI/CD, YAML, Docker</strong>)',
-                    'Designed and implemented an <strong>LLM-powered RAG</strong> model using <strong>Python</strong> to handle inquiries about <strong>GCP</strong> tables. The model can interpret natural language questions, provide insights into table contents, and generate <strong>SQL</strong> queries for seamless and intuitive data interaction. It was integrated with <strong>Slack</strong> to allow users to access and interact with the system directly within their messaging environment.'',
+                    'Designed and implemented an <strong>LLM-powered RAG</strong> model using <strong>Python</strong> to handle inquiries about <strong>GCP</strong> tables. The model can interpret natural language questions, provide insights into table contents, and generate <strong>SQL</strong> queries for seamless and intuitive data interaction. It was integrated with <strong>Slack</strong> to allow users to access and interact with the system directly within their messaging environment.',
                     'Retrieved and processed data using <strong>dbt</strong> and <strong>BigQuery</strong>, supporting efficient model creation and analytics',
                     'Developed a <strong>SQL linting</strong> script utilizing <strong>SQLFluff</strong>, automating code formatting and improving interpretability through terminal commands',
                     'Worked with various Google components, including <strong>Firestore, Vertex AI</strong>, and <strong>Generative Studio AI</strong>',
