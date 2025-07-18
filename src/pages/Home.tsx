@@ -18,7 +18,7 @@ const Home = () => {
                 Welcome to My Portfolio
               </h1>
               <p className="text-2xl md:text-3xl font-light mb-6 tracking-wide">
-                Paolo Cadei - Data Analyst/Engineer
+                Paolo Cadei -  all things data & AI fan
               </p>
               <p className="text-lg md:text-xl mb-8 leading-relaxed opacity-90">
                 Love all things data — especially passionate about LLMs, AI, and anything that automates and makes life easier. Currently pursuing a Master's in Data Science and Business Analytics at the University of Amsterdam, with hands-on experience in business intelligence, data engineering, and machine learning.
