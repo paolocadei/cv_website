@@ -24,7 +24,7 @@ const About = () => {
               </div>
               <div className="flex-1 text-center lg:text-left">
                 <h2 className="text-3xl font-bold text-slate-800 mb-4">Paolo Cadei</h2>
-                <p className="text-xl text-orange-600 mb-4">Student Data Analyst/Engineer</p>
+                <p className="text-xl text-orange-600 mb-4">Data Analyst/Engineer</p>
                 <p className="text-gray-700 leading-relaxed text-lg">
                   I am a Data Science Master's student, soon to graduate, at the Universiteit van Amsterdam. 
                   I love finding patterns and answering questions in a data-driven manner, particularly if coding is required. 
