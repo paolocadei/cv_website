@@ -44,7 +44,7 @@ const Education = () => {
                     </div>
                     <div className="flex flex-col">
                       <h2 className="text-2xl font-bold text-slate-800 text-left">Master's Degree</h2>
-                      <p className="text-orange-600 font-semibold text-left">Data Science and Business Analytics</p>
+                      <p className="text-blue-600 font-semibold">Data Science and Business Analytics</p>
                     </div>
 
                   </div>
