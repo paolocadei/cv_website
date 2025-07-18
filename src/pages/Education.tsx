@@ -12,9 +12,30 @@ const Education = () => {
             <p className="text-xl text-gray-600">My Academic Journey</p>
           </div>
 
+          {/* Academic Achievements */}
+          <div className="bg-white rounded-xl shadow-lg p-8 mb-8">
+            <h2 className="text-2xl font-bold text-slate-800 mb-6">Academic Achievements</h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div className="text-center p-6 bg-gradient-to-br from-orange-50 to-orange-100 rounded-lg">
+                <div className="text-3xl font-bold text-orange-600 mb-2">8.6</div>
+                <div className="text-gray-700 font-semibold">Master's GPA</div>
+                <div className="text-sm text-gray-600 mt-1">Current Program</div>
+              </div>
+              <div className="text-center p-6 bg-gradient-to-br from-blue-50 to-blue-100 rounded-lg">
+                <div className="text-3xl font-bold text-blue-600 mb-2">8.27</div>
+                <div className="text-gray-700 font-semibold">Bachelor's GPA</div>
+                <div className="text-sm text-gray-600 mt-1">Cum Laude</div>
+              </div>
+              <div className="text-center p-6 bg-gradient-to-br from-green-50 to-green-100 rounded-lg">
+                <div className="text-3xl font-bold text-green-600 mb-2">4</div>
+                <div className="text-gray-700 font-semibold">Years</div>
+                <div className="text-sm text-gray-600 mt-1">Academic Excellence</div>
+              </div>
+            </div>
+          </div>
+
           {/* Education Timeline */}
           <div className="space-y-8">
-            
             {/* Master's Degree */}
             <div className="bg-white rounded-xl shadow-lg p-8 border-l-4 border-orange-500">
               <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-6">
@@ -32,7 +53,7 @@ const Education = () => {
                   <span className="font-semibold">2024 - Current</span>
                 </div>
               </div>
-              
+
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                 <div className="flex items-center">
                   <MapPin className="w-5 h-5 text-gray-500 mr-2" />
@@ -88,7 +109,7 @@ const Education = () => {
                   <span className="font-semibold">2020 - 2024</span>
                 </div>
               </div>
-              
+
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                 <div className="flex items-center">
                   <MapPin className="w-5 h-5 text-gray-500 mr-2" />
@@ -128,28 +149,6 @@ const Education = () => {
                     Capstone project in business analytics
                   </li>
                 </ul>
-              </div>
-            </div>
-          </div>
-
-          {/* Academic Achievements */}
-          <div className="bg-white rounded-xl shadow-lg p-8 mt-8">
-            <h2 className="text-2xl font-bold text-slate-800 mb-6">Academic Achievements</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <div className="text-center p-6 bg-gradient-to-br from-orange-50 to-orange-100 rounded-lg">
-                <div className="text-3xl font-bold text-orange-600 mb-2">8.6</div>
-                <div className="text-gray-700 font-semibold">Master's GPA</div>
-                <div className="text-sm text-gray-600 mt-1">Current Program</div>
-              </div>
-              <div className="text-center p-6 bg-gradient-to-br from-blue-50 to-blue-100 rounded-lg">
-                <div className="text-3xl font-bold text-blue-600 mb-2">8.27</div>
-                <div className="text-gray-700 font-semibold">Bachelor's GPA</div>
-                <div className="text-sm text-gray-600 mt-1">Cum Laude</div>
-              </div>
-              <div className="text-center p-6 bg-gradient-to-br from-green-50 to-green-100 rounded-lg">
-                <div className="text-3xl font-bold text-green-600 mb-2">4</div>
-                <div className="text-gray-700 font-semibold">Years</div>
-                <div className="text-sm text-gray-600 mt-1">Academic Excellence</div>
               </div>
             </div>
           </div>
