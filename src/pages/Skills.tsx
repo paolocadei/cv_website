@@ -9,8 +9,7 @@ const Skills = () => {
       color: "blue",
       skills: [
         { name: "Python", level: 95, description: "Advanced data analysis, machine learning, web scraping, API connections, Agentic-Models" },
-        { name: "SQL", level: 90, description: "Complex queries, database design, optimization" },
-        { name: "scikit-learn", level: 80, description: "Supervised/unsupervised models, pipelines, preprocessing" }
+        { name: "SQL", level: 90, description: "Complex queries, database design, optimization" }
       ]
     },
     {
