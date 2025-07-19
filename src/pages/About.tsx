@@ -33,16 +33,17 @@ const About = () => {
             <div className="space-y-6 text-gray-700 leading-relaxed">
               <p className="text-lg">
                 What sets me apart in data science? Probably the fact that I get equally excited about writing a clean SQL query and explaining it in plain English to someone who thinks Python is just a snake. I’m not just here to crunch numbers — I love solving messy, complex problems and turning data chaos into insights that actually make sense (and maybe even drive smart decisions). Bridging the gap between the technical and the practical is kind of my thing.
-
+              </p>
+              
+              <p className="text-lg">
                 Throughout my journey in data, I’ve made a habit of turning complex concepts into “aha!” moments. I’ve worked in startup settings where I built data pipelines from scratch, and at large-scale companies like IKEA Digital, where I played with some of the coolest tech out there — think LLMs and RAG models that do more than just impress your manager at meetings.
               </p>
-            
               
-              <p>
+              <p className="text-lg">
                 More recently, I’ve been working as a BI Developer, diving into dbt, crafting clean data models, and building dashboards that don’t just look good — they actually help people make decisions without needing a data dictionary and a degree in statistics. Whether it's building intuitive query systems or streamlining messy reporting workflows, I’m all about practical, scalable, and user-friendly solutions.
               </p>
               
-              <p>
+              <p className="text-lg">
                 What really makes me tick is the sweet spot between tech and business. I care about the code, but I care just as much about why it’s being written and who it's helping. Add in a few languages (spoken, not just programming) and a love for clear communication, and you’ve got someone who can talk SQL and stakeholder strategy in the same conversation — without anyone falling asleep.
               </p>
             </div>
