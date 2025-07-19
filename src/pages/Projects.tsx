@@ -47,6 +47,7 @@ const Projects = () => {
       category: "AI/ML Engineering",
       color: "green",
       githubAccess: true,
+      githubLink: "https://github.com/paolocadei/Spider2.0-Thesis",
       images: [
         "src/images/Master_Thesis/overview.png",
         "src/images/Master_Thesis/question_answering_phase.png"
