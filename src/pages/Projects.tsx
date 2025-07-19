@@ -65,7 +65,7 @@ const Projects = () => {
         "Created a reproducible, live-database-ready evaluation framework for real-world enterprise text-to-SQL",
         "Demonstrated that schema quality and context selection can rival raw model size in driving performance"
       ],
-      "technicalDetails": "The system is built in Python with LangChain orchestration, using OpenAI o3-mini for inference. Retrieval uses hybrid sparse/dense embedding storage in Qdrant, and schema elements are compressed and enriched prior to model input. Execution accuracy is computed live on Snowflake using SQL validation with fallback and retry logic. Evaluation is stratified across 405 natural language questions from the Spider 2.0-Snow benchmark."
+      "technicalDetails": "The system is built in Python, using OpenAI o3-mini for inference. Retrieval uses hybrid sparse/dense embedding storage in Qdrant, and schema elements are compressed and enriched prior to model input. Execution accuracy is computed live on Snowflake using SQL validation with fallback and retry logic. Evaluation is stratified across 405 natural language questions from the Spider 2.0-Snow benchmark."
     }
     },
     {
