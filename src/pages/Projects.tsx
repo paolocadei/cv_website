@@ -76,8 +76,8 @@ const Projects = () => {
       }
     },
     {
-      title: "Business Intelligence Dashboard",
-      description: "Created an interactive executive dashboard in Tableau for KPI monitoring and performance analysis, serving 50+ stakeholders across different departments.",
+      title: "Business Intelligence Dashboards",
+      description: "Created interactive dashboards in Tableau for KPI monitoring and performance analysis, serving departments in Yokoy with a particular focus on the Marketing department.",
       technologies: ["Tableau", "SQL", "PostgreSQL", "Data Modeling"],
       year: "2023",
       category: "Business Intelligence",
