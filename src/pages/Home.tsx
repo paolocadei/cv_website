@@ -35,7 +35,7 @@ const Home = () => {
                   Download CV
                 </a>
                 <Link 
-                  to="/contact" 
+                  to="mailto:paolo.cadei2001@gmail.com" 
                   className="bg-orange-700 text-white px-8 py-3 rounded-lg font-semibold hover:bg-orange-800 transition-colors flex items-center justify-center"
                 >
                   <Mail className="w-5 h-5 mr-2" />
@@ -210,10 +210,13 @@ const Home = () => {
             I'm excited to bring my data science and engineering expertise to your team.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-orange-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-orange-700 transition-colors flex items-center justify-center">
+            <a 
+              href="mailto:paolo.cadei2001@gmail.com"
+              className="bg-orange-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-orange-700 transition-colors flex items-center justify-center"
+            >
               <Mail className="w-5 h-5 mr-2" />
               Get in Touch
-            </button>
+            </a>
             <a 
                   href="https://github.com/paolocadei/cv_website/raw/main/public/CV/Paolo_Cadei_CV.pdf" 
                   download="Paolo_Cadei_CV.pdf" 

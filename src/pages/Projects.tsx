@@ -1,5 +1,6 @@
 import React from 'react';
-import { FolderOpen, ExternalLink, Github, Calendar, Code } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { FolderOpen, ExternalLink, Github, Calendar, Code, Mail } from 'lucide-react';
 
 const Projects = () => {
   const projects = [
@@ -170,17 +171,22 @@ const Projects = () => {
               I'm always excited to discuss new projects and opportunities in data science and engineering.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-orange-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-center justify-center">
+              <a 
+                href="https://github.com/paolocadei"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-white text-orange-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-center justify-center"
+              >
                 <Github className="w-5 h-5 mr-2" />
                 View GitHub
-              </button>
-              <Link 
-                to="/contact" 
+              </a>
+              <a 
+                href="mailto:paolo.cadei2001@gmail.com"
                 className="bg-orange-700 text-white px-8 py-3 rounded-lg font-semibold hover:bg-orange-800 transition-colors flex items-center justify-center"
               >
                 <Mail className="w-5 h-5 mr-2" />
                 Contact Me
-              </Link>
+              </a>
             </div>
           </div>
 
