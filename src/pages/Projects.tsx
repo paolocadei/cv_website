@@ -59,6 +59,7 @@ const Projects = () => {
         "Implemented hybrid sparse+dense retrieval with Qdrant to maximize relevant context inclusion",
         "Limited LLM usage to ≤6 calls and ≤3 DB queries per task using o3-mini, slashing compute and emissions"
       ],
+      "image": "/images/text-to-sql-pipeline.png",
       "impact": [
         "Achieved 33.24% execution accuracy on Spider 2.0-Snow (74% stratified split), approaching SoTA despite minimal resources",
         "Reduced token usage by ~50% vs competing systems while improving retrieval and verification quality",
