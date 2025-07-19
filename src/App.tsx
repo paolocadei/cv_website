@@ -10,6 +10,7 @@ import Experience from './pages/Experience';
 import Projects from './pages/Projects';
 import Hobbies from './pages/Hobbies';
 import Skills from './pages/Skills';
+import Contact from './pages/Contact';
 
 function App() {
   return (
