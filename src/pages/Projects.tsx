@@ -78,7 +78,7 @@ const Projects = () => {
     {
       title: "Business Intelligence Dashboards",
       description: "Created interactive dashboards in Tableau for KPI monitoring and performance analysis, serving departments in Yokoy with a particular focus on the Marketing department.",
-      technologies: ["Tableau", "SQL", "PostgreSQL", "Data Modeling"],
+      technologies: ["Tableau", "SQL", "PostgreSQL", "Data Modeling", "dbt"],
       year: "2023",
       category: "Business Intelligence",
       color: "orange",
