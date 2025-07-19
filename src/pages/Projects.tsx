@@ -139,37 +139,38 @@ const Projects = () => {
       }
     },
     {
-    title: "Reinforcement Learning (Small Projects)",
-    description: "Implemented and compared RL algorithms like Q-Learning, SARSA, and Monte Carlo to solve OpenAI Gym environments such as Cliff Walking and Taxi Driver.",
-    technologies: ["Python", "NumPy", "OpenAI Gym", "Matplotlib", "RL Algorithms"],
-    year: "2024",
-    category: "Reinforcement Learning",
-    color: "purple",
-    githubAccess: true,
-    githubLink: "https://github.com/paolocadei/reinforcement-learning-experiments",
-    detailedDescription: {
-      overview: "This project explores foundational reinforcement learning techniques applied to two classic control problems: Cliff Walking and Taxi Driver. Implemented and compared on-policy and off-policy algorithms with focus on value-based learning and exploration-exploitation trade-offs.",
-      challenges: [
-        "Tuning exploration parameters (ε, decay rates) for stable learning",
-        "Visualizing policy convergence in discrete state-action spaces",
-        "Avoiding divergence in off-policy methods without proper update control",
-        "Balancing fairness in episodic sampling for Monte Carlo methods"
-      ],
-      solution: [
-        "Implemented tabular versions of SARSA, Q-learning, and Monte Carlo control from scratch",
-        "Used ε-greedy and decayed ε strategies for exploration control",
-        "Tracked cumulative reward and policy evolution over episodes",
-        "Built graphs to compare learned policies across algorithms"
-      ],
-      impact: [
-        "Demonstrated clear differences in stability and convergence speed between SARSA and Q-learning",
-        "Validated that Monte Carlo control performs well with sufficient episodes but slower convergence",
-        "Gained intuition on algorithmic bias from on-policy vs off-policy learning",
-        "Created reproducible, well-documented experiments for teaching and analysis"
-      ],
-      technicalDetails: "Built in Python using NumPy and OpenAI Gym's built-in `CliffWalking-v0` and `Taxi-v3` environments. Results visualized using Matplotlib. All RL logic implemented manually to avoid reliance on high-level libraries like Stable Baselines. Each algorithm includes logging, evaluation scripts, and reproducibility seeds."
+      title: "Reinforcement Learning (Small Projects)",
+      description: "Implemented and compared RL algorithms like Q-Learning, SARSA, and Monte Carlo to solve manually built Cliff Walking and OpenAI Gym's Taxi Driver environments.",
+      technologies: ["Python", "NumPy", "OpenAI Gym (Taxi)", "Matplotlib", "RL Algorithms"],
+      year: "2024",
+      category: "Reinforcement Learning",
+      color: "purple",
+      githubAccess: true,
+      githubLink: "https://github.com/paolocadei/reinforcement-learning-experiments",
+      detailedDescription: {
+        overview: "This project explores fundamental reinforcement learning algorithms applied to two environments: a custom-built Cliff Walking gridworld and OpenAI Gym's Taxi-v3. Implementations include Q-Learning, SARSA, and Monte Carlo control, with a focus on value function learning and exploration strategies.",
+        challenges: [
+          "Designing and debugging a custom environment for Cliff Walking with proper reward dynamics",
+          "Ensuring fair episode termination logic and consistent state transitions",
+          "Comparing on-policy vs. off-policy algorithms under the same exploration constraints",
+          "Visualizing value and policy convergence across discrete spaces"
+        ],
+        solution: [
+          "Built a from-scratch gridworld simulator for the Cliff Walking problem with configurable rewards and transitions",
+          "Used OpenAI Gym for standardization and benchmarking with Taxi-v3",
+          "Implemented and tested tabular SARSA, Q-Learning, and Monte Carlo control algorithms in both settings",
+          "Created modular evaluation pipelines with episode reward tracking and heatmap policy visualization"
+        ],
+        impact: [
+          "Gained hands-on understanding of policy learning dynamics in finite MDPs",
+          "Observed more conservative paths from SARSA vs. aggressive shortcuts in Q-Learning",
+          "Highlighted convergence properties and trade-offs in algorithm design through controlled experiments",
+          "Provided reusable code templates for teaching RL fundamentals and benchmarking custom environments"
+        ],
+        technicalDetails: "All algorithms were implemented in Python using only NumPy for numerical operations. Cliff Walking was simulated with a custom gridworld class implementing the MDP framework manually. Taxi Driver used OpenAI Gym's Taxi-v3 environment. Visualization of state-value maps and policies was done using Matplotlib. Reproducibility ensured via fixed seeds and configurable training parameters."
+      }
     }
-  }
+
   ];
 
   const getColorClasses = (color) => {
