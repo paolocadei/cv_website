@@ -216,11 +216,16 @@ const Home = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a 
-              href="mailto:paolo.cadei2001@gmail.com"
+              href="#"
+              onClick={(e) => {
+                e.preventDefault();
+                navigator.clipboard.writeText('paolo.cadei2001@gmail.com');
+                alert('Email address copied to clipboard!');
+              }}
               className="bg-orange-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-orange-700 transition-colors flex items-center justify-center"
             >
               <Mail className="w-5 h-5 mr-2" />
-              Get in Touch
+              Copy Email
             </a>
             <a 
                   href="https://github.com/paolocadei/cv_website/raw/main/public/CV/Paolo_Cadei_CV.pdf" 

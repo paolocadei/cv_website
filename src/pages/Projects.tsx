@@ -181,11 +181,16 @@ const Projects = () => {
                 View GitHub
               </a>
               <a 
-                href="mailto:paolo.cadei2001@gmail.com"
+                href="#"
+                onClick={(e) => {
+                  e.preventDefault();
+                  navigator.clipboard.writeText('paolo.cadei2001@gmail.com');
+                  alert('Email address copied to clipboard!');
+                }}
                 className="bg-orange-700 text-white px-8 py-3 rounded-lg font-semibold hover:bg-orange-800 transition-colors flex items-center justify-center"
               >
                 <Mail className="w-5 h-5 mr-2" />
-                Contact Me
+                Copy Email
               </a>
             </div>
           </div>
