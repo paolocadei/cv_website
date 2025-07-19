@@ -42,9 +42,9 @@ const Education = () => {
                     <div className="bg-orange-100 p-3 rounded-lg mr-4">
                       <GraduationCap className="w-8 h-8 text-orange-600" />
                     </div>
-                    <div className="flex flex-col">
-                      <h2 className="text-2xl font-bold text-slate-800 text-left">Master's Degree</h2>
-                      <p className="text-orange-600 font-semibold text-left">Data Science and Business Analytics</p>
+                    <div className="text-left">
+                      <h2 className="text-2xl font-bold text-slate-800">Master's Degree</h2>
+                      <p className="text-orange-600 font-semibold ml-4">Data Science and Business Analytics</p>
                     </div>
                   </div>
                   <div className="flex items-center text-gray-600">
@@ -110,9 +110,9 @@ const Education = () => {
                     <div className="bg-blue-100 p-3 rounded-lg mr-4">
                       <GraduationCap className="w-8 h-8 text-blue-600" />
                     </div>
-                    <div>
+                    <div className="text-left">
                       <h2 className="text-2xl font-bold text-slate-800">Bachelor's Degree</h2>
-                      <p className="text-blue-600 font-semibold">Business Analytics</p>
+                      <p className="text-blue-600 font-semibold ml-4">Business Analytics</p>
                     </div>
                   </div>
                   <div className="flex items-center text-gray-600">
@@ -182,9 +182,9 @@ const Education = () => {
                     <div className="bg-purple-100 p-3 rounded-lg mr-4">
                       <GraduationCap className="w-8 h-8 text-purple-600" />
                     </div>
-                    <div>
+                    <div className="text-left">
                       <h2 className="text-2xl font-bold text-slate-800">Transition Period</h2>
-                      <p className="text-purple-600 font-semibold">International Business Management</p>
+                      <p className="text-purple-600 font-semibold ml-4">International Business Management</p>
                     </div>
                   </div>
                   <div className="flex items-center text-gray-600">
@@ -238,9 +238,9 @@ const Education = () => {
                     <div className="bg-green-100 p-3 rounded-lg mr-4">
                       <GraduationCap className="w-8 h-8 text-green-600" />
                     </div>
-                    <div>
+                    <div className="text-left">
                       <h2 className="text-2xl font-bold text-slate-800">High School Diploma</h2>
-                      <p className="text-green-600 font-semibold">Liceo Linguistico</p>
+                      <p className="text-green-600 font-semibold ml-4">Liceo Linguistico</p>
                     </div>
                   </div>
                   <div className="flex items-center text-gray-600">
