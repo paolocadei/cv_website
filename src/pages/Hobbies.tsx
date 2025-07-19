@@ -176,7 +176,7 @@ const Hobbies = () => {
               I believe that diverse interests and hobbies are essential for personal growth and professional success. 
               Each activity teaches me something different - bouldering develops problem-solving under pressure, 
               meditation enhances focus and clarity, reading expands my knowledge base, and board games sharpen 
-              strategic thinking. This variety keeps me energized and brings fresh perspectives to my life.
+              strategic thinking. This variety keeps me energized and brings fresh perspectives into my life.
             </p>
           </div>
 
