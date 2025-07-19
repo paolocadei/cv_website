@@ -346,9 +346,6 @@ const Projects = () => {
                       >
                         {project.githubAccess ? <Github className="w-5 h-5" /> : <Lock className="w-5 h-5" />}
                       </button>
-                      <button className="p-2 text-gray-400 hover:text-orange-600 transition-colors">
-                        <ExternalLink className="w-5 h-5" />
-                      </button>
                     </div>
                   </div>
 
