@@ -36,26 +36,15 @@ const About = () => {
               </p>
               
               <p>
-                Throughout my academic and professional career, I've consistently demonstrated the ability to 
-                translate complex data concepts into actionable business insights. My experience spans from 
-                startup environments where I built data pipelines from scratch, to enterprise-level organizations 
-                like IKEA Digital where I worked with cutting-edge AI technologies including LLMs and RAG models.
+                Throughout my journey in data, I’ve made a habit of turning complex concepts into “aha!” moments. I’ve worked in scrappy startup settings where I built data pipelines from scratch (and occasionally broke them for fun), and at large-scale companies like IKEA Digital, where I played with some of the coolest tech out there — think LLMs and RAG models that do more than just impress your manager at meetings.
               </p>
               
               <p>
-                What truly sets me apart is my holistic approach to data science. I don't just focus on the 
-                technical aspects – I understand the business context, the stakeholder needs, and the real-world 
-                impact of data-driven decisions. My multilingual background and international experience have 
-                taught me to communicate complex technical concepts to diverse audiences, making me an effective 
-                bridge between technical teams and business stakeholders.
+                More recently, I’ve been working as a BI Developer, diving into dbt, crafting clean data models, and building dashboards that don’t just look good — they actually help people make decisions without needing a data dictionary and a degree in statistics. Whether it's building intuitive query systems or streamlining messy reporting workflows, I’m all about practical, scalable, and user-friendly solutions.
               </p>
               
               <p>
-                I'm particularly passionate about the intersection of AI and practical business applications. 
-                My work with LLM-powered systems and automated data pipelines reflects my belief that technology 
-                should not just be impressive, but genuinely useful in solving real problems. Whether it's 
-                building intuitive data query systems or creating comprehensive BI dashboards, I focus on 
-                solutions that empower users and drive meaningful outcomes.
+                What really makes me tick is the sweet spot between tech and business. I care about the code, but I care just as much about why it’s being written and who it's helping. Add in a few languages (spoken, not just programming) and a love for clear communication, and you’ve got someone who can talk SQL and stakeholder strategy in the same conversation — without anyone falling asleep.
               </p>
             </div>
           </div>
