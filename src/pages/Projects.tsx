@@ -5,6 +5,7 @@ const Projects = () => {
   const [selectedProject, setSelectedProject] = useState(null);
   const [showAccessDenied, setShowAccessDenied] = useState(false);
   const [imageError, setImageError] = useState({});
+  const [zoomedImage, setZoomedImage] = useState(null);
 
   const projects = [
     {
@@ -160,6 +161,15 @@ const Projects = () => {
     setSelectedProject(null);
     document.body.style.overflow = 'unset';
     setImageError({});
+    setZoomedImage(null);
+  };
+
+  const openImageZoom = (imagePath) => {
+    setZoomedImage(imagePath);
+  };
+
+  const closeImageZoom = () => {
+    setZoomedImage(null);
   };
 
   const handleGithubClick = (project) => {
@@ -187,6 +197,24 @@ const Projects = () => {
     }
     return [];
   };
+
+  // Handle keyboard events for image zoom
+  React.useEffect(() => {
+    const handleKeyDown = (event) => {
+      if (event.key === 'Escape') {
+        if (zoomedImage) {
+          closeImageZoom();
+        } else if (selectedProject) {
+          closeProjectModal();
+        }
+      }
+    };
+
+    document.addEventListener('keydown', handleKeyDown);
+    return () => {
+      document.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [zoomedImage, selectedProject]);
 
   return (
     <div className="min-h-screen bg-gray-50 py-12">
@@ -377,14 +405,23 @@ const Projects = () => {
                     <h3 className="text-xl font-bold text-slate-800 mb-4">Project Preview</h3>
                     <div className={`grid gap-4 ${getProjectImages(selectedProject).length > 1 ? 'grid-cols-1 md:grid-cols-2' : 'grid-cols-1'}`}>
                       {getProjectImages(selectedProject).map((imagePath, index) => (
-                        <div key={index} className="rounded-lg overflow-hidden shadow-lg bg-gray-50">
+                        <div key={index} className="rounded-lg overflow-hidden shadow-lg bg-gray-50 cursor-zoom-in group">
                           {!imageError[imagePath] ? (
-                            <img 
-                              src={imagePath} 
-                              alt={`${selectedProject.title} preview ${index + 1}`}
-                              className="w-full h-64 object-cover hover:scale-105 transition-transform duration-300"
-                              onError={() => handleImageError(imagePath)}
-                            />
+                            <div className="relative">
+                              <img 
+                                src={imagePath} 
+                                alt={`${selectedProject.title} preview ${index + 1}`}
+                                className="w-full h-auto object-contain hover:scale-[1.02] transition-transform duration-300"
+                                style={{ maxHeight: 'none', height: 'auto' }}
+                                onClick={() => openImageZoom(imagePath)}
+                                onError={() => handleImageError(imagePath)}
+                              />
+                              <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300 flex items-center justify-center">
+                                <div className="bg-white bg-opacity-90 px-3 py-1 rounded-full text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                  Click to zoom
+                                </div>
+                              </div>
+                            </div>
                           ) : (
                             <div className="w-full h-64 flex items-center justify-center bg-gray-100">
                               <div className="text-center text-gray-500">
@@ -485,6 +522,29 @@ const Projects = () => {
                   </button>
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Image Zoom Modal */}
+      {zoomedImage && (
+        <div className="fixed inset-0 bg-black bg-opacity-90 z-[60] flex items-center justify-center p-4">
+          <div className="relative max-w-full max-h-full">
+            <button 
+              onClick={closeImageZoom}
+              className="absolute -top-12 right-0 text-white hover:text-gray-300 transition-colors"
+            >
+              <X className="w-8 h-8" />
+            </button>
+            <img 
+              src={zoomedImage} 
+              alt="Zoomed view"
+              className="max-w-full max-h-[90vh] object-contain shadow-2xl"
+              style={{ imageRendering: 'auto' }}
+            />
+            <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-black bg-opacity-50 text-white px-4 py-2 rounded-lg text-sm">
+              Press ESC or click X to close
             </div>
           </div>
         </div>
