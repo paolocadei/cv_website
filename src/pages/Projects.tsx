@@ -48,8 +48,8 @@ const Projects = () => {
       color: "green",
       githubAccess: true,
       images: [
-        "src/images/Master_Thesis/overview.png",
-        "src/images/Master_Thesis/question_answering_phase.png"
+        "https://via.placeholder.com/800x600/10b981/ffffff?text=System+Overview",
+        "https://via.placeholder.com/800x400/059669/ffffff?text=Question+Answering+Phase"
       ], 
       detailedDescription: {
         overview: "This project addresses the challenge of translating natural language questions into SQL queries on large-scale, enterprise-grade databases. It introduces a lightweight Retrieval-Augmented Generation (RAG) pipeline optimized for the Spider 2.0-Snow benchmark using schema-aware vector search, a dual-agent architecture, and minimal model usage.",
@@ -82,7 +82,7 @@ const Projects = () => {
       category: "Business Intelligence",
       color: "orange",
       githubAccess: false,
-      image: "./images/tableau-dashboard.png", // Add your image path here
+      images: ["https://via.placeholder.com/800x600/ea580c/ffffff?text=BI+Dashboard+Preview"],
       detailedDescription: {
         overview: "A comprehensive business intelligence solution that provides real-time visibility into key performance indicators across multiple departments. The dashboard serves as a central hub for executive decision-making and departmental performance tracking.",
         challenges: [
@@ -114,7 +114,7 @@ const Projects = () => {
       category: "Data Collection",
       color: "red",
       githubAccess: true,
-      image: "./images/web-scraping-framework.png", // Add your image path here
+      images: ["https://via.placeholder.com/800x600/dc2626/ffffff?text=Web+Scraping+Architecture"],
       detailedDescription: {
         overview: "A comprehensive web scraping framework designed for large-scale data collection from dynamic real estate websites. The system handles complex JavaScript rendering, anti-bot measures, and provides reliable data extraction capabilities.",
         challenges: [
@@ -164,11 +164,19 @@ const Projects = () => {
     setZoomedImage(null);
   };
 
-  const openImageZoom = (imagePath) => {
+  const openImageZoom = (imagePath, event) => {
+    event.preventDefault();
+    event.stopPropagation();
+    console.log('Opening zoom for:', imagePath); // Debug log
     setZoomedImage(imagePath);
   };
 
-  const closeImageZoom = () => {
+  const closeImageZoom = (event) => {
+    if (event) {
+      event.preventDefault();
+      event.stopPropagation();
+    }
+    console.log('Closing zoom'); // Debug log
     setZoomedImage(null);
   };
 
@@ -413,7 +421,7 @@ const Projects = () => {
                                 alt={`${selectedProject.title} preview ${index + 1}`}
                                 className="w-full h-auto object-contain hover:scale-[1.02] transition-transform duration-300"
                                 style={{ maxHeight: 'none', height: 'auto' }}
-                                onClick={() => openImageZoom(imagePath)}
+                                onClick={(e) => openImageZoom(imagePath, e)}
                                 onError={() => handleImageError(imagePath)}
                               />
                               <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300 flex items-center justify-center">
@@ -529,11 +537,14 @@ const Projects = () => {
 
       {/* Image Zoom Modal */}
       {zoomedImage && (
-        <div className="fixed inset-0 bg-black bg-opacity-90 z-[60] flex items-center justify-center p-4">
+        <div 
+          className="fixed inset-0 bg-black bg-opacity-90 z-[60] flex items-center justify-center p-4 cursor-zoom-out"
+          onClick={closeImageZoom}
+        >
           <div className="relative max-w-full max-h-full">
             <button 
-              onClick={closeImageZoom}
-              className="absolute -top-12 right-0 text-white hover:text-gray-300 transition-colors"
+              onClick={(e) => closeImageZoom(e)}
+              className="absolute -top-12 right-0 text-white hover:text-gray-300 transition-colors z-10"
             >
               <X className="w-8 h-8" />
             </button>
@@ -542,9 +553,10 @@ const Projects = () => {
               alt="Zoomed view"
               className="max-w-full max-h-[90vh] object-contain shadow-2xl"
               style={{ imageRendering: 'auto' }}
+              onClick={(e) => e.stopPropagation()}
             />
             <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-black bg-opacity-50 text-white px-4 py-2 rounded-lg text-sm">
-              Press ESC or click X to close
+              Press ESC or click outside to close
             </div>
           </div>
         </div>
