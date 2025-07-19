@@ -11,7 +11,7 @@ const Hobbies = () => {
       description: "I love diving into books, no matter what they are.",
       icon: BookOpen,
       color: "blue",
-      activities: ["Technical books", "Philosophy", "Science fiction", "Biographies"],
+      activities: ["Fantasy", "Philosophy", "Meditation", "Self-Improvement", "Romance"],
       link: {
         url: "https://www.goodreads.com/user/show/166373035-paolo",
         text: "Follow me on Goodreads"
