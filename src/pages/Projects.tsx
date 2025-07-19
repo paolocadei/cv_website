@@ -40,33 +40,33 @@ const Projects = () => {
     {
       title: "A Lean Retrieval-Augmented LLM Pipeline for Enterprise-Scale Text-to-SQL",
       description: "Built a cost-efficient, agentic LLM pipeline for the Spider 2.0-Snow benchmark using retrieval-augmented generation (RAG), schema compression, and hybrid vector search to translate natural language into SQL with strong performance and minimal compute.",
-      technologies: ["Python", "OpenAI o3-mini", "Qdrant", "RAG LLM", "Snowflake"],
-      year: "2023",
-      category: "Data Science",
+      technologies: ["Python", "OpenAI o3-mini", "Qdrant", "RAG LLM", "Snowflake", "Agentic Conversational AI"],
+      year: "2025",
+      category: "AI/ML Engineering",
       color: "green",
       githubAccess: true, // Public access
       detailedDescription: {
-        overview: "A comprehensive machine learning project that predicts real estate prices in Amsterdam by analyzing market trends, property features, and neighborhood characteristics. The system combines web scraping, feature engineering, and advanced ML algorithms to deliver accurate price predictions.",
-        challenges: [
-          "Dynamic website structures requiring adaptive scraping strategies",
-          "Handling missing and inconsistent data from multiple sources",
-          "Feature selection from 100+ potential variables",
-          "Model overfitting due to limited historical data"
-        ],
-        solution: [
-          "Developed robust web scraping framework with rotating proxies and error handling",
-          "Implemented advanced data cleaning and imputation techniques",
-          "Used recursive feature elimination and correlation analysis for feature selection",
-          "Applied cross-validation and regularization techniques to prevent overfitting"
-        ],
-        impact: [
-          "Achieved 85% prediction accuracy on test dataset",
-          "Reduced price estimation error margin by 40% compared to traditional methods",
-          "Created insights into key price-driving factors in Amsterdam real estate market",
-          "Developed reusable framework for other European cities"
-        ],
-        technicalDetails: "Utilized ensemble methods including Random Forest, XGBoost, and Gradient Boosting. Implemented feature engineering pipeline with polynomial features and interaction terms. Used Scrapy for large-scale data collection with custom middleware for handling JavaScript-rendered content."
-      }
+          "overview": "This project addresses the challenge of translating natural language questions into SQL queries on large-scale, enterprise-grade databases. It introduces a lightweight Retrieval-Augmented Generation (RAG) pipeline optimized for the Spider 2.0-Snow benchmark using schema-aware vector search, a dual-agent architecture, and minimal model usage.",
+      "challenges": [
+        "Low accuracy of existing text-to-SQL models on large and complex enterprise schemas",
+        "High compute cost and carbon emissions of LLM-heavy pipelines",
+        "Handling ambiguous user questions and under-documented schema elements",
+        "Avoiding prompt overflow from overly wide or noisy table structures"
+      ],
+      "solution": [
+        "Designed a dual-agent loop (Generator + Checker) to generate and validate SQL queries iteratively",
+        "Condensed schema using parameterized templates and LLM-generated documentation for under-described tables",
+        "Implemented hybrid sparse+dense retrieval with Qdrant to maximize relevant context inclusion",
+        "Limited LLM usage to ≤6 calls and ≤3 DB queries per task using o3-mini, slashing compute and emissions"
+      ],
+      "impact": [
+        "Achieved 33.24% execution accuracy on Spider 2.0-Snow (74% stratified split), approaching SoTA despite minimal resources",
+        "Reduced token usage by ~50% vs competing systems while improving retrieval and verification quality",
+        "Created a reproducible, live-database-ready evaluation framework for real-world enterprise text-to-SQL",
+        "Demonstrated that schema quality and context selection can rival raw model size in driving performance"
+      ],
+      "technicalDetails": "The system is built in Python with LangChain orchestration, using OpenAI o3-mini for inference. Retrieval uses hybrid sparse/dense embedding storage in Qdrant, and schema elements are compressed and enriched prior to model input. Execution accuracy is computed live on Snowflake using SQL validation with fallback and retry logic. Evaluation is stratified across 405 natural language questions from the Spider 2.0-Snow benchmark."
+    }
     },
     {
       title: "Data Pipeline Automation",
