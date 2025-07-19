@@ -139,6 +139,38 @@ const Projects = () => {
       }
     },
     {
+      title: "Data Science Assignments",
+      description: "Built a robust web scraping framework for real estate data collection, handling dynamic websites and large-scale data extraction.",
+      technologies: ["Python", "Scrapy", "Selenium", "BeautifulSoup"],
+      year: "2022",
+      category: "Data Collection",
+      color: "red",
+      githubAccess: true,
+      githubLink: "https://github.com/paolocadei/DataScienceMethods",
+      detailedDescription: {
+        overview: "A comprehensive web scraping framework designed for large-scale data collection from dynamic real estate websites. The system handles complex JavaScript rendering, anti-bot measures, and provides reliable data extraction capabilities.",
+        challenges: [
+          "Bypassing sophisticated anti-bot detection systems",
+          "Handling dynamic content and JavaScript-heavy websites",
+          "Managing large-scale concurrent scraping operations",
+          "Maintaining data consistency across different website structures"
+        ],
+        solution: [
+          "Implemented rotating proxy pools with intelligent IP management",
+          "Combined Scrapy with Selenium for JavaScript-rendered content",
+          "Built adaptive parsing logic for varying website structures",
+          "Created comprehensive error handling and retry mechanisms"
+        ],
+        impact: [
+          "Successfully collected 2M+ property listings across 15 major cities",
+          "Achieved 99.8% uptime with robust error handling",
+          "Reduced data collection costs by 60% compared to third-party services",
+          "Created reusable framework adopted by 3 other projects"
+        ],
+        technicalDetails: "Built with Scrapy framework using custom middlewares for proxy rotation and user-agent spoofing. Integrated Selenium with headless Chrome for JavaScript execution. Implemented distributed scraping using Scrapyd for horizontal scaling."
+      }
+    },
+    {
       title: "Web Scraping Framework",
       description: "Built a robust web scraping framework for real estate data collection, handling dynamic websites and large-scale data extraction.",
       technologies: ["Python", "Scrapy", "Selenium", "BeautifulSoup"],
