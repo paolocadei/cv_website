@@ -6,11 +6,6 @@ const About = () => {
     <div className="min-h-screen bg-gray-50 py-12">
       <div className="container mx-auto px-6">
         <div className="max-w-4xl mx-auto">
-          {/* Header */}
-          <div className="text-center mb-12">
-            <h1 className="text-4xl font-bold text-slate-800 mb-4">About Me</h1>
-          </div>
-
           {/* Profile Section */}
           <div className="bg-white rounded-xl shadow-lg p-8 mb-8">
             <div className="flex flex-col lg:flex-row items-center gap-8">
