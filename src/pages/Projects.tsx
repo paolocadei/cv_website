@@ -113,7 +113,6 @@ const Projects = () => {
       category: "Data Collection",
       color: "red",
       githubAccess: true,
-      images: ["https://via.placeholder.com/800x600/dc2626/ffffff?text=Web+Scraping+Architecture"],
       detailedDescription: {
         overview: "A comprehensive web scraping framework designed for large-scale data collection from dynamic real estate websites. The system handles complex JavaScript rendering, anti-bot measures, and provides reliable data extraction capabilities.",
         challenges: [
