@@ -25,7 +25,7 @@ const Home = () => {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center sm:justify-start">
                 <a 
-                  href="https://raw.githubusercontent.com/paolocadei/cv_website/main/public/CV/Paolo_Cadei_CV.pdf" 
+                  href="https://github.com/paolocadei/cv_website/raw/main/public/CV/Paolo_Cadei_CV.pdf" 
                   download="Paolo_Cadei_CV.pdf" 
                   target="_blank" 
                   rel="noopener noreferrer"
