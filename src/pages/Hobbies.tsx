@@ -70,6 +70,9 @@ const Hobbies = () => {
   ];
 
   const [modalHobby, setModalHobby] = useState<string | null>(null);
+  const [visibleRecipes, setVisibleRecipes] = useState<{ [key: string]: boolean }>(
+    {}
+  );
 
   const getColorClasses = (color: string) => {
     const colorMap = {
