@@ -7,7 +7,7 @@ const Projects = () => {
     {
       title: "CustomerDataGPT",
       description: "Developed an LLM-powered RAG model in Python to answer natural language questions about GCP tables, generate SQL queries, and provide insights. Integrated with Slack for seamless user interaction.",
-      technologies: ["Python", "Pandas", "Scikit-learn", "Tableau"],
+      technologies: ["Python", "GCP", "Slack API/APP", "RAG LLM", "Qdrant (Vector Database)"],
       year: "2024",
       category: "Machine Learning",
       color: "blue"
