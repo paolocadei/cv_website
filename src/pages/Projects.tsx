@@ -592,10 +592,6 @@ const Projects = () => {
                     {selectedProject.githubAccess ? <Github className="w-5 h-5 mr-2" /> : <Lock className="w-5 h-5 mr-2" />}
                     {selectedProject.githubAccess ? 'View Source Code' : 'Access Restricted'}
                   </button>
-                  <button className="flex items-center justify-center px-6 py-3 bg-orange-600 text-white rounded-lg hover:bg-orange-700 transition-colors">
-                    <ExternalLink className="w-5 h-5 mr-2" />
-                    Live Demo
-                  </button>
                 </div>
               </div>
             </div>
