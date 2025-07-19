@@ -12,7 +12,7 @@ const About = () => {
             <div className="flex flex-col lg:flex-row items-center gap-8">
               <div className="w-48 h-48 rounded-full overflow-hidden shadow-lg">
                 <img 
-                  src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=400" 
+                  src={paoloPhoto} 
                   alt="Paolo Cadei" 
                   className="w-full h-full object-cover"
                 />
