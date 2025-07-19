@@ -38,9 +38,9 @@ const Projects = () => {
       }
     },
     {
-      title: "Real Estate Price Prediction",
-      description: "Built a machine learning model to predict Amsterdam housing prices using web-scraped data, achieving 85% accuracy with Random Forest regression.",
-      technologies: ["Python", "Scrapy", "XGBoost", "BeautifulSoup"],
+      title: "A Lean Retrieval-Augmented LLM Pipeline for Enterprise-Scale Text-to-SQL",
+      description: "Built a cost-efficient, agentic LLM pipeline for the Spider 2.0-Snow benchmark using retrieval-augmented generation (RAG), schema compression, and hybrid vector search to translate natural language into SQL with strong performance and minimal compute.",
+      technologies: ["Python", "OpenAI o3-mini", "Qdrant", "RAG LLM", "Snowflake"],
       year: "2023",
       category: "Data Science",
       color: "green",
