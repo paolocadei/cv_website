@@ -24,15 +24,19 @@ const Home = () => {
                 Love all things data — especially passionate about LLMs, AI, and anything that automates and makes life easier. Currently pursuing a Master's in Data Science and Business Analytics at the University of Amsterdam, with hands-on experience in business intelligence, data engineering, and machine learning.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center sm:justify-start">
-                <button className="bg-white text-orange-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-center justify-center">
+                <a 
+                  href="/Paolo_Cadei_CV.pdf" 
+                  download 
+                  className="bg-white text-orange-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-center justify-center"
+                >
                   <Download className="w-5 h-5 mr-2" />
                   Download CV
-                </button>
+                </a>
                 <button className="bg-orange-700 text-white px-8 py-3 rounded-lg font-semibold hover:bg-orange-800 transition-colors flex items-center justify-center">
                   <Mail className="w-5 h-5 mr-2" />
                   Contact Me
                 </button>
-              </div>
+              </div> 
             </div>
             <div className="lg:w-1/3 flex justify-center">
               <div className="w-64 h-64 rounded-full bg-white/20 backdrop-blur-sm border-4 border-white/30 shadow-2xl overflow-hidden">
