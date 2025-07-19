@@ -71,38 +71,6 @@ const Projects = () => {
       }
     },
     {
-      title: "Data Pipeline Automation",
-      description: "Designed and implemented an automated ETL pipeline using Apache Airflow and dbt for processing daily sales data from multiple sources.",
-      technologies: ["dbt", "Apache Airflow", "PostgreSQL", "Docker"],
-      year: "2024",
-      category: "Data Engineering",
-      color: "purple",
-      githubAccess: false,
-      image: "./images/data-pipeline-flow.png", // Add your image path here
-      detailedDescription: {
-        overview: "A scalable, automated data pipeline solution that processes daily sales data from multiple sources, transforms it using dbt, and orchestrates workflows with Apache Airflow. The system ensures data quality, reliability, and timely delivery of business-critical insights.",
-        challenges: [
-          "Managing complex dependencies between data sources",
-          "Ensuring data quality and consistency across transformations",
-          "Handling varying data volumes and processing times",
-          "Implementing robust error handling and recovery mechanisms"
-        ],
-        solution: [
-          "Designed modular dbt models with clear lineage and documentation",
-          "Implemented Airflow DAGs with dynamic task generation and smart retries",
-          "Created comprehensive data quality tests and monitoring alerts",
-          "Built containerized deployment with Docker for consistent environments"
-        ],
-        impact: [
-          "Reduced manual data processing time from 8 hours to 30 minutes",
-          "Improved data accuracy by 99.5% through automated quality checks",
-          "Enabled real-time business intelligence reporting",
-          "Decreased data pipeline maintenance overhead by 70%"
-        ],
-        technicalDetails: "Built with Apache Airflow 2.0+ using TaskGroups and XComs for complex workflows. Implemented dbt with Jinja templating for dynamic SQL generation. Used PostgreSQL with partitioning for optimal performance and Docker Compose for local development."
-      }
-    },
-    {
       title: "Business Intelligence Dashboard",
       description: "Created an interactive executive dashboard in Tableau for KPI monitoring and performance analysis, serving 50+ stakeholders across different departments.",
       technologies: ["Tableau", "SQL", "PostgreSQL", "Data Modeling"],
@@ -132,38 +100,6 @@ const Projects = () => {
           "Increased meeting efficiency with pre-built analytical insights"
         ],
         technicalDetails: "Built using Tableau Server with custom SQL connectors to PostgreSQL. Implemented row-level security for data governance. Created calculated fields with complex business logic and custom color palettes for brand consistency."
-      }
-    },
-    {
-      title: "LLM-Powered Data Query System",
-      description: "Developed an intelligent RAG model that interprets natural language questions and generates SQL queries for seamless database interaction.",
-      technologies: ["Python", "LLM", "RAG", "GCP", "Vertex AI"],
-      year: "2024",
-      category: "AI/ML",
-      color: "indigo",
-      githubAccess: true,
-      image: "./images/llm-query-system.png", // Add your image path here
-      detailedDescription: {
-        overview: "An advanced natural language to SQL system that bridges the gap between business users and complex databases. Using cutting-edge LLM technology and RAG architecture, the system enables intuitive data exploration through conversational interfaces.",
-        challenges: [
-          "Mapping natural language to complex SQL join operations",
-          "Handling schema evolution and maintaining query accuracy",
-          "Ensuring secure and efficient query execution",
-          "Managing context and maintaining conversation flow"
-        ],
-        solution: [
-          "Implemented semantic schema mapping using vector embeddings",
-          "Built query validation and optimization layer for safety",
-          "Created conversational memory system for context preservation",
-          "Developed feedback loop for continuous model improvement"
-        ],
-        impact: [
-          "Reduced average query formulation time from 20 minutes to 30 seconds",
-          "Enabled 150+ business users to access data independently",
-          "Achieved 92% query success rate with natural language inputs",
-          "Decreased IT support tickets for data requests by 75%"
-        ],
-        technicalDetails: "Leveraged Vertex AI's PaLM 2 model with custom fine-tuning on domain-specific queries. Implemented using LangChain framework with custom chains for query generation and validation. Deployed on GCP Cloud Run with automatic scaling."
       }
     },
     {
