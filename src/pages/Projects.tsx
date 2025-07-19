@@ -100,7 +100,7 @@ const Projects = () => {
           "Enabled data-driven decision",
           
         ],
-        technicalDetails: "Built using Tableau and dbt with custom SQL connectors to PostgreSQL. Implemented row-level security for data governance. Created calculated fields with complex business logic and custom color palettes for brand consistency."
+        technicalDetails: "Built using Tableau and dbt with custom SQL connectors to PostgreSQL. Created models in dbt as well as calculated fields with complex business logic."
       }
     },
     {
