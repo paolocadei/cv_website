@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { 
   Heart, BookOpen, Mountain, Brain, Gamepad2, 
   Camera, ChefHat 
@@ -36,23 +36,28 @@ const Hobbies = () => {
       description: "Strategic board games combine fun with analytical thinking. I enjoy both competitive and cooperative games with friends and family.",
       icon: Gamepad2,
       color: "orange",
-      activities: ["Strategy games", "Social gaming", "Game nights", "Competitive play", "Least amount of luck games"]
+      activities: ["Strategy games", "Social gaming", "Game nights", "Competitive play", "Least amount of luck games"],
+      moreInfo: "Board games stimulate my strategic thinking and social skills. I love classics like Catan, cooperative games like Pandemic, and chess."
     },
     {
       name: "Cooking",
       description: "I'm Italian...no more needs to be said !!!",
       icon: ChefHat,
       color: "red",
-      activities: ["International cuisine", "Relaxation", "Healthy cooking"]
+      activities: ["International cuisine", "Relaxation", "Healthy cooking"],
+      moreInfo: "Cooking is my creative outlet. I enjoy experimenting with traditional Italian recipes and exploring other cuisines."
     },
     {
       name: "Photography",
       description: "Capturing moments and exploring composition through photography. I particularly enjoy landscape and street photography during travels.",
       icon: Camera,
       color: "pink",
-      activities: ["Landscape photography", "Street photography", "Travel documentation", "Photo editing"]
+      activities: ["Landscape photography", "Street photography", "Travel documentation", "Photo editing"],
+      moreInfo: "Photography allows me to see the world differently. I focus on light, composition, and storytelling through images."
     }
   ];
+
+  const [modalHobby, setModalHobby] = useState<string | null>(null);
 
   const getColorClasses = (color: string) => {
     const colorMap = {
@@ -66,6 +71,29 @@ const Hobbies = () => {
     };
     return colorMap[color as keyof typeof colorMap] || colorMap.blue;
   };
+
+  // Modal component
+  const Modal = ({ hobbyName, content, onClose }: { hobbyName: string, content: string, onClose: () => void }) => (
+    <div 
+      className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50"
+      onClick={onClose}
+    >
+      <div
+        className="bg-white rounded-lg max-w-lg p-6 relative"
+        onClick={e => e.stopPropagation()} // prevent modal close when clicking inside modal
+      >
+        <button 
+          onClick={onClose} 
+          className="absolute top-3 right-3 text-gray-600 hover:text-gray-900 font-bold text-xl"
+          aria-label="Close modal"
+        >
+          &times;
+        </button>
+        <h3 className="text-2xl font-bold mb-4">{hobbyName}</h3>
+        <p className="text-gray-700">{content}</p>
+      </div>
+    </div>
+  );
 
   return (
     <div className="min-h-screen bg-gray-50 py-12">
@@ -96,12 +124,22 @@ const Hobbies = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
             {hobbies.map((hobby, index) => {
               const IconComponent = hobby.icon;
+              const colorClasses = getColorClasses(hobby.color);
+              const textColor = colorClasses.split(' ')[2]; // e.g. text-orange-600
+              const bgColor = textColor.replace('text-', 'bg-'); // e.g. bg-orange-600
+
+              // For hobbies with moreInfo, we add a button to open modal
+              const hasMoreInfo = !!hobby.moreInfo;
+
               return (
-                <div key={index} className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group">
+                <div 
+                  key={index} 
+                  className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group"
+                >
                   <div className="p-8">
                     <div className="flex items-center mb-6">
-                      <div className={`bg-gradient-to-r ${getColorClasses(hobby.color)} p-4 rounded-lg mr-4 border`}>
-                        <IconComponent className={`w-8 h-8 ${getColorClasses(hobby.color).split(' ')[2]}`} />
+                      <div className={`bg-gradient-to-r ${colorClasses} p-4 rounded-lg mr-4 border`}>
+                        <IconComponent className={`w-8 h-8 ${textColor}`} />
                       </div>
                       <h3 className="text-2xl font-bold text-slate-800 group-hover:text-orange-600 transition-colors">
                         {hobby.name}
@@ -117,7 +155,7 @@ const Hobbies = () => {
                       <div className="grid grid-cols-2 gap-2">
                         {hobby.activities.map((activity, actIndex) => (
                           <div key={actIndex} className="flex items-center text-sm text-gray-600">
-                            <span className={`w-2 h-2 rounded-full mr-2 ${getColorClasses(hobby.color).split(' ')[2].replace('text-', 'bg-')}`}></span>
+                            <span className={`w-2 h-2 rounded-full mr-2 ${bgColor}`}></span>
                             {activity}
                           </div>
                         ))}
@@ -130,11 +168,20 @@ const Hobbies = () => {
                           href={hobby.link.url}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className={`inline-block text-sm font-medium ${getColorClasses(hobby.color).split(' ')[2]} hover:underline`}
+                          className={`inline-block text-sm font-medium ${textColor} hover:underline`}
                         >
                           {hobby.link.text}
                         </a>
                       </div>
+                    )}
+
+                    {hasMoreInfo && (
+                      <button
+                        onClick={() => setModalHobby(hobby.name)}
+                        className={`mt-6 inline-block bg-gradient-to-r ${colorClasses} px-4 py-2 rounded font-semibold text-white hover:brightness-90 transition`}
+                      >
+                        Learn More
+                      </button>
                     )}
                   </div>
                 </div>
@@ -180,6 +227,14 @@ const Hobbies = () => {
             </p>
           </div>
 
+          {/* Modal */}
+          {modalHobby && (
+            <Modal
+              hobbyName={modalHobby}
+              content={hobbies.find(h => h.name === modalHobby)?.moreInfo || "More info coming soon."}
+              onClose={() => setModalHobby(null)}
+            />
+          )}
         </div>
       </div>
     </div>
