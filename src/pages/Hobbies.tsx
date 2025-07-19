@@ -36,7 +36,7 @@ const Hobbies = () => {
       description: "Strategic board games combine fun with analytical thinking. I enjoy both competitive and cooperative games with friends and family.",
       icon: Gamepad2,
       color: "orange",
-      activities: ["Strategy games", "Social gaming", "Game nights", "Competitive play"]
+      activities: ["Strategy games", "Social gaming", "Game nights", "Competitive play", "Least amount of luck games"]
     },
     {
       name: "Data Science Projects",
