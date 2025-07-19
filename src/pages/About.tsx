@@ -1,6 +1,6 @@
 import React from 'react';
 import { Code, Globe, MapPin, Phone, Mail, Linkedin } from 'lucide-react';
-import paoloPhoto from '../images/IMG_20210627_131204.jpg'; // ✅ Import local image
+import paoloPhoto from '../images/IMG_20210627_131204.jpg';
 
 const About = () => {
   return (
