@@ -43,7 +43,7 @@ const Hobbies = () => {
       description: "I'm Italian",
       icon: ChefHat,
       color: "red",
-      activities: ["International cuisine", "Recipe experimentation", "Meal planning", "Healthy cooking"]
+      activities: ["International cuisine", "Relaxation", "Healthy cooking"]
     },
     {
       name: "Photography",
