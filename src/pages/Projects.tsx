@@ -137,7 +137,39 @@ const Projects = () => {
         ],
         technicalDetails: "Built with Scrapy framework using custom middlewares for proxy rotation and user-agent spoofing. Integrated Selenium with headless Chrome for JavaScript execution. Implemented distributed scraping using Scrapyd for horizontal scaling."
       }
+    },
+    {
+    title: "Reinforcement Learning (Small Projects)",
+    description: "Implemented and compared RL algorithms like Q-Learning, SARSA, and Monte Carlo to solve OpenAI Gym environments such as Cliff Walking and Taxi Driver.",
+    technologies: ["Python", "NumPy", "OpenAI Gym", "Matplotlib", "RL Algorithms"],
+    year: "2024",
+    category: "Reinforcement Learning",
+    color: "purple",
+    githubAccess: true,
+    githubLink: "https://github.com/paolocadei/reinforcement-learning-experiments",
+    detailedDescription: {
+      overview: "This project explores foundational reinforcement learning techniques applied to two classic control problems: Cliff Walking and Taxi Driver. Implemented and compared on-policy and off-policy algorithms with focus on value-based learning and exploration-exploitation trade-offs.",
+      challenges: [
+        "Tuning exploration parameters (ε, decay rates) for stable learning",
+        "Visualizing policy convergence in discrete state-action spaces",
+        "Avoiding divergence in off-policy methods without proper update control",
+        "Balancing fairness in episodic sampling for Monte Carlo methods"
+      ],
+      solution: [
+        "Implemented tabular versions of SARSA, Q-learning, and Monte Carlo control from scratch",
+        "Used ε-greedy and decayed ε strategies for exploration control",
+        "Tracked cumulative reward and policy evolution over episodes",
+        "Built visual heatmaps to compare learned policies across algorithms"
+      ],
+      impact: [
+        "Demonstrated clear differences in stability and convergence speed between SARSA and Q-learning",
+        "Validated that Monte Carlo control performs well with sufficient episodes but slower convergence",
+        "Gained intuition on algorithmic bias from on-policy vs off-policy learning",
+        "Created reproducible, well-documented experiments for teaching and analysis"
+      ],
+      technicalDetails: "Built in Python using NumPy and OpenAI Gym's built-in `CliffWalking-v0` and `Taxi-v3` environments. Results visualized using Matplotlib. All RL logic implemented manually to avoid reliance on high-level libraries like Stable Baselines. Each algorithm includes logging, evaluation scripts, and reproducibility seeds."
     }
+  }
   ];
 
   const getColorClasses = (color) => {
