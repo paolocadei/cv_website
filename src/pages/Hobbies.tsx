@@ -13,7 +13,7 @@ const Hobbies = () => {
       color: "blue",
       activities: ["Technical books", "Philosophy", "Science fiction", "Biographies"],
       link: {
-        url: "https://www.goodreads.com/YOUR_GOODREADS_PROFILE",
+        url: "https://www.goodreads.com/user/show/166373035-paolo",
         text: "Follow me on Goodreads"
       }
     },
