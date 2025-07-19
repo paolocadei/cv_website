@@ -91,16 +91,13 @@ const Projects = () => {
           "Ensuring real-time data accuracy and consistency"
         ],
         solution: [
-          "Designed star schema data model for optimal query performance",
           "Created role-based dashboard views with personalized KPI sets",
           "Implemented real-time data connections with automated refresh schedules",
           "Built interactive drill-down capabilities for detailed analysis"
         ],
         impact: [
-          "Reduced executive reporting preparation time by 80%",
           "Improved cross-departmental visibility and alignment",
-          "Enabled data-driven decision making for 50+ stakeholders",
-          "Increased meeting efficiency with pre-built analytical insights"
+          "Enabled data-driven decision"
         ],
         technicalDetails: "Built using Tableau Server with custom SQL connectors to PostgreSQL. Implemented row-level security for data governance. Created calculated fields with complex business logic and custom color palettes for brand consistency."
       }
