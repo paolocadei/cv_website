@@ -26,27 +26,39 @@ const Hobbies = () => {
     },
     {
       name: "Board Games",
-      description: "Strategic board games combine fun with analytical thinking. I enjoy both competitive and cooperative games with friends and family.",
       icon: Gamepad2,
-      color: "orange",
-      activities: ["Strategy games", "Social gaming", "Game nights", "Competitive play", "Least amount of luck games"],
-      moreInfo: "Board games stimulate my strategic thinking and social skills. I love classics like Catan, cooperative games like Pandemic, and chess."
+      color: "indigo",
+      description: "I enjoy strategic and social board games that bring friends together.",
+      activities: [
+        "Strategy games",
+        "Cooperative games",
+        "Family-friendly games",
+        "Solo campaigns",
+      ],
     },
     {
       name: "Cooking",
-      description: "I'm Italian...no more needs to be said !!!",
       icon: ChefHat,
       color: "red",
-      activities: ["International cuisine", "Relaxation", "Healthy cooking"],
-      moreInfo: "Cooking is my creative outlet. I enjoy experimenting with traditional Italian recipes and exploring other cuisines."
+      description: "Being Italian, cooking is a passion, especially traditional recipes.",
+      activities: [
+        "Pasta dishes",
+        "Baking bread",
+        "Desserts",
+        "Seasonal cooking",
+      ],
     },
     {
       name: "Photography",
-      description: "Capturing moments and exploring composition through photography. I particularly enjoy landscape and street photography during travels.",
       icon: Camera,
       color: "pink",
-      activities: ["Landscape photography", "Street photography", "Travel documentation", "Photo editing"],
-      moreInfo: "Photography allows me to see the world differently. I focus on light, composition, and storytelling through images."
+      description: "Photography helps me capture moments and improve my artistic eye.",
+      activities: [
+        "Landscape photos",
+        "Street photography",
+        "Portrait shots",
+        "Black & white",
+      ],
     },
     {
       name: "Bouldering",
