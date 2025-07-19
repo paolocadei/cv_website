@@ -18,13 +18,6 @@ const Hobbies = () => {
       }
     },
     {
-      name: "Bouldering",
-      description: "Rock climbing challenges both my physical and mental strength. I enjoy the problem-solving aspect and the community at climbing gyms.",
-      icon: Mountain,
-      color: "green",
-      activities: ["Indoor climbing", "Problem solving", "Strength training", "Community events"]
-    },
-    {
       name: "Meditating",
       description: "Daily meditation helps me maintain focus and mental clarity. I practice mindfulness and breathing techniques for a calm daily life.",
       icon: Brain,
@@ -54,6 +47,13 @@ const Hobbies = () => {
       color: "pink",
       activities: ["Landscape photography", "Street photography", "Travel documentation", "Photo editing"],
       moreInfo: "Photography allows me to see the world differently. I focus on light, composition, and storytelling through images."
+    },
+    {
+      name: "Bouldering",
+      description: "Rock climbing challenges both my physical and mental strength. I enjoy the problem-solving aspect and the community at climbing gyms.",
+      icon: Mountain,
+      color: "green",
+      activities: ["Indoor climbing", "Problem solving", "Strength training", "Community events"]
     }
   ];
 
