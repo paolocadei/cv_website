@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
-import { FolderOpen, ExternalLink, Github, Calendar, Code, Mail, X, ChevronRight } from 'lucide-react';
+import { FolderOpen, ExternalLink, Github, Calendar, Code, Mail, X, ChevronRight, Lock } from 'lucide-react';
 
 const Projects = () => {
   const [selectedProject, setSelectedProject] = useState(null);
+  const [showAccessDenied, setShowAccessDenied] = useState(false);
 
   const projects = [
     {
@@ -12,6 +13,7 @@ const Projects = () => {
       year: "2023-2024",
       category: "AI/ML Engineering",
       color: "blue",
+      githubAccess: false, // No access to this code
       detailedDescription: {
         overview: "CustomerDataGPT is an innovative LLM-powered application designed to democratize data access at IKEA by allowing non-technical stakeholders to query complex databases using natural language. The system leverages Retrieval-Augmented Generation (RAG) to provide accurate, contextual responses about customer data stored in Google Cloud Platform.",
         challenges: [
@@ -42,6 +44,7 @@ const Projects = () => {
       year: "2023",
       category: "Data Science",
       color: "green",
+      githubAccess: true, // Public access
       detailedDescription: {
         overview: "A comprehensive machine learning project that predicts real estate prices in Amsterdam by analyzing market trends, property features, and neighborhood characteristics. The system combines web scraping, feature engineering, and advanced ML algorithms to deliver accurate price predictions.",
         challenges: [
@@ -72,6 +75,7 @@ const Projects = () => {
       year: "2024",
       category: "Data Engineering",
       color: "purple",
+      githubAccess: false, // No access to this code
       detailedDescription: {
         overview: "A scalable, automated data pipeline solution that processes daily sales data from multiple sources, transforms it using dbt, and orchestrates workflows with Apache Airflow. The system ensures data quality, reliability, and timely delivery of business-critical insights.",
         challenges: [
@@ -102,6 +106,7 @@ const Projects = () => {
       year: "2023",
       category: "Business Intelligence",
       color: "orange",
+      githubAccess: false, // No access to this code
       detailedDescription: {
         overview: "A comprehensive business intelligence solution that provides real-time visibility into key performance indicators across multiple departments. The dashboard serves as a central hub for executive decision-making and departmental performance tracking.",
         challenges: [
@@ -132,6 +137,7 @@ const Projects = () => {
       year: "2024",
       category: "AI/ML",
       color: "indigo",
+      githubAccess: true, // Public access
       detailedDescription: {
         overview: "An advanced natural language to SQL system that bridges the gap between business users and complex databases. Using cutting-edge LLM technology and RAG architecture, the system enables intuitive data exploration through conversational interfaces.",
         challenges: [
@@ -162,6 +168,7 @@ const Projects = () => {
       year: "2022",
       category: "Data Collection",
       color: "red",
+      githubAccess: true, // Public access
       detailedDescription: {
         overview: "A comprehensive web scraping framework designed for large-scale data collection from dynamic real estate websites. The system handles complex JavaScript rendering, anti-bot measures, and provides reliable data extraction capabilities.",
         challenges: [
@@ -209,6 +216,16 @@ const Projects = () => {
     document.body.style.overflow = 'unset';
   };
 
+  const handleGithubClick = (project) => {
+    if (!project.githubAccess) {
+      setShowAccessDenied(true);
+      setTimeout(() => setShowAccessDenied(false), 3000);
+    } else {
+      // Open GitHub link - you can customize this URL
+      window.open(`https://github.com/paolocadei/${project.title.toLowerCase().replace(/\s+/g, '-')}`, '_blank');
+    }
+  };
+
   return (
     <div className="min-h-screen bg-gray-50 py-12">
       <div className="container mx-auto px-6">
@@ -218,6 +235,14 @@ const Projects = () => {
             <h1 className="text-4xl font-bold text-slate-800 mb-4">Projects Portfolio</h1>
             <p className="text-xl text-gray-600">Showcasing my work</p>
           </div>
+
+          {/* Access Denied Toast */}
+          {showAccessDenied && (
+            <div className="fixed top-4 right-4 z-50 bg-red-100 border border-red-400 text-red-700 px-6 py-4 rounded-lg shadow-lg flex items-center animate-bounce">
+              <Lock className="w-5 h-5 mr-2" />
+              <span className="font-semibold">Sorry... Access denied for permission reasons</span>
+            </div>
+          )}
 
           {/* Projects Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -244,8 +269,16 @@ const Projects = () => {
                       </div>
                     </div>
                     <div className="flex space-x-2">
-                      <button className="p-2 text-gray-400 hover:text-orange-600 transition-colors">
-                        <Github className="w-5 h-5" />
+                      <button 
+                        onClick={() => handleGithubClick(project)}
+                        className={`p-2 transition-colors ${
+                          project.githubAccess 
+                            ? 'text-gray-400 hover:text-orange-600' 
+                            : 'text-gray-300 hover:text-red-500'
+                        }`}
+                        title={project.githubAccess ? 'View source code' : 'Access restricted'}
+                      >
+                        {project.githubAccess ? <Github className="w-5 h-5" /> : <Lock className="w-5 h-5" />}
                       </button>
                       <button className="p-2 text-gray-400 hover:text-orange-600 transition-colors">
                         <ExternalLink className="w-5 h-5" />
@@ -443,9 +476,17 @@ const Projects = () => {
 
                 {/* Action Buttons */}
                 <div className="flex flex-col sm:flex-row gap-4 pt-6 border-t border-gray-200">
-                  <button className="flex items-center justify-center px-6 py-3 bg-gray-800 text-white rounded-lg hover:bg-gray-900 transition-colors">
-                    <Github className="w-5 h-5 mr-2" />
-                    View Source Code
+                  <button 
+                    onClick={() => handleGithubClick(selectedProject)}
+                    className={`flex items-center justify-center px-6 py-3 rounded-lg transition-colors ${
+                      selectedProject.githubAccess 
+                        ? 'bg-gray-800 text-white hover:bg-gray-900' 
+                        : 'bg-gray-300 text-gray-500 cursor-not-allowed'
+                    }`}
+                    disabled={!selectedProject.githubAccess}
+                  >
+                    {selectedProject.githubAccess ? <Github className="w-5 h-5 mr-2" /> : <Lock className="w-5 h-5 mr-2" />}
+                    {selectedProject.githubAccess ? 'View Source Code' : 'Access Restricted'}
                   </button>
                   <button className="flex items-center justify-center px-6 py-3 bg-orange-600 text-white rounded-lg hover:bg-orange-700 transition-colors">
                     <ExternalLink className="w-5 h-5 mr-2" />
