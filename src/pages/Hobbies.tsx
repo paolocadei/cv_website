@@ -39,15 +39,8 @@ const Hobbies = () => {
       activities: ["Strategy games", "Social gaming", "Game nights", "Competitive play", "Least amount of luck games"]
     },
     {
-      name: "Data Science Projects",
-      description: "Working on personal data science projects keeps me learning and exploring new techniques outside of work and studies.",
-      icon: Brain,
-      color: "indigo",
-      activities: ["Personal projects", "New technologies", "Open source", "Kaggle competitions"]
-    },
-    {
       name: "Cooking",
-      description: "Experimenting with different cuisines and techniques. I find cooking relaxing and enjoy the creative process of combining flavors.",
+      description: "I'm Italian",
       icon: ChefHat,
       color: "red",
       activities: ["International cuisine", "Recipe experimentation", "Meal planning", "Healthy cooking"]
