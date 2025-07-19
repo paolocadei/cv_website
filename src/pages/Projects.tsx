@@ -146,7 +146,7 @@ const Projects = () => {
       category: "Reinforcement Learning",
       color: "purple",
       githubAccess: true,
-      githubLink: "https://github.com/paolocadei/reinforcement-learning-experiments",
+      githubLink: "https://github.com/paolocadei/Reinforcement-Deep-Learning",
       detailedDescription: {
         overview: "This project explores fundamental reinforcement learning algorithms applied to two environments: a custom-built Cliff Walking gridworld and OpenAI Gym's Taxi-v3. Implementations include Q-Learning, SARSA, and Monte Carlo control, with a focus on value function learning and exploration strategies.",
         challenges: [
