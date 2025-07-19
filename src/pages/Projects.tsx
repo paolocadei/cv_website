@@ -171,11 +171,21 @@ const Projects = () => {
     }
   };
 
-  const handleImageError = (projectTitle) => {
+  const handleImageError = (imagePath) => {
     setImageError(prev => ({
       ...prev,
-      [projectTitle]: true
+      [imagePath]: true
     }));
+  };
+
+  // Get images for a project (handles both single image and multiple images)
+  const getProjectImages = (project) => {
+    if (project.images && Array.isArray(project.images)) {
+      return project.images;
+    } else if (project.image) {
+      return [project.image];
+    }
+    return [];
   };
 
   return (
@@ -361,27 +371,31 @@ const Projects = () => {
             {/* Modal Content - Scrollable */}
             <div className="overflow-y-auto max-h-[calc(90vh-120px)] p-6">
               <div className="space-y-8">
-                {/* Project Image */}
-                {selectedProject.image && (
+                {/* Project Images */}
+                {getProjectImages(selectedProject).length > 0 && (
                   <section>
                     <h3 className="text-xl font-bold text-slate-800 mb-4">Project Preview</h3>
-                    <div className="rounded-lg overflow-hidden shadow-lg bg-gray-50">
-                      {!imageError[selectedProject.title] ? (
-                        <img 
-                          src={selectedProject.image} 
-                          alt={`${selectedProject.title} preview`}
-                          className="w-full h-64 object-cover hover:scale-105 transition-transform duration-300"
-                          onError={() => handleImageError(selectedProject.title)}
-                        />
-                      ) : (
-                        <div className="w-full h-64 flex items-center justify-center bg-gray-100">
-                          <div className="text-center text-gray-500">
-                            <Image className="w-12 h-12 mx-auto mb-2 opacity-50" />
-                            <p>Image not available</p>
-                            <p className="text-sm">({selectedProject.image})</p>
-                          </div>
+                    <div className={`grid gap-4 ${getProjectImages(selectedProject).length > 1 ? 'grid-cols-1 md:grid-cols-2' : 'grid-cols-1'}`}>
+                      {getProjectImages(selectedProject).map((imagePath, index) => (
+                        <div key={index} className="rounded-lg overflow-hidden shadow-lg bg-gray-50">
+                          {!imageError[imagePath] ? (
+                            <img 
+                              src={imagePath} 
+                              alt={`${selectedProject.title} preview ${index + 1}`}
+                              className="w-full h-64 object-cover hover:scale-105 transition-transform duration-300"
+                              onError={() => handleImageError(imagePath)}
+                            />
+                          ) : (
+                            <div className="w-full h-64 flex items-center justify-center bg-gray-100">
+                              <div className="text-center text-gray-500">
+                                <Image className="w-12 h-12 mx-auto mb-2 opacity-50" />
+                                <p>Image not available</p>
+                                <p className="text-sm">({imagePath})</p>
+                              </div>
+                            </div>
+                          )}
                         </div>
-                      )}
+                      ))}
                     </div>
                   </section>
                 )}
