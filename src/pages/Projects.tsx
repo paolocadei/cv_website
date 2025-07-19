@@ -140,34 +140,37 @@ const Projects = () => {
     },
     {
       title: "Data Science Assignments",
-      description: "Built a robust web scraping framework for real estate data collection, handling dynamic websites and large-scale data extraction.",
-      technologies: ["Python", "Scrapy", "Selenium", "BeautifulSoup"],
-      year: "2022",
-      category: "Data Collection",
-      color: "red",
+      description: "A collection of practical data science assignments covering supervised and unsupervised learning, regularization, regression, time series forecasting, text analysis, and advanced model selection using real-world datasets.",
+      technologies: [
+        "Python", "Pandas", "NumPy", "Scikit-learn", "Matplotlib", "Seaborn", 
+        "Statsmodels", "Jupyter Notebook"
+      ],
+      year: "2023",
+      category: "Machine Learning & Data Analysis",
+      color: "blue",
       githubAccess: true,
       githubLink: "https://github.com/paolocadei/DataScienceMethods",
       detailedDescription: {
-        overview: "A comprehensive web scraping framework designed for large-scale data collection from dynamic real estate websites. The system handles complex JavaScript rendering, anti-bot measures, and provides reliable data extraction capabilities.",
+        overview: "A comprehensive set of Jupyter notebook assignments implementing core data science methods, including data preprocessing, regression and classification, regularization, clustering, kernel methods, time series analysis, bagging and boosting, with thorough EDA and performance evaluation on standard and real-world datasets.",
         challenges: [
-          "Bypassing sophisticated anti-bot detection systems",
-          "Handling dynamic content and JavaScript-heavy websites",
-          "Managing large-scale concurrent scraping operations",
-          "Maintaining data consistency across different website structures"
+          "Structuring exploratory data analysis and feature engineering for noisy real-world datasets",
+          "Implementing and tuning a variety of supervised and unsupervised algorithms",
+          "Evaluating and visualizing model performance using best practices",
+          "Transitioning between regression and classification tasks efficiently within similar data domains"
         ],
         solution: [
-          "Implemented rotating proxy pools with intelligent IP management",
-          "Combined Scrapy with Selenium for JavaScript-rendered content",
-          "Built adaptive parsing logic for varying website structures",
-          "Created comprehensive error handling and retry mechanisms"
+          "Applied robust preprocessing pipelines and automated feature engineering using scikit-learn and pandas",
+          "Integrated and compared multiple regression and classification algorithms (linear regression, lasso, ridge, SVM, kNN, kernel ridge, ensemble methods, etc.)",
+          "Leveraged advanced visualization (Matplotlib, Seaborn) to communicate results and insights clearly",
+          "Explored unsupervised learning (clustering, density estimation), model selection, and regularization techniques"
         ],
         impact: [
-          "Successfully collected 2M+ property listings across 15 major cities",
-          "Achieved 99.8% uptime with robust error handling",
-          "Reduced data collection costs by 60% compared to third-party services",
-          "Created reusable framework adopted by 3 other projects"
+          "Created a modular and reusable codebase for common data science workflows",
+          "Improved predictive performance on multiple public datasets through iterative tuning and selection",
+          "Provided clear, educational notebooks used as teaching/example material for advanced data science methods",
+          "Enabled extension to new domains (text analysis, time series forecasting) beyond static tabular data"
         ],
-        technicalDetails: "Built with Scrapy framework using custom middlewares for proxy rotation and user-agent spoofing. Integrated Selenium with headless Chrome for JavaScript execution. Implemented distributed scraping using Scrapyd for horizontal scaling."
+        technicalDetails: "All assignments are developed in Jupyter Notebooks using Python 3, with extensive application of the scikit-learn ecosystem for modeling, regularization, ensemble methods, and pipeline management. Pandas and numpy are used for efficient data handling, while statsmodels supports statistical modeling and inference. Visualizations are crafted with matplotlib and seaborn. The repository features modular code with reproducible experiments and rich markdown explanations to aid understanding and teaching."
       }
     },
     {
