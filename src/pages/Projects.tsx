@@ -82,7 +82,6 @@ const Projects = () => {
       category: "Business Intelligence",
       color: "orange",
       githubAccess: false,
-      images: ["https://via.placeholder.com/800x600/ea580c/ffffff?text=BI+Dashboard+Preview"],
       detailedDescription: {
         overview: "A comprehensive business intelligence solution that provides real-time visibility into key performance indicators across multiple departments. The dashboard serves as a central hub for executive decision-making and departmental performance tracking.",
         challenges: [
