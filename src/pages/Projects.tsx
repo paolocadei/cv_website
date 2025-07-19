@@ -45,6 +45,8 @@ const Projects = () => {
       category: "AI/ML Engineering",
       color: "green",
       githubAccess: true, // Public access
+      image: './images/Master_Thesis/overview.png',
+      image: './images/Master_Thesis/question_answering_phase.png'
       detailedDescription: {
           "overview": "This project addresses the challenge of translating natural language questions into SQL queries on large-scale, enterprise-grade databases. It introduces a lightweight Retrieval-Augmented Generation (RAG) pipeline optimized for the Spider 2.0-Snow benchmark using schema-aware vector search, a dual-agent architecture, and minimal model usage.",
       "challenges": [
@@ -59,7 +61,6 @@ const Projects = () => {
         "Implemented hybrid sparse+dense retrieval with Qdrant to maximize relevant context inclusion",
         "Limited LLM usage to ≤6 calls and ≤3 DB queries per task using o3-mini, slashing compute and emissions"
       ],
-      "image": "/images/text-to-sql-pipeline.png",
       "impact": [
         "Achieved 33.24% execution accuracy on Spider 2.0-Snow (74% stratified split), approaching SoTA despite minimal resources",
         "Reduced token usage by ~50% vs competing systems while improving retrieval and verification quality",
