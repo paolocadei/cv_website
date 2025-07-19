@@ -5,7 +5,7 @@ import { FolderOpen, ExternalLink, Github, Calendar, Code, Mail } from 'lucide-r
 const Projects = () => {
   const projects = [
     {
-      title: "CustomerDataGPT",
+      title: "CustomerDataGPT (INGKA/IKEA DIGITAL)",
       description: "Developed an LLM-powered RAG model in Python to answer natural language questions about GCP tables, generate SQL queries, and provide insights. Integrated with Slack for seamless user interaction.",
       technologies: ["Python", "GCP", "Slack API/APP", "RAG LLM", "Qdrant (Vector Database)"],
       year: "2023-2024",
