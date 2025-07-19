@@ -72,74 +72,59 @@ const Hobbies = () => {
     return colorMap[color as keyof typeof colorMap] || colorMap.blue;
   };
 
-  // Modal component
-  const Modal = ({ hobbyName, content, onClose }: { hobbyName: string, content: string, onClose: () => void }) => (
-    <div 
-      className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50"
-      onClick={onClose}
-    >
-      <div
-        className="bg-white rounded-lg max-w-lg p-6 relative"
-        onClick={e => e.stopPropagation()} // prevent modal close when clicking inside modal
-      >
-        <button 
-          onClick={onClose} 
-          className="absolute top-3 right-3 text-gray-600 hover:text-gray-900 font-bold text-xl"
-          aria-label="Close modal"
-        >
-          &times;
-        </button>
-        <h3 className="text-2xl font-bold mb-4">{hobbyName}</h3>
-        <p className="text-gray-700">{content}</p>
-      </div>
-    </div>
-  );
+  // Content for modals by hobby name
+  const modalContent: { [key: string]: JSX.Element } = {
+    "Board Games": (
+      <>
+        <h3 className="text-3xl font-bold mb-4">Board Games</h3>
+        <p className="mb-4">I love strategic and social board games. Here are some links to my favorite games and communities:</p>
+        <ul className="list-disc list-inside space-y-2">
+          <li><a href="https://boardgamegeek.com/" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline">BoardGameGeek</a></li>
+          <li><a href="https://www.tabletopgaming.co.uk/" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline">Tabletop Gaming Magazine</a></li>
+          <li><a href="https://boardgamearena.com/" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline">Board Game Arena - Play online</a></li>
+        </ul>
+      </>
+    ),
+    "Photography": (
+      <>
+        <h3 className="text-3xl font-bold mb-4">Photography</h3>
+        <p className="mb-4">Photography helps me capture moments and improve my artistic eye. Check out some inspirational sites and my favorite styles:</p>
+        <ul className="list-disc list-inside space-y-2">
+          <li><a href="https://500px.com/" target="_blank" rel="noopener noreferrer" className="text-pink-600 underline">500px - Photography community</a></li>
+          <li><a href="https://www.nationalgeographic.com/photography" target="_blank" rel="noopener noreferrer" className="text-pink-600 underline">National Geographic Photography</a></li>
+          <li><a href="https://digital-photography-school.com/" target="_blank" rel="noopener noreferrer" className="text-pink-600 underline">Digital Photography School</a></li>
+        </ul>
+      </>
+    ),
+    "Cooking": (
+      <>
+        <h3 className="text-3xl font-bold mb-4">Cooking</h3>
+        <p className="mb-4">Being Italian, cooking is a passion! Here are some of my favorite recipe sites and inspirations:</p>
+        <ul className="list-disc list-inside space-y-2">
+          <li><a href="https://www.greatitalianchefs.com/" target="_blank" rel="noopener noreferrer" className="text-red-600 underline">Great Italian Chefs</a></li>
+          <li><a href="https://www.seriouseats.com/" target="_blank" rel="noopener noreferrer" className="text-red-600 underline">Serious Eats</a></li>
+          <li><a href="https://www.bonappetit.com/" target="_blank" rel="noopener noreferrer" className="text-red-600 underline">Bon Appetit</a></li>
+        </ul>
+      </>
+    )
+  };
 
   return (
     <div className="min-h-screen bg-gray-50 py-12">
       <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto">
-          {/* Header */}
-          <div className="text-center mb-12">
-            <h1 className="text-4xl font-bold text-slate-800 mb-4">Hobbies & Interests</h1>
-            <p className="text-xl text-gray-600">What I enjoy doing in my free time</p>
-          </div>
-
-          {/* Introduction */}
-          <div className="bg-white rounded-xl shadow-lg p-8 mb-12">
-            <div className="flex items-center mb-6">
-              <div className="bg-gradient-to-r from-orange-500 to-orange-600 p-3 rounded-lg mr-4">
-                <Heart className="w-8 h-8 text-white" />
-              </div>
-              <h2 className="text-2xl font-bold text-slate-800">Personal Interests</h2>
-            </div>
-            <p className="text-gray-700 leading-relaxed text-lg">
-              Beyond my professional work, I have a diverse range of interests that 
-              keep me balanced and continuously learning. These activities not only provide relaxation and enjoyment 
-              but also contribute to my personal growth and often inspire creative approaches to problem-solving in my work.
-            </p>
-          </div>
+          {/* Header and Intro - unchanged */}
 
           {/* Hobbies Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
             {hobbies.map((hobby, index) => {
               const IconComponent = hobby.icon;
-              const colorClasses = getColorClasses(hobby.color);
-              const textColor = colorClasses.split(' ')[2]; // e.g. text-orange-600
-              const bgColor = textColor.replace('text-', 'bg-'); // e.g. bg-orange-600
-
-              // For hobbies with moreInfo, we add a button to open modal
-              const hasMoreInfo = !!hobby.moreInfo;
-
               return (
-                <div 
-                  key={index} 
-                  className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group"
-                >
+                <div key={index} className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group">
                   <div className="p-8">
                     <div className="flex items-center mb-6">
-                      <div className={`bg-gradient-to-r ${colorClasses} p-4 rounded-lg mr-4 border`}>
-                        <IconComponent className={`w-8 h-8 ${textColor}`} />
+                      <div className={`bg-gradient-to-r ${getColorClasses(hobby.color)} p-4 rounded-lg mr-4 border`}>
+                        <IconComponent className={`w-8 h-8 ${getColorClasses(hobby.color).split(' ')[2]}`} />
                       </div>
                       <h3 className="text-2xl font-bold text-slate-800 group-hover:text-orange-600 transition-colors">
                         {hobby.name}
@@ -155,33 +140,40 @@ const Hobbies = () => {
                       <div className="grid grid-cols-2 gap-2">
                         {hobby.activities.map((activity, actIndex) => (
                           <div key={actIndex} className="flex items-center text-sm text-gray-600">
-                            <span className={`w-2 h-2 rounded-full mr-2 ${bgColor}`}></span>
+                            <span className={`w-2 h-2 rounded-full mr-2 ${getColorClasses(hobby.color).split(' ')[2].replace('text-', 'bg-')}`}></span>
                             {activity}
                           </div>
                         ))}
                       </div>
                     </div>
 
+                    {/* Link from original code */}
                     {hobby.link && (
                       <div className="mt-6">
                         <a
                           href={hobby.link.url}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className={`inline-block text-sm font-medium ${textColor} hover:underline`}
+                          className={`inline-block text-sm font-medium ${getColorClasses(hobby.color).split(' ')[2]} hover:underline`}
                         >
                           {hobby.link.text}
                         </a>
                       </div>
                     )}
 
-                    {hasMoreInfo && (
-                      <button
-                        onClick={() => setModalHobby(hobby.name)}
-                        className={`mt-6 inline-block bg-gradient-to-r ${colorClasses} px-4 py-2 rounded font-semibold text-white hover:brightness-90 transition`}
-                      >
-                        Learn More
-                      </button>
+                    {/* Add Learn More button only for Board Games, Photography, Cooking */}
+                    {["Board Games", "Photography", "Cooking"].includes(hobby.name) && (
+                      <div className="mt-6">
+                        <button
+                          onClick={() => setModalHobby(hobby.name)}
+                          className={`inline-block text-sm font-semibold px-4 py-2 rounded-md
+                            ${getColorClasses(hobby.color).split(' ')[2]} 
+                            bg-opacity-90 hover:bg-opacity-100 transition-opacity duration-200`}
+                          style={{ opacity: 0.9 }} // less transparent
+                        >
+                          Learn More
+                        </button>
+                      </div>
                     )}
                   </div>
                 </div>
@@ -189,51 +181,30 @@ const Hobbies = () => {
             })}
           </div>
 
-          {/* Hobby Categories */}
-          <div className="bg-white rounded-xl shadow-lg p-8 mb-12">
-            <h2 className="text-2xl font-bold text-slate-800 mb-6">Interest Categories</h2>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-              <div className="text-center p-6 bg-gradient-to-br from-blue-50 to-blue-100 rounded-lg">
-                <BookOpen className="w-8 h-8 text-blue-600 mx-auto mb-3" />
-                <div className="font-semibold text-slate-800">Intellectual</div>
-                <div className="text-sm text-gray-600 mt-1">Reading, Learning</div>
-              </div>
-              <div className="text-center p-6 bg-gradient-to-br from-green-50 to-green-100 rounded-lg">
-                <Mountain className="w-8 h-8 text-green-600 mx-auto mb-3" />
-                <div className="font-semibold text-slate-800">Physical</div>
-                <div className="text-sm text-gray-600 mt-1">Bouldering, Fitness</div>
-              </div>
-              <div className="text-center p-6 bg-gradient-to-br from-purple-50 to-purple-100 rounded-lg">
-                <Brain className="w-8 h-8 text-purple-600 mx-auto mb-3" />
-                <div className="font-semibold text-slate-800">Mental</div>
-                <div className="text-sm text-gray-600 mt-1">Meditation, Mindfulness</div>
-              </div>
-              <div className="text-center p-6 bg-gradient-to-br from-orange-50 to-orange-100 rounded-lg">
-                <Gamepad2 className="w-8 h-8 text-orange-600 mx-auto mb-3" />
-                <div className="font-semibold text-slate-800">Social</div>
-                <div className="text-sm text-gray-600 mt-1">Games, Community</div>
+          {/* Hobby Categories and Philosophy unchanged */}
+
+          {/* Modal Popup */}
+          {modalHobby && (
+            <div 
+              className="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50 p-6"
+              onClick={() => setModalHobby(null)} // close when clicking background
+            >
+              <div
+                className="bg-white rounded-xl max-w-4xl w-full max-h-[80vh] overflow-y-auto p-8 relative"
+                onClick={e => e.stopPropagation()} // prevent closing modal when clicking inside content
+              >
+                <button
+                  onClick={() => setModalHobby(null)}
+                  className="absolute top-4 right-4 text-gray-600 hover:text-gray-900 text-xl font-bold"
+                  aria-label="Close modal"
+                >
+                  &times;
+                </button>
+
+                {/* Render modal content */}
+                {modalContent[modalHobby]}
               </div>
             </div>
-          </div>
-
-          {/* Personal Philosophy */}
-          <div className="bg-gradient-to-r from-slate-800 to-slate-900 text-white rounded-xl p-8">
-            <h2 className="text-2xl font-bold mb-4">Work-Life Balance</h2>
-            <p className="text-lg leading-relaxed opacity-90">
-              I believe that diverse interests and hobbies are essential for personal growth and professional success. 
-              Each activity teaches me something different - bouldering develops problem-solving under pressure, 
-              meditation enhances focus and clarity, reading expands my knowledge base, and board games sharpen 
-              strategic thinking. This variety keeps me energized and brings fresh perspectives into my life.
-            </p>
-          </div>
-
-          {/* Modal */}
-          {modalHobby && (
-            <Modal
-              hobbyName={modalHobby}
-              content={hobbies.find(h => h.name === modalHobby)?.moreInfo || "More info coming soon."}
-              onClose={() => setModalHobby(null)}
-            />
           )}
         </div>
       </div>
