@@ -86,7 +86,7 @@ const Hobbies = () => {
               <h2 className="text-2xl font-bold text-slate-800">Personal Interests</h2>
             </div>
             <p className="text-gray-700 leading-relaxed text-lg">
-              Beyond my professional work in data science and analytics, I have a diverse range of interests that 
+              Beyond my professional work, I have a diverse range of interests that 
               keep me balanced and continuously learning. These activities not only provide relaxation and enjoyment 
               but also contribute to my personal growth and often inspire creative approaches to problem-solving in my work.
             </p>
