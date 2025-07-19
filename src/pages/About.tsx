@@ -36,7 +36,7 @@ const About = () => {
               </p>
               
               <p>
-                Throughout my journey in data, I’ve made a habit of turning complex concepts into “aha!” moments. I’ve worked in scrappy startup settings where I built data pipelines from scratch (and occasionally broke them for fun), and at large-scale companies like IKEA Digital, where I played with some of the coolest tech out there — think LLMs and RAG models that do more than just impress your manager at meetings.
+                Throughout my journey in data, I’ve made a habit of turning complex concepts into “aha!” moments. I’ve worked in scrappy startup settings where I built data pipelines from scratch, and at large-scale companies like IKEA Digital, where I played with some of the coolest tech out there — think LLMs and RAG models that do more than just impress your manager at meetings.
               </p>
               
               <p>
