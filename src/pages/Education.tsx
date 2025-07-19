@@ -117,7 +117,7 @@ const Education = () => {
                   </div>
                   <div className="flex items-center text-gray-600">
                     <Calendar className="w-5 h-5 mr-2" />
-                    <span className="font-semibold">2020 - 2024</span>
+                    <span className="font-semibold">2021 - 2024</span>
                   </div>
                 </div>
 
@@ -189,7 +189,7 @@ const Education = () => {
                   </div>
                   <div className="flex items-center text-gray-600">
                     <Calendar className="w-5 h-5 mr-2" />
-                    <span className="font-semibold">2019 - 2020</span>
+                    <span className="font-semibold">2020 - 2021</span>
                   </div>
                 </div>
 
@@ -245,7 +245,7 @@ const Education = () => {
                   </div>
                   <div className="flex items-center text-gray-600">
                     <Calendar className="w-5 h-5 mr-2" />
-                    <span className="font-semibold">2014 - 2019</span>
+                    <span className="font-semibold">2015 - 2020</span>
                   </div>
                 </div>
 
