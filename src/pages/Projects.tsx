@@ -114,6 +114,7 @@ const Projects = () => {
       category: "Data Collection",
       color: "red",
       githubAccess: true,
+      githubLink: "https://github.com/paolocadei/REIT-s-Scrapers",
       detailedDescription: {
         overview: "A comprehensive web scraping framework designed for large-scale data collection from dynamic real estate websites. The system handles complex JavaScript rendering, anti-bot measures, and provides reliable data extraction capabilities.",
         challenges: [
