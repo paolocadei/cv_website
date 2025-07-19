@@ -183,7 +183,7 @@ const Projects = () => {
       setShowAccessDenied(true);
       setTimeout(() => setShowAccessDenied(false), 3000);
     } else {
-      window.open(`https://github.com/paolocadei/${project.title.toLowerCase().replace(/\s+/g, '-')}`, '_blank');
+      window.open(project.githubLink, '_blank');
     }
   };
 
