@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
-import { FolderOpen, ExternalLink, Github, Calendar, Code, Mail, X, ChevronRight, Lock } from 'lucide-react';
+import { FolderOpen, ExternalLink, Github, Calendar, Code, Mail, X, ChevronRight, Lock, Image } from 'lucide-react';
 
 const Projects = () => {
   const [selectedProject, setSelectedProject] = useState(null);
   const [showAccessDenied, setShowAccessDenied] = useState(false);
+  const [imageError, setImageError] = useState({});
 
   const projects = [
     {
@@ -13,7 +14,7 @@ const Projects = () => {
       year: "2023-2024",
       category: "AI/ML Engineering",
       color: "blue",
-      githubAccess: false, // No access to this code
+      githubAccess: false,
       detailedDescription: {
         overview: "CustomerDataGPT is an innovative LLM-powered application designed to democratize data access at IKEA by allowing non-technical stakeholders to query complex databases using natural language. The system leverages Retrieval-Augmented Generation (RAG) to provide accurate, contextual responses about customer data stored in Google Cloud Platform.",
         challenges: [
@@ -44,31 +45,30 @@ const Projects = () => {
       year: "2025",
       category: "AI/ML Engineering",
       color: "green",
-      githubAccess: true, // Public access
-      image: '/images/Master_Thesis/overview.png',
-      image: '/images/Master_Thesis/question_answering_phase.png',
+      githubAccess: true,
+      image: "./images/Master_Thesis/overview.png", // Add your image path here
       detailedDescription: {
-          "overview": "This project addresses the challenge of translating natural language questions into SQL queries on large-scale, enterprise-grade databases. It introduces a lightweight Retrieval-Augmented Generation (RAG) pipeline optimized for the Spider 2.0-Snow benchmark using schema-aware vector search, a dual-agent architecture, and minimal model usage.",
-      "challenges": [
-        "Low accuracy of existing text-to-SQL models on large and complex enterprise schemas",
-        "High compute cost and carbon emissions of LLM-heavy pipelines",
-        "Handling ambiguous user questions and under-documented schema elements",
-        "Avoiding prompt overflow from overly wide or noisy table structures"
-      ],
-      "solution": [
-        "Designed a dual-agent loop (Generator + Checker) to generate and validate SQL queries iteratively",
-        "Condensed schema using parameterized templates and LLM-generated documentation for under-described tables",
-        "Implemented hybrid sparse+dense retrieval with Qdrant to maximize relevant context inclusion",
-        "Limited LLM usage to ≤6 calls and ≤3 DB queries per task using o3-mini, slashing compute and emissions"
-      ],
-      "impact": [
-        "Achieved 33.24% execution accuracy on Spider 2.0-Snow (74% stratified split), approaching SoTA despite minimal resources",
-        "Reduced token usage by ~50% vs competing systems while improving retrieval and verification quality",
-        "Created a reproducible, live-database-ready evaluation framework for real-world enterprise text-to-SQL",
-        "Demonstrated that schema quality and context selection can rival raw model size in driving performance"
-      ],
-      "technicalDetails": "The system is built in Python, using OpenAI o3-mini for inference. Retrieval uses hybrid sparse/dense embedding storage in Qdrant, and schema elements are compressed and enriched prior to model input. Execution accuracy is computed live on Snowflake using SQL validation with fallback and retry logic. Evaluation is stratified across 405 natural language questions from the Spider 2.0-Snow benchmark."
-    }
+        overview: "This project addresses the challenge of translating natural language questions into SQL queries on large-scale, enterprise-grade databases. It introduces a lightweight Retrieval-Augmented Generation (RAG) pipeline optimized for the Spider 2.0-Snow benchmark using schema-aware vector search, a dual-agent architecture, and minimal model usage.",
+        challenges: [
+          "Low accuracy of existing text-to-SQL models on large and complex enterprise schemas",
+          "High compute cost and carbon emissions of LLM-heavy pipelines",
+          "Handling ambiguous user questions and under-documented schema elements",
+          "Avoiding prompt overflow from overly wide or noisy table structures"
+        ],
+        solution: [
+          "Designed a dual-agent loop (Generator + Checker) to generate and validate SQL queries iteratively",
+          "Condensed schema using parameterized templates and LLM-generated documentation for under-described tables",
+          "Implemented hybrid sparse+dense retrieval with Qdrant to maximize relevant context inclusion",
+          "Limited LLM usage to ≤6 calls and ≤3 DB queries per task using o3-mini, slashing compute and emissions"
+        ],
+        impact: [
+          "Achieved 33.24% execution accuracy on Spider 2.0-Snow (74% stratified split), approaching SoTA despite minimal resources",
+          "Reduced token usage by ~50% vs competing systems while improving retrieval and verification quality",
+          "Created a reproducible, live-database-ready evaluation framework for real-world enterprise text-to-SQL",
+          "Demonstrated that schema quality and context selection can rival raw model size in driving performance"
+        ],
+        technicalDetails: "The system is built in Python, using OpenAI o3-mini for inference. Retrieval uses hybrid sparse/dense embedding storage in Qdrant, and schema elements are compressed and enriched prior to model input. Execution accuracy is computed live on Snowflake using SQL validation with fallback and retry logic. Evaluation is stratified across 405 natural language questions from the Spider 2.0-Snow benchmark."
+      }
     },
     {
       title: "Data Pipeline Automation",
@@ -77,7 +77,8 @@ const Projects = () => {
       year: "2024",
       category: "Data Engineering",
       color: "purple",
-      githubAccess: false, // No access to this code
+      githubAccess: false,
+      image: "./images/data-pipeline-flow.png", // Add your image path here
       detailedDescription: {
         overview: "A scalable, automated data pipeline solution that processes daily sales data from multiple sources, transforms it using dbt, and orchestrates workflows with Apache Airflow. The system ensures data quality, reliability, and timely delivery of business-critical insights.",
         challenges: [
@@ -108,7 +109,8 @@ const Projects = () => {
       year: "2023",
       category: "Business Intelligence",
       color: "orange",
-      githubAccess: false, // No access to this code
+      githubAccess: false,
+      image: "./images/tableau-dashboard.png", // Add your image path here
       detailedDescription: {
         overview: "A comprehensive business intelligence solution that provides real-time visibility into key performance indicators across multiple departments. The dashboard serves as a central hub for executive decision-making and departmental performance tracking.",
         challenges: [
@@ -139,7 +141,8 @@ const Projects = () => {
       year: "2024",
       category: "AI/ML",
       color: "indigo",
-      githubAccess: true, // Public access
+      githubAccess: true,
+      image: "./images/llm-query-system.png", // Add your image path here
       detailedDescription: {
         overview: "An advanced natural language to SQL system that bridges the gap between business users and complex databases. Using cutting-edge LLM technology and RAG architecture, the system enables intuitive data exploration through conversational interfaces.",
         challenges: [
@@ -170,7 +173,8 @@ const Projects = () => {
       year: "2022",
       category: "Data Collection",
       color: "red",
-      githubAccess: true, // Public access
+      githubAccess: true,
+      image: "./images/web-scraping-framework.png", // Add your image path here
       detailedDescription: {
         overview: "A comprehensive web scraping framework designed for large-scale data collection from dynamic real estate websites. The system handles complex JavaScript rendering, anti-bot measures, and provides reliable data extraction capabilities.",
         challenges: [
@@ -216,6 +220,7 @@ const Projects = () => {
   const closeProjectModal = () => {
     setSelectedProject(null);
     document.body.style.overflow = 'unset';
+    setImageError({});
   };
 
   const handleGithubClick = (project) => {
@@ -223,9 +228,15 @@ const Projects = () => {
       setShowAccessDenied(true);
       setTimeout(() => setShowAccessDenied(false), 3000);
     } else {
-      // Open GitHub link - you can customize this URL
       window.open(`https://github.com/paolocadei/${project.title.toLowerCase().replace(/\s+/g, '-')}`, '_blank');
     }
+  };
+
+  const handleImageError = (projectTitle) => {
+    setImageError(prev => ({
+      ...prev,
+      [projectTitle]: true
+    }));
   };
 
   return (
@@ -381,7 +392,7 @@ const Projects = () => {
       {/* Project Detail Modal */}
       {selectedProject && (
         <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4">
-          <div className="bg-white rounded-xl max-w-4xl max-h-[90vh] w-full overflow-hidden">
+          <div className="bg-white rounded-xl max-w-5xl max-h-[90vh] w-full overflow-hidden">
             {/* Modal Header */}
             <div className={`bg-gradient-to-r ${getColorClasses(selectedProject.color).split(' ')[0]} ${getColorClasses(selectedProject.color).split(' ')[1]} p-6`}>
               <div className="flex items-center justify-between">
@@ -411,6 +422,31 @@ const Projects = () => {
             {/* Modal Content - Scrollable */}
             <div className="overflow-y-auto max-h-[calc(90vh-120px)] p-6">
               <div className="space-y-8">
+                {/* Project Image */}
+                {selectedProject.image && (
+                  <section>
+                    <h3 className="text-xl font-bold text-slate-800 mb-4">Project Preview</h3>
+                    <div className="rounded-lg overflow-hidden shadow-lg bg-gray-50">
+                      {!imageError[selectedProject.title] ? (
+                        <img 
+                          src={selectedProject.image} 
+                          alt={`${selectedProject.title} preview`}
+                          className="w-full h-64 object-cover hover:scale-105 transition-transform duration-300"
+                          onError={() => handleImageError(selectedProject.title)}
+                        />
+                      ) : (
+                        <div className="w-full h-64 flex items-center justify-center bg-gray-100">
+                          <div className="text-center text-gray-500">
+                            <Image className="w-12 h-12 mx-auto mb-2 opacity-50" />
+                            <p>Image not available</p>
+                            <p className="text-sm">({selectedProject.image})</p>
+                          </div>
+                        </div>
+                      )}
+                    </div>
+                  </section>
+                )}
+
                 {/* Overview */}
                 <section>
                   <h3 className="text-xl font-bold text-slate-800 mb-4">Project Overview</h3>
