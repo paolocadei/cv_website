@@ -159,7 +159,7 @@ const Projects = () => {
         "Implemented tabular versions of SARSA, Q-learning, and Monte Carlo control from scratch",
         "Used ε-greedy and decayed ε strategies for exploration control",
         "Tracked cumulative reward and policy evolution over episodes",
-        "Built visual heatmaps to compare learned policies across algorithms"
+        "Built graphs to compare learned policies across algorithms"
       ],
       impact: [
         "Demonstrated clear differences in stability and convergence speed between SARSA and Q-learning",
