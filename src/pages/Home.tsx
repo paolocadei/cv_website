@@ -25,8 +25,10 @@ const Home = () => {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center sm:justify-start">
                 <a 
-                  href="public/CV/Paolo_Cadei_CV.pdf" 
+                  href="https://raw.githubusercontent.com/paolocadei/cv_website/main/public/CV/Paolo_Cadei_CV.pdf" 
                   download="Paolo_Cadei_CV.pdf" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
                   className="bg-white text-orange-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-center justify-center"
                 >
                   <Download className="w-5 h-5 mr-2" />
