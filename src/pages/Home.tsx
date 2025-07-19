@@ -212,7 +212,7 @@ const Home = () => {
         <div className="container mx-auto px-6 text-center">
           <h2 className="text-4xl font-bold mb-4">Ready to Work Together?</h2>
           <p className="text-xl mb-8 opacity-90">
-            I'm excited to bring my data science and engineering expertise to your team.
+            Turning data into decisions and coffee into code.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a 
