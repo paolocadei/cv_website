@@ -97,9 +97,10 @@ const Projects = () => {
         ],
         impact: [
           "Improved cross-departmental visibility and alignment",
-          "Enabled data-driven decision"
+          "Enabled data-driven decision",
+          
         ],
-        technicalDetails: "Built using Tableau Server with custom SQL connectors to PostgreSQL. Implemented row-level security for data governance. Created calculated fields with complex business logic and custom color palettes for brand consistency."
+        technicalDetails: "Built using Tableau and dbt with custom SQL connectors to PostgreSQL. Implemented row-level security for data governance. Created calculated fields with complex business logic and custom color palettes for brand consistency."
       }
     },
     {
