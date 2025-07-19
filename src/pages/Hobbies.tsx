@@ -1,17 +1,21 @@
 import React from 'react';
 import { 
   Heart, BookOpen, Mountain, Brain, Gamepad2, 
-  Camera, ChefHat, Music, Dumbbell, Palette 
+  Camera, ChefHat 
 } from 'lucide-react';
 
 const Hobbies = () => {
   const hobbies = [
     {
       name: "Reading",
-      description: "I love diving into books on data science, philosophy, and fiction. Currently exploring topics in machine learning and behavioral economics.",
+      description: "I love diving into books, no matter what they are.",
       icon: BookOpen,
       color: "blue",
-      activities: ["Technical books", "Philosophy", "Science fiction", "Biographies"]
+      activities: ["Technical books", "Philosophy", "Science fiction", "Biographies"],
+      link: {
+        url: "https://www.goodreads.com/YOUR_GOODREADS_PROFILE",
+        text: "Follow me on Goodreads"
+      }
     },
     {
       name: "Bouldering",
@@ -126,6 +130,19 @@ const Hobbies = () => {
                         ))}
                       </div>
                     </div>
+
+                    {hobby.link && (
+                      <div className="mt-6">
+                        <a
+                          href={hobby.link.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className={`inline-block text-sm font-medium ${getColorClasses(hobby.color).split(' ')[2]} hover:underline`}
+                        >
+                          {hobby.link.text}
+                        </a>
+                      </div>
+                    )}
                   </div>
                 </div>
               );
