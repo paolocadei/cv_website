@@ -5,8 +5,8 @@ import { FolderOpen, ExternalLink, Github, Calendar, Code, Mail } from 'lucide-r
 const Projects = () => {
   const projects = [
     {
-      title: "Customer Segmentation Analysis",
-      description: "Developed a comprehensive customer segmentation model using K-means clustering and RFM analysis for an e-commerce dataset with 500k+ records.",
+      title: "CustomerDataGPT",
+      description: "Developed an LLM-powered RAG model in Python to answer natural language questions about GCP tables, generate SQL queries, and provide insights. Integrated with Slack for seamless user interaction.",
       technologies: ["Python", "Pandas", "Scikit-learn", "Tableau"],
       year: "2024",
       category: "Machine Learning",
