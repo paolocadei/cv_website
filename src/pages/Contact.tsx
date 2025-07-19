@@ -1,22 +1,7 @@
-import React, { FormEvent, useState } from 'react';
+import React, { useState } from 'react';
 
 const Contact: React.FC = () => {
   const [formStatus, setFormStatus] = useState<string | null>(null);
-
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-
-    const form = e.currentTarget;
-    const data = new FormData(form);
-
-    fetch('/', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: new URLSearchParams(data as any).toString(),
-    })
-      .then(() => setFormStatus('SUCCESS'))
-      .catch(() => setFormStatus('ERROR'));
-  };
 
   return (
     <section className="min-h-screen bg-white py-20 px-6">
@@ -31,8 +16,7 @@ const Contact: React.FC = () => {
             method="POST"
             data-netlify="true"
             netlify-honeypot="bot-field"
-            onSubmit={handleSubmit}
-            className="grid grid-cols-1 gap-6"
+            onSubmit={() => setFormStatus('SUCCESS')} // simple optimistic UI change; optional
           >
             <input type="hidden" name="form-name" value="contact" />
             <div hidden>
@@ -77,10 +61,6 @@ const Contact: React.FC = () => {
             >
               Send Message
             </button>
-
-            {formStatus === 'ERROR' && (
-              <p className="text-red-600 mt-4">Oops! There was an error sending your message.</p>
-            )}
           </form>
         )}
       </div>
