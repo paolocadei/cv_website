@@ -34,10 +34,13 @@ const Home = () => {
                   <Download className="w-5 h-5 mr-2" />
                   Download CV
                 </a>
-                <button className="bg-orange-700 text-white px-8 py-3 rounded-lg font-semibold hover:bg-orange-800 transition-colors flex items-center justify-center">
+                <Link 
+                  to="/contact" 
+                  className="bg-orange-700 text-white px-8 py-3 rounded-lg font-semibold hover:bg-orange-800 transition-colors flex items-center justify-center"
+                >
                   <Mail className="w-5 h-5 mr-2" />
                   Contact Me
-                </button>
+                </Link>
               </div> 
             </div>
             <div className="lg:w-1/3 flex justify-center">

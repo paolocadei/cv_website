@@ -174,10 +174,13 @@ const Projects = () => {
                 <Github className="w-5 h-5 mr-2" />
                 View GitHub
               </button>
-              <button className="bg-orange-700 text-white px-8 py-3 rounded-lg font-semibold hover:bg-orange-800 transition-colors flex items-center justify-center">
-                <ExternalLink className="w-5 h-5 mr-2" />
+              <Link 
+                to="/contact" 
+                className="bg-orange-700 text-white px-8 py-3 rounded-lg font-semibold hover:bg-orange-800 transition-colors flex items-center justify-center"
+              >
+                <Mail className="w-5 h-5 mr-2" />
                 Contact Me
-              </button>
+              </Link>
             </div>
           </div>
 
