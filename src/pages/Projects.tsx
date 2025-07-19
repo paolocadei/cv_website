@@ -97,8 +97,11 @@ const Projects = () => {
         ],
         impact: [
           "Improved cross-departmental visibility and alignment",
-          "Enabled data-driven decision",
-          
+          "Enabled data-driven decision making across Marketing",
+          "Empowered Marketing team to track campaign performance and ROI in real-time",
+          "Shortened KPI reporting cycles from weekly to daily, improving agility",
+          "Standardized KPI definitions across departments to reduce ambiguity and improve trust in data",
+          "Enhanced executive engagement by providing high-level summaries with drill-down capability"
         ],
         technicalDetails: "Built using Tableau and dbt with custom SQL connectors to PostgreSQL. Created models in dbt as well as calculated fields with complex business logic."
       }
