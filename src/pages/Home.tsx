@@ -4,7 +4,7 @@ import {
   User, GraduationCap, Briefcase, FolderOpen, Heart, Code,
   ArrowRight, Download, Mail
 } from 'lucide-react';
-import paoloPhoto from '/CV/images/IMG_20210627_131204.jpg'; // ✅ Import local image
+import prague from '/CV/images/praga.jpeg'; // ✅ Import local image
 
 const Home = () => {
   return (
@@ -51,7 +51,7 @@ const Home = () => {
             <div className="lg:w-1/3 flex justify-center">
               <div className="w-64 h-64 rounded-full bg-white/20 backdrop-blur-sm border-4 border-white/30 shadow-2xl overflow-hidden">
                 <img 
-                  src={paoloPhoto} 
+                  src={prague} 
                   alt="Paolo Cadei" 
                   className="w-full h-full object-cover"
                 />
