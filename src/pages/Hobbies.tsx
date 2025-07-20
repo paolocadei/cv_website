@@ -58,7 +58,7 @@ const Hobbies = () => {
         name: "Cooking",
         icon: ChefHat,
         color: "red",
-        image: "CV/images/boat.jpeg",
+        image: "CV/images/food.jpeg",
         description: "Being Italian, cooking is a passion, especially traditional recipes.",
         activities: [
           "Pasta dishes",
