@@ -488,6 +488,7 @@ const Projects = () => {
                                 onClick={(e) => {
                                   e.preventDefault();
                                   e.stopPropagation();
+                                  console.log('Image clicked:', imagePath); // Add this debug line
                                   openImageZoom(imagePath, e);
                                 }}
                                 onError={() => handleImageError(imagePath)}
