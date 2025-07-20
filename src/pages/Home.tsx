@@ -119,7 +119,7 @@ const Home = () => {
                   <h3 className="text-2xl font-bold ml-4 text-slate-800">Education</h3>
                 </div>
                 <p className="text-gray-600 mb-4">
-                  My academic journey from highschool to Master's, including my Master's and Bachelor's degrees.
+                  My academic journey from highschool to Master's.
                 </p>
                 <div className="flex items-center text-blue-600 font-semibold group-hover:translate-x-2 transition-transform">
                   <span>View Details</span>
