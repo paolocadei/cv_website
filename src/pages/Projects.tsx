@@ -196,8 +196,7 @@ const Projects = () => {
         impact: [
           "Successfully collected 2M+ property listings across 15 major cities",
           "Achieved 99.8% uptime with robust error handling",
-          "Reduced data collection costs by 90% compared to previous methods.",
-          "Created reusable framework adopted by 3 other projects"
+          "Reduced data collection costs by 90% compared to previous methods."
         ],
         technicalDetails: "Built with Scrapy framework using custom middlewares for proxy rotation and user-agent spoofing. Integrated Selenium with headless Chrome for JavaScript execution. Implemented distributed scraping using Scrapyd for horizontal scaling."
       }
