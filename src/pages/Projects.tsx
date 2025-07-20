@@ -198,7 +198,7 @@ const Projects = () => {
           "Achieved 99.8% uptime with robust error handling",
           "Reduced data collection costs by 90% compared to previous methods."
         ],
-        technicalDetails: "Built with Scrapy framework using custom middlewares for proxy rotation and user-agent spoofing. Integrated Selenium with headless Chrome for JavaScript execution. Implemented distributed scraping using Scrapyd for horizontal scaling."
+        technicalDetails: "Built with Scrapy framework. Integrated Selenium with headless Chrome for JavaScript execution. Implemented distributed scraping using Scrapyd for horizontal scaling."
       }
     },
   ];
