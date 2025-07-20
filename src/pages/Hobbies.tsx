@@ -526,13 +526,15 @@ Instructions:
                           {hobby.name}
                         </h3>
                       </div>
-                      <div className="ml-6">
-                        <img 
-                          src={hobby.image} 
-                          alt={hobby.name}
-                          className="w-40 h-40 object-cover rounded-full border-4 border-white shadow-lg"
-                        />
-                      </div>
+                      {hobby.image && (
+                        <div className="ml-6">
+                          <img 
+                            src={hobby.image} 
+                            alt={hobby.name}
+                            className="w-40 h-40 object-cover rounded-full border-4 border-white shadow-lg"
+                          />
+                        </div>
+                      )}
                     </div>
 
                       
