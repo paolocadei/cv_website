@@ -126,7 +126,7 @@ const Hobbies = () => {
       <div className="space-y-8">
         <div className="text-center mb-8">
           <h3 className="text-3xl font-bold mb-4 text-indigo-700">
-            My Favourite Board Games
+            My Board Games
           </h3>
           <p className="text-lg text-gray-600 leading-relaxed max-w-3xl mx-auto">
             I'm passionate about board games that bring people together and challenge strategic thinking. 
