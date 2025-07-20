@@ -17,7 +17,7 @@ const Projects = () => {
       color: "blue",
       githubAccess: false,
       detailedDescription: {
-        overview: "CustomerDataGPT is an innovative LLM-powered application designed to democratize data access at IKEA by allowing non-technical stakeholders to query complex databases using natural language. The system leverages Retrieval-Augmented Generation (RAG) to provide accurate, contextual responses about customer data stored in Google Cloud Platform.",
+        overview: "CustomerDataGPT is an innovative LLM-powered application designed to democratize data access at IKEA by allowing non-technical stakeholders to query complex databases using natural language. The system leverages Retrieval-Augmented Generation (RAG) to provide accurate, contextual responses about customer data stored in Google Cloud Platform. The user can chat with the model using Slack as an interface.",
         challenges: [
           "Complex schema mapping for natural language understanding",
           "Maintaining data privacy and security compliance",
