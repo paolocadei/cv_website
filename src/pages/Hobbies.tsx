@@ -20,69 +20,75 @@ const DotRating = ({ grade }) => {
 };
 
 const Hobbies = () => {
-  const hobbies = [
-    {
-      name: "Reading",
-      description: "I love diving into books, no matter what they are.",
-      icon: BookOpen,
-      color: "blue",
-      activities: ["Fantasy", "Philosophy", "Meditation", "Self-Improvement", "Romance"],
-      link: {
-        url: "https://www.goodreads.com/user/show/166373035-paolo",
-        text: "Check out my Goodreads here !!!"
+   const hobbies = [
+      {
+        name: "Reading",
+        description: "I love diving into books, no matter what they are.",
+        icon: BookOpen,
+        color: "blue",
+        image: "CV/images/boat.jpeg",
+        activities: ["Fantasy", "Philosophy", "Meditation", "Self-Improvement", "Romance"],
+        link: {
+          url: "https://www.goodreads.com/user/show/166373035-paolo",
+          text: "Check out my Goodreads here !!!"
+        }
+      },
+      {
+        name: "Meditating",
+        description: "Daily meditation helps me maintain focus and mental clarity. I practice mindfulness and breathing techniques for a calm daily life.",
+        icon: Brain,
+        color: "purple",
+        image: "CV/images/boat.jpeg",
+        activities: ["Mindfulness", "Breathing exercises", "Daily practice"]
+      },
+      {
+        name: "Board Games",
+        icon: Gamepad2,
+        color: "indigo",
+        image: "CV/images/boat.jpeg",
+        description: "I enjoy strategic and social board games that bring friends together.",
+        activities: [
+          "Strategy games",
+          "Cooperative games",
+          "Family-friendly games",
+          "Solo campaigns",
+        ],
+      },
+      {
+        name: "Cooking",
+        icon: ChefHat,
+        color: "red",
+        image: "CV/images/boat.jpeg",
+        description: "Being Italian, cooking is a passion, especially traditional recipes.",
+        activities: [
+          "Pasta dishes",
+          "Baking bread",
+          "Desserts",
+          "Seasonal cooking",
+        ],
+      },
+      {
+        name: "Photography",
+        icon: Camera,
+        color: "pink",
+        image: "CV/images/boat.jpeg",
+        description: "Photography helps me capture moments and improve my artistic eye.",
+        activities: [
+          "Landscape photos",
+          "Street photography",
+          "Portrait shots",
+          "Black & white",
+        ],
+      },
+      {
+        name: "Bouldering",
+        description: "Rock climbing challenges both my physical and mental strength. I enjoy the problem-solving aspect and the community at climbing gyms.",
+        icon: Mountain,
+        color: "green",
+        image: "CV/images/boat.jpeg",
+        activities: ["Indoor climbing", "Problem solving", "Strength training", "Community events"]
       }
-    },
-    {
-      name: "Meditating",
-      description: "Daily meditation helps me maintain focus and mental clarity. I practice mindfulness and breathing techniques for a calm daily life.",
-      icon: Brain,
-      color: "purple",
-      activities: ["Mindfulness", "Breathing exercises", "Daily practice"]
-    },
-    {
-      name: "Board Games",
-      icon: Gamepad2,
-      color: "indigo",
-      description: "I enjoy strategic and social board games that bring friends together.",
-      activities: [
-        "Strategy games",
-        "Cooperative games",
-        "Family-friendly games",
-        "Solo campaigns",
-      ],
-    },
-    {
-      name: "Cooking",
-      icon: ChefHat,
-      color: "red",
-      description: "Being Italian, cooking is a passion, especially traditional recipes.",
-      activities: [
-        "Pasta dishes",
-        "Baking bread",
-        "Desserts",
-        "Seasonal cooking",
-      ],
-    },
-    {
-      name: "Photography",
-      icon: Camera,
-      color: "pink",
-      description: "Photography helps me capture moments and improve my artistic eye.",
-      activities: [
-        "Landscape photos",
-        "Street photography",
-        "Portrait shots",
-        "Black & white",
-      ],
-    },
-    {
-      name: "Bouldering",
-      description: "Rock climbing challenges both my physical and mental strength. I enjoy the problem-solving aspect and the community at climbing gyms.",
-      icon: Mountain,
-      color: "green",
-      activities: ["Indoor climbing", "Problem solving", "Strength training", "Community events"]
-    }
-  ];
+    ];
 
   const [modalHobby, setModalHobby] = useState(null);
   const [visibleRecipes, setVisibleRecipes] = useState({});
@@ -510,21 +516,32 @@ Instructions:
                   key={index}
                   className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group"
                 >
-                  <div className="p-8">
-                    <div className="flex items-center mb-6">
-                      <div className={`bg-gradient-to-r ${colorClasses} p-4 rounded-lg mr-4 border`}>
-                        <IconComponent className={`w-8 h-8 ${hobby.color === 'blue' ? 'text-blue-600' : 
-                          hobby.color === 'green' ? 'text-green-600' : 
-                          hobby.color === 'purple' ? 'text-purple-600' :
-                          hobby.color === 'indigo' ? 'text-indigo-600' :
-                          hobby.color === 'red' ? 'text-red-600' :
-                          hobby.color === 'pink' ? 'text-pink-600' : 'text-blue-600'}`} />
+                    <div className="p-8">
+                    <div className="flex items-start justify-between mb-6">
+                      <div className="flex items-center flex-1">
+                        <div className={`bg-gradient-to-r ${colorClasses} p-4 rounded-lg mr-4 border`}>
+                          <IconComponent className={`w-8 h-8 ${hobby.color === 'blue' ? 'text-blue-600' : 
+                              hobby.color === 'green' ? 'text-green-600' : 
+                              hobby.color === 'purple' ? 'text-purple-600' :
+                              hobby.color === 'indigo' ? 'text-indigo-600' :
+                              hobby.color === 'red' ? 'text-red-600' :
+                              hobby.color === 'pink' ? 'text-pink-600' : 'text-blue-600'}`} />
+                        </div>
+                        <h3 className="text-2xl font-bold text-slate-800 group-hover:text-orange-600 transition-colors">
+                          {hobby.name}
+                        </h3>
                       </div>
-                      <h3 className="text-2xl font-bold text-slate-800 group-hover:text-orange-600 transition-colors">
-                        {hobby.name}
-                      </h3>
+                      <div className="ml-6">
+                        <img 
+                          src={hobby.image} 
+                          alt={hobby.name}
+                          className="w-40 h-40 object-cover rounded-full border-4 border-white shadow-lg"
+                        />
+                      </div>
                     </div>
 
+                      
+                  
                     <p className="text-gray-700 mb-6 leading-relaxed">
                       {hobby.description}
                     </p>
