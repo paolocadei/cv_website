@@ -4,7 +4,7 @@ import {
   User, GraduationCap, Briefcase, FolderOpen, Heart, Code,
   ArrowRight, Download, Mail
 } from 'lucide-react';
-import prague from '/CV/images/praga.jpeg'; // ✅ Import local image
+import corsica from '/CV/images/corsica.jpeg'; // ✅ Import local image
 
 const Home = () => {
   return (
