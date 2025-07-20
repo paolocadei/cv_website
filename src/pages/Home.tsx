@@ -157,7 +157,7 @@ const Home = () => {
                   <h3 className="text-2xl font-bold ml-4 text-slate-800">Projects</h3>
                 </div>
                 <p className="text-gray-600 mb-4">
-                  Explore my portfolio of data science projects, from machine learning models to data pipelines.
+                  Explore my portfolio of data projects, from machine learning models to LLMs.
                 </p>
                 <div className="flex items-center text-purple-600 font-semibold group-hover:translate-x-2 transition-transform">
                   <span>View Projects</span>
