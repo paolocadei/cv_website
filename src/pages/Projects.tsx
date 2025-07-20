@@ -174,15 +174,15 @@ const Projects = () => {
     },
     {
       title: "Web Scraping Framework",
-      description: "Built a robust web scraping framework for real estate data collection, handling dynamic websites and large-scale data extraction.",
+      description: "Built multiple web scraping frameworks for real estate data collection, handling dynamic websites and large-scale data extraction.",
       technologies: ["Python", "Scrapy", "Selenium", "BeautifulSoup"],
-      year: "2022",
+      year: "2021",
       category: "Data Collection",
       color: "red",
       githubAccess: true,
       githubLink: "https://github.com/paolocadei/REIT-s-Scrapers",
       detailedDescription: {
-        overview: "A comprehensive web scraping framework designed for large-scale data collection from dynamic real estate websites. The system handles complex JavaScript rendering, anti-bot measures, and provides reliable data extraction capabilities.",
+        overview: "A comprehensive web scraping framework designed for large-scale data collection from dynamic real estate websites. The system handles complex JavaScript rendering and provides reliable data extraction capabilities.",
         challenges: [
           "Bypassing sophisticated anti-bot detection systems",
           "Handling dynamic content and JavaScript-heavy websites",
