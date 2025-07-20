@@ -231,20 +231,14 @@ const Projects = () => {
   };
 
   const openImageZoom = (imagePath, event) => {
-    if (event) {
-      event.preventDefault();
-      event.stopPropagation();
-    }
-    console.log('Opening zoom for:', imagePath); // Keep this debug line
+    event?.preventDefault();
+    event?.stopPropagation();
     setZoomedImage(imagePath);
   };
 
   const closeImageZoom = (event) => {
-    if (event) {
-      event.preventDefault();
-      event.stopPropagation();
-    }
-    console.log('Closing zoom'); // Debug log
+    event?.preventDefault();
+    event?.stopPropagation();
     setZoomedImage(null);
   };
 
@@ -496,9 +490,6 @@ const Projects = () => {
                                 className="w-full h-auto object-contain hover:scale-[1.02] transition-transform duration-300"
                                 style={{ maxHeight: 'none', height: 'auto' }}
                                 onClick={(e) => {
-                                  e.preventDefault();
-                                  e.stopPropagation();
-                                  console.log('Image clicked:', imagePath); // Add this debug line
                                   openImageZoom(imagePath, e);
                                 }}
                                 onError={() => handleImageError(imagePath)}
@@ -626,7 +617,7 @@ const Projects = () => {
             <img 
               src={zoomedImage} 
               alt="Zoomed view"
-              className="max-w-full max-h-[90vh] object-contain shadow-2xl"
+              className="max-w-full max-h-[90vh] object-contain shadow-2xl cursor-default"
               style={{ imageRendering: 'auto' }}
               onClick={(e) => e.stopPropagation()}
             />
