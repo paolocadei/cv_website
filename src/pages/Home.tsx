@@ -176,7 +176,7 @@ const Home = () => {
                   <h3 className="text-2xl font-bold ml-4 text-slate-800">Skills</h3>
                 </div>
                 <p className="text-gray-600 mb-4">
-                  Technical skills including Python, SQL, Tableau, dbt, GCP, and more programming languages.
+                  Technical skills including Python, SQL, Tableau, dbt, GCP, and more.
                 </p>
                 <div className="flex items-center text-indigo-600 font-semibold group-hover:translate-x-2 transition-transform">
                   <span>View Skills</span>
