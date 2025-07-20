@@ -35,7 +35,7 @@ const Projects = () => {
           "Enabled 200+ non-technical users to access customer insights independently",
           "Reduced issues with siloed information and long waiting time when data location is not known"
         ],
-        technicalDetails: "Built using Python with LangChain framework, deployed on GCP Cloud Run with auto-scaling capabilities. Utilized Vertex AI for LLM inference and Qdrant for vector embeddings storage. Implemented comprehensive logging and monitoring using Cloud Logging and Datadog."
+        technicalDetails: "Built using Python, deployed on GCP Cloud Run with auto-scaling capabilities. Utilized Vertex AI for LLM inference and Qdrant for vector embeddings storage. Used Slack as interface."
       }
     },
     {
