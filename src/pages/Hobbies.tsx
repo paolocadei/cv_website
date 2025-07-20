@@ -4,6 +4,21 @@ import {
   Camera, ChefHat, X
 } from 'lucide-react';
 
+const DotRating = ({ grade }) => {
+  return (
+    <div className="flex space-x-1 mt-3">
+      {[1, 2, 3, 4, 5].map((dot) => (
+        <div
+          key={dot}
+          className={`w-3 h-3 rounded-full ${
+            dot <= grade ? 'bg-orange-500' : 'bg-gray-300'
+          }`}
+        ></div>
+      ))}
+    </div>
+  );
+};
+
 const Hobbies = () => {
   const hobbies = [
     {
@@ -111,7 +126,7 @@ const Hobbies = () => {
       <div className="space-y-8">
         <div className="text-center mb-8">
           <h3 className="text-3xl font-bold mb-4 text-indigo-700">
-            My Favorite Board Games
+            My Favourite Board Games
           </h3>
           <p className="text-lg text-gray-600 leading-relaxed max-w-3xl mx-auto">
             I'm passionate about board games that bring people together and challenge strategic thinking. 
@@ -127,7 +142,9 @@ const Hobbies = () => {
               players: "3-4 players",
               duration: "60-90 min",
               thoughts: "Great for group play with negotiation and resource management. Always fun with friends!",
-              color: "blue"
+              color: "blue",
+              myGrade: 4,
+              bggLink: "https://boardgamegeek.com/boardgame/13/catan"
             },
             {
               name: "Pandemic",
@@ -135,7 +152,9 @@ const Hobbies = () => {
               players: "2-4 players", 
               duration: "45-60 min",
               thoughts: "Perfect if you love working as a team to overcome challenges. Intense and rewarding.",
-              color: "green"
+              color: "green",
+              myGrade: 4,
+              bggLink: "https://boardgamegeek.com/boardgame/30549/pandemic"
             },
             {
               name: "Ticket to Ride",
@@ -143,29 +162,157 @@ const Hobbies = () => {
               players: "2-5 players",
               duration: "30-60 min",
               thoughts: "Easy to learn, great for beginners and kids. Travel the world through train routes!",
-              color: "purple"
+              color: "purple",
+              myGrade: 4,
+              bggLink: "https://boardgamegeek.com/boardgame/9209/ticket-ride"
+            },
+            {
+              name: "Small World",
+              category: "Area Control",
+              players: "2-5 players",
+              duration: "40-80 min",
+              thoughts: "Fun, fast-paced territory game with unique race powers. Light-hearted but tactical.",
+              color: "orange",
+              myGrade: 4,
+              bggLink: "https://boardgamegeek.com/boardgame/40692/small-world"
+            },
+            {
+              name: "Azul",
+              category: "Abstract",
+              players: "2-4 players",
+              duration: "30-45 min",
+              thoughts: "Beautiful tile-laying game with simple rules but deep strategy.",
+              color: "blue",
+              myGrade: 5,
+              bggLink: "https://boardgamegeek.com/boardgame/230802/azul"
+            },
+            {
+              name: "Cascadia",
+              category: "Puzzle/Tile-laying",
+              players: "1-4 players",
+              duration: "30-45 min",
+              thoughts: "Relaxing and elegant. Nature-themed puzzler with smart spatial decisions.",
+              color: "green",
+              myGrade: 4,
+              bggLink: "https://boardgamegeek.com/boardgame/295947/cascadia"
+            },
+            {
+              name: "Splendor",
+              category: "Engine-building",
+              players: "2-4 players",
+              duration: "30 min",
+              thoughts: "Quick and satisfying. Build an engine to acquire gems and prestige.",
+              color: "gold",
+              myGrade: 4,
+              bggLink: "https://boardgamegeek.com/boardgame/148228/splendor"
+            },
+            {
+              name: "Dune: Imperium – Uprising",
+              category: "Deck-building/Worker Placement",
+              players: "1-6 players",
+              duration: "60-120 min",
+              thoughts: "Intense hybrid of deck-building and strategy. A great evolution of Dune: Imperium.",
+              color: "red",
+              myGrade: 5,
+              bggLink: "https://boardgamegeek.com/boardgame/379078/dune-imperium-uprising"
+            },
+            {
+              name: "Castle Panic",
+              category: "Cooperative/Tower Defense",
+              players: "1-6 players",
+              duration: "45-60 min",
+              thoughts: "Family-friendly and engaging. Great intro to co-op board games.",
+              color: "brown",
+              myGrade: 3,
+              bggLink: "https://boardgamegeek.com/boardgame/43443/castle-panic"
+            },
+            {
+              name: "Noctiluca",
+              category: "Dice Drafting",
+              players: "1-4 players",
+              duration: "30-45 min",
+              thoughts: "Gorgeous and calming, with a clever drafting mechanic.",
+              color: "teal",
+              myGrade: 3,
+              bggLink: "https://boardgamegeek.com/boardgame/270144/noctiluca"
+            },
+            {
+              name: "Spicy",
+              category: "Bluffing/Party",
+              players: "2-6 players",
+              duration: "15-30 min",
+              thoughts: "Quick bluffing card game with striking art. Great for laughs.",
+              color: "red",
+              myGrade: 3,
+              bggLink: "https://boardgamegeek.com/boardgame/295670/spicy"
+            },
+            {
+              name: "Onitama",
+              category: "Abstract/2-Player",
+              players: "2 players",
+              duration: "10-20 min",
+              thoughts: "Elegant and fast-paced. Chess-like with rotating move sets.",
+              color: "black",
+              myGrade: 5,
+              bggLink: "https://boardgamegeek.com/boardgame/160477/onitama"
+            },
+            {
+              name: "Debatable",
+              category: "Party/Debate",
+              players: "3-16 players",
+              duration: "20-45 min",
+              thoughts: "Hilarious debate-based game. Great for extroverted groups.",
+              color: "yellow",
+              myGrade: 3,
+              bggLink: "https://boardgamegeek.com/boardgame/204537/debatable"
+            },
+            {
+              name: "Summoner Wars (Second Edition)",
+              category: "Tactical Skirmish",
+              players: "2 players",
+              duration: "30-60 min",
+              thoughts: "Fast, strategic, and full of variety. Deck and board in one.",
+              color: "gray",
+              myGrade: 4,
+              bggLink: "https://boardgamegeek.com/boardgame/317985/summoner-wars-second-edition"
+            },
+            {
+              name: "Arcs",
+              category: "Sci-Fi Strategy",
+              players: "2-4 players",
+              duration: "60-120 min",
+              thoughts: "Ambitious storytelling meets deep galactic conflict. Big potential!",
+              color: "navy",
+              myGrade: 4,
+              bggLink: "https://boardgamegeek.com/boardgame/361545/arcs"
             },
           ].map((game) => (
             <div
               key={game.name}
-              className="bg-gradient-to-br from-blue-50 to-blue-100 p-6 rounded-xl border border-blue-200 hover:shadow-lg transition-all duration-300 hover:scale-105"
+              className="bg-gradient-to-br from-white to-gray-100 p-6 rounded-xl border border-gray-200 hover:shadow-lg transition-all duration-300 hover:scale-105"
             >
               <div className="flex items-start justify-between mb-3">
-                <h4 className="text-xl font-bold text-blue-800">{game.name}</h4>
-                <span className="bg-blue-200 text-blue-700 px-3 py-1 rounded-full text-sm font-medium">
+                <h4 className="text-xl font-bold text-slate-800">{game.name}</h4>
+                <span className="bg-gray-200 text-gray-700 px-3 py-1 rounded-full text-sm font-medium">
                   {game.category}
                 </span>
               </div>
               <div className="space-y-2 mb-3">
-                <p className="text-blue-600 text-sm font-medium">👥 {game.players}</p>
-                <p className="text-blue-600 text-sm font-medium">⏱️ {game.duration}</p>
+                <p className="text-gray-600 text-sm font-medium">👥 {game.players}</p>
+                <p className="text-gray-600 text-sm font-medium">⏱️ {game.duration}</p>
               </div>
-              <p className="text-blue-700 leading-relaxed">{game.thoughts}</p>
+              <p className="text-gray-700 leading-relaxed">{game.thoughts}</p>
+              <DotRating grade={game.myGrade} />
+              <a
+                href={game.bggLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block mt-3 text-blue-500 text-sm underline"
+              >
+                View on BGG
+              </a>
             </div>
-          ))}
-        </div>
-      </div>
-    ),
+          ))},
 
     "Cooking": (
       <div className="space-y-8">
