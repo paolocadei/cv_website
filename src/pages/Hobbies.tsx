@@ -50,8 +50,7 @@ const Hobbies = () => {
         activities: [
           "Strategy games",
           "Cooperative games",
-          "Family-friendly games",
-          "Solo campaigns",
+          "Family-friendly games"
         ],
       },
       {
@@ -61,9 +60,9 @@ const Hobbies = () => {
         image: "CV/images/food.jpeg",
         description: "Being Italian, cooking is a passion, especially traditional recipes.",
         activities: [
-          "Pasta dishes",
+          "Fusion",
+          "Vegetarian",
           "Baking bread",
-          "Desserts",
           "Seasonal cooking",
         ],
       },
