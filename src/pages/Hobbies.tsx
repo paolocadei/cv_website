@@ -143,7 +143,7 @@ const Hobbies = () => {
               duration: "60-90 min",
               thoughts: "Great for group play with negotiation and resource management. Always fun with friends!",
               color: "blue",
-              myGrade: 4,
+              myGrade: 3,
               bggLink: "https://boardgamegeek.com/boardgame/13/catan"
             },
             {
@@ -183,7 +183,7 @@ const Hobbies = () => {
               duration: "30-45 min",
               thoughts: "Beautiful tile-laying game with simple rules but deep strategy.",
               color: "blue",
-              myGrade: 5,
+              myGrade: 4,
               bggLink: "https://boardgamegeek.com/boardgame/230802/azul"
             },
             {
@@ -193,7 +193,7 @@ const Hobbies = () => {
               duration: "30-45 min",
               thoughts: "Relaxing and elegant. Nature-themed puzzler with smart spatial decisions.",
               color: "green",
-              myGrade: 4,
+              myGrade: 2,
               bggLink: "https://boardgamegeek.com/boardgame/295947/cascadia"
             },
             {
@@ -203,7 +203,7 @@ const Hobbies = () => {
               duration: "30 min",
               thoughts: "Quick and satisfying. Build an engine to acquire gems and prestige.",
               color: "gold",
-              myGrade: 4,
+              myGrade: 3,
               bggLink: "https://boardgamegeek.com/boardgame/148228/splendor"
             },
             {
@@ -213,7 +213,7 @@ const Hobbies = () => {
               duration: "60-120 min",
               thoughts: "Intense hybrid of deck-building and strategy. A great evolution of Dune: Imperium.",
               color: "red",
-              myGrade: 5,
+              myGrade: 4,
               bggLink: "https://boardgamegeek.com/boardgame/397598/dune-imperium-uprising"
             },
             {
@@ -233,7 +233,7 @@ const Hobbies = () => {
               duration: "30-45 min",
               thoughts: "Gorgeous and calming, with a clever drafting mechanic.",
               color: "teal",
-              myGrade: 3,
+              myGrade: 2,
               bggLink: "https://boardgamegeek.com/boardgame/269752/noctiluca"
             },
             {
@@ -253,7 +253,7 @@ const Hobbies = () => {
               duration: "10-20 min",
               thoughts: "Elegant and fast-paced. Chess-like with rotating move sets.",
               color: "black",
-              myGrade: 5,
+              myGrade: 4,
               bggLink: "https://boardgamegeek.com/boardgame/160477/onitama"
             },
             {
@@ -263,7 +263,7 @@ const Hobbies = () => {
               duration: "20-45 min",
               thoughts: "Hilarious debate-based game. Great for extroverted groups.",
               color: "yellow",
-              myGrade: 3,
+              myGrade: 4,
               bggLink: "https://boardgamegeek.com/boardgame/227026/debatable"
             },
             {
@@ -273,7 +273,7 @@ const Hobbies = () => {
               duration: "30-60 min",
               thoughts: "Fast, strategic, and full of variety. Deck and board in one.",
               color: "gray",
-              myGrade: 4,
+              myGrade: 3,
               bggLink: "https://boardgamegeek.com/boardgame/332800/summoner-wars-second-edition"
             },
             {
