@@ -231,9 +231,11 @@ const Projects = () => {
   };
 
   const openImageZoom = (imagePath, event) => {
-    event.preventDefault();
-    event.stopPropagation();
-    console.log('Opening zoom for:', imagePath);
+    if (event) {
+      event.preventDefault();
+      event.stopPropagation();
+    }
+    console.log('Opening zoom for:', imagePath); // Keep this debug line
     setZoomedImage(imagePath);
   };
 
