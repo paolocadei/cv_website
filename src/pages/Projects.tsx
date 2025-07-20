@@ -48,7 +48,7 @@ const Projects = () => {
       githubAccess: true,
       githubLink: "https://github.com/paolocadei/Spider2.0-Thesis",
       images: [
-        "/images/Master_Thesis/overview.png",
+        "CV/images/Master_Thesis/overview.png",
         "/images/Master_Thesis/question_answering_phase.png"
       ],
       detailedDescription: {
