@@ -48,9 +48,9 @@ const Projects = () => {
       githubAccess: true,
       githubLink: "https://github.com/paolocadei/Spider2.0-Thesis",
       images: [
-        "src/images/Master_Thesis/overview.png",
-        "src/images/Master_Thesis/question_answering_phase.png"
-      ], 
+        "/images/Master_Thesis/overview.png",
+        "/images/Master_Thesis/question_answering_phase.png"
+      ],
       detailedDescription: {
         overview: "This project addresses the challenge of translating natural language questions into SQL queries on large-scale, enterprise-grade databases. It introduces a lightweight Retrieval-Augmented Generation (RAG) pipeline optimized for the Spider 2.0-Snow benchmark using schema-aware vector search, a dual-agent architecture, and minimal model usage.",
         challenges: [
@@ -475,7 +475,7 @@ const Projects = () => {
                 {getProjectImages(selectedProject).length > 0 && (
                   <section>
                     <h3 className="text-xl font-bold text-slate-800 mb-4">Project Preview</h3>
-                    <div className={`grid gap-4 ${getProjectImages(selectedProject).length > 1 ? 'grid-cols-1 md:grid-cols-2' : 'grid-cols-1'}`}>
+                    <div className="grid gap-4 grid-cols-1 md:grid-cols-2">
                       {getProjectImages(selectedProject).map((imagePath, index) => (
                         <div key={index} className="rounded-lg overflow-hidden shadow-lg bg-gray-50 cursor-zoom-in group">
                           {!imageError[imagePath] ? (
@@ -485,7 +485,11 @@ const Projects = () => {
                                 alt={`${selectedProject.title} preview ${index + 1}`}
                                 className="w-full h-auto object-contain hover:scale-[1.02] transition-transform duration-300"
                                 style={{ maxHeight: 'none', height: 'auto' }}
-                                onClick={(e) => openImageZoom(imagePath, e)}
+                                onClick={(e) => {
+                                  e.preventDefault();
+                                  e.stopPropagation();
+                                  openImageZoom(imagePath, e);
+                                }}
                                 onError={() => handleImageError(imagePath)}
                               />
                               <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300 flex items-center justify-center">
