@@ -1,6 +1,6 @@
 import React from 'react';
 import { Code, Globe, MapPin, Phone, Mail, Linkedin } from 'lucide-react';
-import boat from '/CV/images/boat.jpeg';
+import boat from '/CV/images/boat.png';
 
 const About = () => {
   return (
