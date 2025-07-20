@@ -51,7 +51,7 @@ const Home = () => {
             <div className="lg:w-1/3 flex justify-center">
               <div className="w-64 h-64 rounded-full bg-white/20 backdrop-blur-sm border-4 border-white/30 shadow-2xl overflow-hidden">
                 <img 
-                  src={prague} 
+                  src={corsica} 
                   alt="Paolo Cadei" 
                   className="w-full h-full object-cover"
                 />
