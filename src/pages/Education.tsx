@@ -157,7 +157,7 @@ const Education = () => {
                     </li>
                     <li className="flex items-start">
                       <span className="w-2 h-2 bg-blue-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                      Capstone project in business analytics
+                      Capstone project at INGKA (IKEA DIGITAL).
                     </li>
                   </ul>
                 </div>
