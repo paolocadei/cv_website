@@ -4,7 +4,7 @@ import {
   User, GraduationCap, Briefcase, FolderOpen, Heart, Code,
   ArrowRight, Download, Mail
 } from 'lucide-react';
-import paoloPhoto from '/images/IMG_20210627_131204.jpg'; // ✅ Import local image
+import paoloPhoto from '/CV/images/IMG_20210627_131204.jpg'; // ✅ Import local image
 
 const Home = () => {
   return (
