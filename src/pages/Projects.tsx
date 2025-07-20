@@ -442,7 +442,15 @@ const Projects = () => {
 
       {/* Project Detail Modal */}
       {selectedProject && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4">
+        <div 
+          className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4"
+          onClick={(e) => {
+            // Only close modal if clicking the backdrop, not the content
+            if (e.target === e.currentTarget) {
+              closeProjectModal();
+            }
+          }}
+        >
           <div className="bg-white rounded-xl max-w-5xl max-h-[90vh] w-full overflow-hidden">
             {/* Modal Header */}
             <div className={`bg-gradient-to-r ${getColorClasses(selectedProject.color).split(' ')[0]} ${getColorClasses(selectedProject.color).split(' ')[1]} p-6`}>
