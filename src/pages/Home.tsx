@@ -100,7 +100,7 @@ const Home = () => {
                   <h3 className="text-2xl font-bold ml-4 text-slate-800">About Me</h3>
                 </div>
                 <p className="text-gray-600 mb-4">
-                  Learn about my background, skills, and what drives my passion.
+                  Learn about my background, skills, and what drives my passion for the world of data.
                 </p>
                 <div className="flex items-center text-orange-600 font-semibold group-hover:translate-x-2 transition-transform">
                   <span>Learn More</span>
