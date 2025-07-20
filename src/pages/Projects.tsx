@@ -237,8 +237,10 @@ const Projects = () => {
   };
 
   const closeImageZoom = (event) => {
-    event?.preventDefault();
-    event?.stopPropagation();
+    if (event) {
+      event.preventDefault();
+      event.stopPropagation();
+    }
     setZoomedImage(null);
   };
 
@@ -490,6 +492,8 @@ const Projects = () => {
                                 className="w-full h-auto object-contain hover:scale-[1.02] transition-transform duration-300"
                                 style={{ maxHeight: 'none', height: 'auto' }}
                                 onClick={(e) => {
+                                  e.preventDefault();
+                                  e.stopPropagation();
                                   openImageZoom(imagePath, e);
                                 }}
                                 onError={() => handleImageError(imagePath)}
@@ -609,7 +613,7 @@ const Projects = () => {
         >
           <div className="relative max-w-full max-h-full">
             <button 
-              onClick={(e) => closeImageZoom(e)}
+              onClick={closeImageZoom}
               className="absolute -top-12 right-0 text-white hover:text-gray-300 transition-colors z-10"
             >
               <X className="w-8 h-8" />
