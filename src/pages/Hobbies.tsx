@@ -85,7 +85,7 @@ const Hobbies = () => {
         icon: Mountain,
         color: "green",
         image: "CV/images/boat.jpeg",
-        activities: ["Indoor climbing", "Problem solving", "Strength training", "Community events"]
+        activities: ["Indoor climbing", "Strength training", "Community events"]
       }
     ];
 
