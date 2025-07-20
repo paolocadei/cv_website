@@ -134,7 +134,7 @@ const Hobbies = () => {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid gap-6 md:grid-cols-2">
           {[
             {
               name: "Catan",
@@ -285,34 +285,35 @@ const Hobbies = () => {
               color: "navy",
               myGrade: 4,
               bggLink: "https://boardgamegeek.com/boardgame/361545/arcs"
-            },
+            }
           ].map((game) => (
             <div
               key={game.name}
-              className="bg-gradient-to-br from-white to-gray-100 p-6 rounded-xl border border-gray-200 hover:shadow-lg transition-all duration-300 hover:scale-105"
+              className="bg-white border border-gray-200 p-4 rounded-xl shadow hover:shadow-md transition"
             >
-              <div className="flex items-start justify-between mb-3">
-                <h4 className="text-xl font-bold text-slate-800">{game.name}</h4>
-                <span className="bg-gray-200 text-gray-700 px-3 py-1 rounded-full text-sm font-medium">
+              <div className="flex items-start justify-between mb-2">
+                <h4 className="text-lg font-bold text-slate-800">{game.name}</h4>
+                <span className="bg-gray-200 text-gray-700 px-2 py-1 rounded-full text-xs font-medium">
                   {game.category}
                 </span>
               </div>
-              <div className="space-y-2 mb-3">
-                <p className="text-gray-600 text-sm font-medium">👥 {game.players}</p>
-                <p className="text-gray-600 text-sm font-medium">⏱️ {game.duration}</p>
-              </div>
-              <p className="text-gray-700 leading-relaxed">{game.thoughts}</p>
+              <p className="text-sm text-gray-600">👥 {game.players}</p>
+              <p className="text-sm text-gray-600">⏱️ {game.duration}</p>
+              <p className="text-gray-700 text-sm mt-2 italic">"{game.thoughts}"</p>
               <DotRating grade={game.myGrade} />
               <a
                 href={game.bggLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block mt-3 text-blue-500 text-sm underline"
+                className="text-blue-500 text-sm underline mt-2 inline-block"
               >
                 View on BGG
               </a>
             </div>
-          ))},
+          ))}
+        </div>
+      </div>
+    ),
 
     "Cooking": (
       <div className="space-y-8">
