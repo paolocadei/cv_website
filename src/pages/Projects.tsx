@@ -89,7 +89,7 @@ const Projects = () => {
       category: "AI/ML Engineering",
       color: "green",
       githubAccess: true,
-      githubLink: "https://github.com/paolocadei/Geolocation-Guesser-AI"
+      githubLink: "https://github.com/paolocadei/Geolocation-Guesser-AI,
       detailedDescription: {
         overview: "Geolocation Guesser AI is a deep learning project designed to identify the subregion of the world where a given image was captured, using convolutional neural networks trained on a diverse set of street view images. The project aims to mimic the challenge of the game GeoGuessr, providing interpretable and accurate predictions by highlighting the key visual features driving the model's decisions.",
         challenges: [
