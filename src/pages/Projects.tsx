@@ -33,8 +33,7 @@ const Projects = () => {
         impact: [
           "Reduced data query response time from hours to minutes",
           "Enabled 200+ non-technical users to access customer insights independently",
-          "Improved decision-making speed by 60% across multiple departments",
-          "Achieved 95% query accuracy rate with continuous learning improvements"
+          "Reduced issues with siloed information and long waiting time when data location is not known"
         ],
         technicalDetails: "Built using Python with LangChain framework, deployed on GCP Cloud Run with auto-scaling capabilities. Utilized Vertex AI for LLM inference and Qdrant for vector embeddings storage. Implemented comprehensive logging and monitoring using Cloud Logging and Datadog."
       }
