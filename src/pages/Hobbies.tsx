@@ -26,7 +26,6 @@ const Hobbies = () => {
         description: "I love diving into books, no matter what they are.",
         icon: BookOpen,
         color: "blue",
-        image: "CV/images/boat.jpeg",
         activities: ["Fantasy", "Philosophy", "Meditation", "Self-Improvement", "Romance"],
         link: {
           url: "https://www.goodreads.com/user/show/166373035-paolo",
@@ -45,7 +44,6 @@ const Hobbies = () => {
         name: "Board Games",
         icon: Gamepad2,
         color: "indigo",
-        image: "CV/images/boat.jpeg",
         description: "I enjoy strategic and social board games that bring friends together.",
         activities: [
           "Strategy games",
@@ -70,7 +68,6 @@ const Hobbies = () => {
         name: "Photography",
         icon: Camera,
         color: "pink",
-        image: "CV/images/boat.jpeg",
         description: "Photography helps me capture moments and improve my artistic eye.",
         activities: [
           "Landscape photos",
@@ -84,7 +81,6 @@ const Hobbies = () => {
         description: "Rock climbing challenges both my physical and mental strength. I enjoy the problem-solving aspect and the community at climbing gyms.",
         icon: Mountain,
         color: "green",
-        image: "CV/images/boat.jpeg",
         activities: ["Indoor climbing", "Strength training", "Community events"]
       }
     ];
