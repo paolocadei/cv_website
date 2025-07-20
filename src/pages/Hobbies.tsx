@@ -214,7 +214,7 @@ const Hobbies = () => {
               thoughts: "Intense hybrid of deck-building and strategy. A great evolution of Dune: Imperium.",
               color: "red",
               myGrade: 5,
-              bggLink: "https://boardgamegeek.com/boardgame/379078/dune-imperium-uprising"
+              bggLink: "https://boardgamegeek.com/boardgame/397598/dune-imperium-uprising"
             },
             {
               name: "Castle Panic",
@@ -234,7 +234,7 @@ const Hobbies = () => {
               thoughts: "Gorgeous and calming, with a clever drafting mechanic.",
               color: "teal",
               myGrade: 3,
-              bggLink: "https://boardgamegeek.com/boardgame/270144/noctiluca"
+              bggLink: "https://boardgamegeek.com/boardgame/269752/noctiluca"
             },
             {
               name: "Spicy",
@@ -244,7 +244,7 @@ const Hobbies = () => {
               thoughts: "Quick bluffing card game with striking art. Great for laughs.",
               color: "red",
               myGrade: 3,
-              bggLink: "https://boardgamegeek.com/boardgame/295670/spicy"
+              bggLink: "https://boardgamegeek.com/boardgame/299169/spicy"
             },
             {
               name: "Onitama",
@@ -264,7 +264,7 @@ const Hobbies = () => {
               thoughts: "Hilarious debate-based game. Great for extroverted groups.",
               color: "yellow",
               myGrade: 3,
-              bggLink: "https://boardgamegeek.com/boardgame/204537/debatable"
+              bggLink: "https://boardgamegeek.com/boardgame/227026/debatable"
             },
             {
               name: "Summoner Wars (Second Edition)",
@@ -274,7 +274,7 @@ const Hobbies = () => {
               thoughts: "Fast, strategic, and full of variety. Deck and board in one.",
               color: "gray",
               myGrade: 4,
-              bggLink: "https://boardgamegeek.com/boardgame/317985/summoner-wars-second-edition"
+              bggLink: "https://boardgamegeek.com/boardgame/332800/summoner-wars-second-edition"
             },
             {
               name: "Arcs",
@@ -284,7 +284,7 @@ const Hobbies = () => {
               thoughts: "Ambitious storytelling meets deep galactic conflict. Big potential!",
               color: "navy",
               myGrade: 4,
-              bggLink: "https://boardgamegeek.com/boardgame/361545/arcs"
+              bggLink: "https://boardgamegeek.com/boardgame/359871/arcs"
             }
           ].map((game) => (
             <div
