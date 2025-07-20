@@ -75,6 +75,43 @@ const Projects = () => {
       }
     },
     {
+  "title": "Geolocation Guesser AI",
+  "description": "Developed a CNN-based AI system inspired by GeoGuessr to predict the subregion of an image's origin using Google Street View data. Integrated explainable AI for visual interpretability, leveraging Grad-CAM and Gemini for enhanced understanding of predictions.",
+  "technologies": [
+    "Python",
+    "PyTorch",
+    "ResNet (ResNet18/50/101)",
+    "Grad-CAM",
+    "Google Street View API",
+    "Gemini AI"
+  ],
+  "year": "2024",
+  "category": "AI/ML Engineering",
+  "color": "green",
+  "githubAccess": true,
+  "detailedDescription": {
+    "overview": "Geolocation Guesser AI is a deep learning project designed to identify the subregion of the world where a given image was captured, using convolutional neural networks trained on a diverse set of street view images. The project aims to mimic the challenge of the game GeoGuessr, providing interpretable and accurate predictions by highlighting the key visual features driving the model's decisions.",
+    "challenges": [
+      "Handling significant class imbalance across 126 countries and subregions",
+      "Extracting meaningful features from diverse and unstructured street view images",
+      "Ensuring interpretability of model predictions for trust and validation",
+      "Improving accuracy in underrepresented regions with limited training data"
+    ],
+    "solution": [
+      "Utilized transfer learning with ResNet variants (ResNet18, ResNet50, ResNet101) fine-tuned for geolocation tasks",
+      "Implemented extensive data augmentation (flipping, skewing, brightness changes) to address class imbalance",
+      "Applied Grad-CAM for interpretability, visualizing influential image regions",
+      "Integrated automated object recognition (Gemini 1.5 Flash) to analyze key regions highlighted by Grad-CAM"
+    ],
+    "impact": [
+      "Achieved 47.56% test accuracy and 73.01% top-3 accuracy on a 25,000-image international dataset",
+      "Enabled interpretable predictions by identifying visual cues (e.g., vegetation, signage, buildings) relevant to specific geographies",
+      "Established a reproducible AI pipeline for future extensions, such as text recognition and fine-grained location prediction"
+    ],
+    "technicalDetails": "Built in Python using PyTorch for model training and inference. Dataset consisted of 25,000 geo-tagged images (640x640px) spanning 126 countries with ISO code-based labeling. Data augmentation and transfer learning were central to model robustness. Grad-CAM was used for explainability, and Gemini AI supported post-hoc object identification in image regions most influential for predictions."
+  }
+},
+    {
       title: "Business Intelligence Dashboards",
       description: "Created interactive dashboards in Tableau for KPI monitoring and performance analysis, serving departments in Yokoy with a particular focus on the Marketing department.",
       technologies: ["Tableau", "SQL", "PostgreSQL", "Data Modeling", "dbt"],
