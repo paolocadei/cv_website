@@ -381,30 +381,6 @@ const Projects = () => {
             ))}
           </div>
 
-          {/* Project Categories */}
-          <div className="bg-white rounded-xl shadow-lg p-8 mt-12">
-            <h2 className="text-2xl font-bold text-slate-800 mb-6">Project Categories</h2>
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-              {[
-                { name: "Machine Learning", count: 2, color: "blue" },
-                { name: "Data Engineering", count: 2, color: "purple" },
-                { name: "Business Intelligence", count: 1, color: "orange" },
-                { name: "AI/ML", count: 1, color: "indigo" },
-                { name: "Data Science", count: 1, color: "green" },
-                { name: "Web Scraping", count: 1, color: "red" }
-              ].map((category, index) => (
-                <div key={index} className={`text-center p-4 bg-gradient-to-br ${getColorClasses(category.color).split(' ')[0]} ${getColorClasses(category.color).split(' ')[1]} rounded-lg`}>
-                  <div className={`text-2xl font-bold ${getColorClasses(category.color).split(' ')[2]} mb-1`}>
-                    {category.count}
-                  </div>
-                  <div className="text-sm font-semibold text-gray-700">
-                    {category.name}
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-
           {/* Call to Action */}
           <div className="bg-gradient-to-r from-orange-500 to-orange-600 text-white rounded-xl p-8 mt-12 text-center">
             <h2 className="text-3xl font-bold mb-4">Interested in My Work?</h2>
