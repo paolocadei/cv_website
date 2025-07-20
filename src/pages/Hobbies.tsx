@@ -136,7 +136,7 @@ const Hobbies = () => {
         </div>
         
         <div className="grid gap-6 md:grid-cols-2">
-          {[
+          [
             {
               name: "Catan",
               category: "Strategy",
@@ -286,6 +286,196 @@ const Hobbies = () => {
               color: "navy",
               myGrade: 4,
               bggLink: "https://boardgamegeek.com/boardgame/359871/arcs"
+            },
+            {
+              name: "Chronicles of Crime",
+              category: "Detective/Story-driven",
+              players: "1-4 players",
+              duration: "60-90 min",
+              thoughts: "Immersive crime-solving with app integration. Feels like a modern mystery movie.",
+              color: "darkred",
+              myGrade: 4,
+              bggLink: "https://boardgamegeek.com/boardgame/239188/chronicles-crime"
+            },
+            {
+              name: "Mycelia",
+              category: "Deck-building/Abstract",
+              players: "1-4 players",
+              duration: "45-60 min",
+              thoughts: "Unique mushroom-themed deck-builder with smooth turns and earthy charm.",
+              color: "forestgreen",
+              myGrade: 3,
+              bggLink: "https://boardgamegeek.com/boardgame/384933/mycelia"
+            },
+            {
+              name: "Paint the Roses",
+              category: "Deduction/Cooperative",
+              players: "2-5 players",
+              duration: "45-60 min",
+              thoughts: "Queen of Hearts is after you! A tense deduction game with whimsical art.",
+              color: "pink",
+              myGrade: 3,
+              bggLink: "https://boardgamegeek.com/boardgame/342942/paint-roses"
+            },
+            {
+              name: "Saboteur",
+              category: "Bluffing/Hidden Roles",
+              players: "3-10 players",
+              duration: "30 min",
+              thoughts: "Easy and chaotic bluff game. Who's sabotaging the mine?",
+              color: "gold",
+              myGrade: 3,
+              bggLink: "https://boardgamegeek.com/boardgame/9220/saboteur"
+            },
+            {
+              name: "Exploding Kittens",
+              category: "Party",
+              players: "2-5 players",
+              duration: "15 min",
+              thoughts: "Silly, fast-paced chaos. Cats, explosions, and betrayal!",
+              color: "hotpink",
+              myGrade: 2,
+              bggLink: "https://boardgamegeek.com/boardgame/172225/exploding-kittens"
+            },
+            {
+              name: "Jaipur",
+              category: "Card Game/2-Player",
+              players: "2 players",
+              duration: "30 min",
+              thoughts: "Quick, clever trading duel with elegant pacing.",
+              color: "rose",
+              myGrade: 4,
+              bggLink: "https://boardgamegeek.com/boardgame/54043/jaipur"
+            },
+            {
+              name: "Hanamikoji",
+              category: "2-Player/Strategy",
+              players: "2 players",
+              duration: "15-30 min",
+              thoughts: "Tense and elegant. Simple choices with deep consequences.",
+              color: "plum",
+              myGrade: 4,
+              bggLink: "https://boardgamegeek.com/boardgame/158600/hanamikoji"
+            },
+            {
+              name: "Quoridor",
+              category: "Abstract",
+              players: "2-4 players",
+              duration: "15-20 min",
+              thoughts: "Simple to learn, brain-burning to master. Great head-to-head duel.",
+              color: "wood",
+              myGrade: 3,
+              bggLink: "https://boardgamegeek.com/boardgame/624/quoridor"
+            },
+            {
+              name: "Diamant",
+              category: "Push Your Luck",
+              players: "3-8 players",
+              duration: "30 min",
+              thoughts: "Quick fun with treasure and traps. Great for big groups!",
+              color: "amber",
+              myGrade: 4,
+              bggLink: "https://boardgamegeek.com/boardgame/15512/diamant"
+            },
+            {
+              name: "The Crew",
+              category: "Cooperative/Trick-taking",
+              players: "2-5 players",
+              duration: "20 min",
+              thoughts: "Teamwork in space! A cooperative twist on classic trick-taking.",
+              color: "sky",
+              myGrade: 4,
+              bggLink: "https://boardgamegeek.com/boardgame/284083/crew-quest-planet-nine"
+            },
+            {
+              name: "Lost Cities",
+              category: "Card Game/2-Player",
+              players: "2 players",
+              duration: "30 min",
+              thoughts: "Tense, minimal, and addictive. A classic 2-player duel.",
+              color: "cyan",
+              myGrade: 4,
+              bggLink: "https://boardgamegeek.com/boardgame/50/lost-cities"
+            },
+            {
+              name: "Sobek",
+              category: "Set Collection",
+              players: "2 players",
+              duration: "20-30 min",
+              thoughts: "Sleek Egyptian theme and clever tactical choices. Fast and fun.",
+              color: "bronze",
+              myGrade: 3,
+              bggLink: "https://boardgamegeek.com/boardgame/341539/sobek-2-players"
+            },
+            {
+              name: "Blue Lagoon",
+              category: "Area Control/Set Collection",
+              players: "2-4 players",
+              duration: "30-45 min",
+              thoughts: "Colorful and cutthroat. Great intro to abstract area control.",
+              color: "aqua",
+              myGrade: 3,
+              bggLink: "https://boardgamegeek.com/boardgame/255460/blue-lagoon"
+            },
+            {
+              name: "Survive: Escape from Atlantis!",
+              category: "Survival/Family",
+              players: "2-4 players",
+              duration: "45 min",
+              thoughts: "Sharks, sea monsters, and sinking land! A hilarious classic.",
+              color: "navy",
+              myGrade: 3,
+              bggLink: "https://boardgamegeek.com/boardgame/2653/survive-escape-atlantis"
+            },
+            {
+              name: "Carcassonne",
+              category: "Tile-laying",
+              players: "2-5 players",
+              duration: "35 min",
+              thoughts: "Relaxing and iconic. Great for casual and strategic minds.",
+              color: "lightblue",
+              myGrade: 4,
+              bggLink: "https://boardgamegeek.com/boardgame/822/carcassonne"
+            },
+            {
+              name: "Mysterium",
+              category: "Cooperative/Deduction",
+              players: "2-7 players",
+              duration: "45-60 min",
+              thoughts: "Beautifully eerie. One player is a ghost guiding the rest with visions!",
+              color: "midnightblue",
+              myGrade: 4,
+              bggLink: "https://boardgamegeek.com/boardgame/181304/mysterium"
+            },
+            {
+              name: "Libertalia: Winds of Galecrest",
+              category: "Simultaneous Action/Strategy",
+              players: "1-6 players",
+              duration: "45-60 min",
+              thoughts: "Pirate-themed card clash with bluffing and clever timing.",
+              color: "steelblue",
+              myGrade: 4,
+              bggLink: "https://boardgamegeek.com/boardgame/343905/libertalia-winds-galecrest"
+            },
+            {
+              name: "Stratego",
+              category: "Classic Strategy",
+              players: "2 players",
+              duration: "45 min",
+              thoughts: "Timeless head-to-head bluffing game. Hidden ranks and mind games.",
+              color: "crimson",
+              myGrade: 3,
+              bggLink: "https://boardgamegeek.com/boardgame/242/stratego"
+            },
+            {
+              name: "The Quest for El Dorado",
+              category: "Deck-building/Race",
+              players: "2-4 players",
+              duration: "45 min",
+              thoughts: "Race through the jungle by building the right deck. Smart and quick.",
+              color: "jungle",
+              myGrade: 4,
+              bggLink: "https://boardgamegeek.com/boardgame/217372/quest-el-dorado"
             }
           ].map((game) => (
             <div
