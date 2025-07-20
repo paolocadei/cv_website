@@ -201,7 +201,7 @@ const Education = () => {
                 </div>
 
                 <div className="bg-gray-50 rounded-lg p-6 mb-4">
-                  <h3 className="text-lg font-semibold text-slate-800 mb-3">Focus Areas</h3>
+                  <h3 className="text-lg font-semibold text-slate-800 mb-3">Program Highlights</h3>
                   <ul className="space-y-2 text-gray-700">
                     <li className="flex items-start">
                       <span className="w-2 h-2 bg-purple-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
