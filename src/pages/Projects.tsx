@@ -231,9 +231,12 @@ const Projects = () => {
   };
 
   const openImageZoom = (imagePath, event) => {
-    event?.preventDefault();
-    event?.stopPropagation();
+    if (event) {
+      event.preventDefault();
+      event.stopPropagation();
+    }
     setZoomedImage(imagePath);
+    document.body.style.overflow = 'hidden';
   };
 
   const closeImageZoom = (event) => {
@@ -242,6 +245,7 @@ const Projects = () => {
       event.stopPropagation();
     }
     setZoomedImage(null);
+    document.body.style.overflow = 'unset';
   };
 
   const handleGithubClick = (project) => {
@@ -491,11 +495,7 @@ const Projects = () => {
                                 alt={`${selectedProject.title} preview ${index + 1}`}
                                 className="w-full h-auto object-contain hover:scale-[1.02] transition-transform duration-300"
                                 style={{ maxHeight: 'none', height: 'auto' }}
-                                onClick={(e) => {
-                                  e.preventDefault();
-                                  e.stopPropagation();
-                                  openImageZoom(imagePath, e);
-                                }}
+                                onClick={(e) => openImageZoom(imagePath, e)}
                                 onError={() => handleImageError(imagePath)}
                               />
                               <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300 flex items-center justify-center">
@@ -608,21 +608,24 @@ const Projects = () => {
       {/* Image Zoom Modal */}
       {zoomedImage && (
         <div 
-          className="fixed inset-0 bg-black bg-opacity-90 z-[60] flex items-center justify-center p-4 cursor-zoom-out"
-          onClick={closeImageZoom}
+          className="fixed inset-0 bg-black bg-opacity-95 z-[60] flex items-center justify-center p-4"
+          onClick={(e) => {
+            if (e.target === e.currentTarget) {
+              closeImageZoom(e);
+            }
+          }}
         >
-          <div className="relative max-w-full max-h-full">
+          <div className="relative max-w-[95vw] max-h-[95vh] flex flex-col items-center">
             <button 
-              onClick={closeImageZoom}
-              className="absolute -top-12 right-0 text-white hover:text-gray-300 transition-colors z-10"
+              onClick={(e) => closeImageZoom(e)}
+              className="absolute -top-12 right-0 text-white hover:text-gray-300 transition-colors z-10 bg-black bg-opacity-50 rounded-full p-2"
             >
               <X className="w-8 h-8" />
             </button>
             <img 
               src={zoomedImage} 
               alt="Zoomed view"
-              className="max-w-full max-h-[90vh] object-contain shadow-2xl cursor-default"
-              style={{ imageRendering: 'auto' }}
+              className="max-w-full max-h-full object-contain shadow-2xl rounded-lg"
               onClick={(e) => e.stopPropagation()}
             />
             <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-black bg-opacity-50 text-white px-4 py-2 rounded-lg text-sm">

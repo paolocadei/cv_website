@@ -137,13 +137,18 @@ const Hobbies = () => {
 
     Cooking: (
       <>
-        <h3 className="text-3xl font-bold mb-6 text-red-700 border-b border-red-300 pb-2">
-          My Favorite Recipes
-        </h3>
+        <div className="mb-8">
+          <p className="text-lg text-gray-600 leading-relaxed">
+            Being Italian, cooking is in my blood! I love preparing traditional recipes that have been 
+            passed down through generations. Here are some of my signature dishes.
+          </p>
+        </div>
         <div className="space-y-6">
           {[
             {
               name: "Classic Spaghetti Carbonara",
+              difficulty: "Medium",
+              time: "20 minutes",
               recipe: `Ingredients:
 - Spaghetti
 - Eggs
@@ -160,6 +165,8 @@ Instructions:
             },
             {
               name: "Tiramisu",
+              difficulty: "Easy",
+              time: "30 min + 4h chill",
               recipe: `Ingredients:
 - Mascarpone cheese
 - Eggs
@@ -178,17 +185,27 @@ Instructions:
           ].map(({ name, recipe }) => (
             <div
               key={name}
-              className="p-4 border rounded-lg shadow-sm hover:shadow-md transition-shadow"
+              className="bg-gradient-to-r from-red-50 to-orange-50 p-6 rounded-xl border border-red-200 hover:shadow-lg transition-all duration-300"
             >
-              <h4 className="text-xl font-semibold text-red-800 mb-2">{name}</h4>
+              <div className="flex items-start justify-between mb-3">
+                <h4 className="text-2xl font-bold text-red-800">{name}</h4>
+                <div className="flex gap-2">
+                  <span className="bg-red-100 text-red-700 px-3 py-1 rounded-full text-sm font-medium">
+                    {name === "Classic Spaghetti Carbonara" ? "Medium" : "Easy"}
+                  </span>
+                  <span className="bg-orange-100 text-orange-700 px-3 py-1 rounded-full text-sm font-medium">
+                    {name === "Classic Spaghetti Carbonara" ? "20 min" : "30 min + chill"}
+                  </span>
+                </div>
+              </div>
               <button
                 onClick={() => toggleRecipe(name)}
-                className="px-3 py-1 bg-red-100 text-red-700 rounded-md border border-red-300 hover:bg-red-200 transition-colors"
+                className="mb-4 px-4 py-2 bg-red-500 text-white rounded-lg hover:bg-red-600 transition-colors font-medium shadow-sm"
               >
                 {visibleRecipes[name] ? "Hide Recipe" : "Show Recipe"}
               </button>
               {visibleRecipes[name] && (
-                <pre className="mt-3 whitespace-pre-wrap text-red-700 bg-red-50 p-3 rounded-md border border-red-200">
+                <pre className="whitespace-pre-wrap text-red-800 bg-white p-4 rounded-lg border border-red-200 shadow-inner font-mono text-sm leading-relaxed">
                   {recipe}
                 </pre>
               )}
@@ -200,38 +217,52 @@ Instructions:
 
     Photography: (
       <>
-        <h3 className="text-3xl font-bold mb-6 text-pink-700 border-b border-pink-300 pb-2">
-          My Photography Portfolio
-        </h3>
+        <div className="mb-8">
+          <p className="text-lg text-gray-600 leading-relaxed">
+            Photography allows me to capture moments and see the world through a different lens. 
+            I enjoy experimenting with different styles and techniques to tell visual stories.
+          </p>
+        </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {[
             {
               url: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80",
               description: "Sunset over the mountains, captured during a hiking trip.",
+              category: "Landscape",
             },
             {
               url: "https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=600&q=80",
               description: "Street portrait taken in downtown during golden hour.",
+              category: "Portrait",
             },
             {
               url: "https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=600&q=80",
               description: "Black & white cityscape showcasing urban textures and lines.",
+              category: "Urban",
             },
             {
               url: "https://images.unsplash.com/photo-1465311445049-d7f644a69d4d?auto=format&fit=crop&w=600&q=80",
               description: "Macro shot of a flower with delicate petal details.",
+              category: "Macro",
             },
-          ].map(({ url, description }, idx) => (
+          ].map(({ url, description, category }, idx) => (
             <figure
               key={idx}
-              className="rounded-lg overflow-hidden border border-pink-300 shadow-sm hover:shadow-md transition-shadow"
+              className="rounded-xl overflow-hidden border border-pink-200 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-[1.02] bg-gradient-to-br from-pink-50 to-purple-50"
             >
               <img
                 src={url}
                 alt={description}
-                className="w-full h-48 object-cover"
+                className="w-full h-48 object-cover hover:scale-105 transition-transform duration-300"
               />
-              <figcaption className="p-3 text-pink-700 text-sm">{description}</figcaption>
+              <figcaption className="p-4">
+                <div className="flex items-center justify-between mb-2">
+                  <span className="bg-pink-100 text-pink-700 px-3 py-1 rounded-full text-xs font-medium">
+                    {category}
+                  </span>
+                </div>
+                <p className="text-pink-700 text-sm leading-relaxed">{description}</p>
+              </figcaption>
             </figure>
           ))}
         </div>
@@ -323,35 +354,70 @@ Instructions:
           {/* Modal Popup */}
           {modalHobby && (
             <div
-              className="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50 p-6"
+              className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 p-4 backdrop-blur-sm"
               onClick={() => {
                 setModalHobby(null);
                 setVisibleRecipes({});
               }}
             >
               <div
-                className="bg-white rounded-xl max-w-4xl w-full max-h-[80vh] overflow-y-auto p-8 relative shadow-lg"
+                className="bg-white rounded-2xl max-w-5xl w-full max-h-[85vh] overflow-hidden relative shadow-2xl border border-gray-200"
                 onClick={(e) => e.stopPropagation()}
               >
-                <button
-                  onClick={() => {
-                    setModalHobby(null);
-                    setVisibleRecipes({});
-                  }}
-                  className="absolute top-4 right-4 text-gray-600 hover:text-gray-900 text-xl font-bold"
-                  aria-label="Close modal"
-                >
-                  &times;
-                </button>
-
-                {modalContent[modalHobby]}
+                {/* Modal Header */}
+                <div className="bg-gradient-to-r from-gray-50 to-gray-100 px-8 py-6 border-b border-gray-200">
+                  <div className="flex items-center justify-between">
+                    <h2 className="text-3xl font-bold text-gray-800">{modalHobby}</h2>
+                    <button
+                      onClick={() => {
+                        setModalHobby(null);
+                        setVisibleRecipes({});
+                      }}
+                      className="p-2 text-gray-500 hover:text-gray-700 hover:bg-gray-200 rounded-full transition-colors"
+                      aria-label="Close modal"
+                    >
+                      <span className="text-2xl font-bold">&times;</span>
+                    </button>
+                  </div>
+                </div>
+        <div className="mb-8">
+          <p className="text-lg text-gray-600 leading-relaxed">
+            I'm passionate about board games that bring people together and challenge strategic thinking. 
+            Here are some of my favorites that I love playing with friends and family.
+          </p>
+        </div>
+                  {modalContent[modalHobby]}
+                </div>
               </div>
             </div>
           )}
+              players: "3-4 players",
+              duration: "60-90 min",
         </div>
       </div>
     </div>
   );
 };
 
+              players: "2-4 players", 
+              duration: "45-60 min",
 export default Hobbies;
+@@ .. @@
+    "Board Games": (
+      <>
+                <button
+                  onClick={() => {
+              players: "2-5 players",
+              duration: "30-60 min",
+                    setModalHobby(null);
+                    setVisibleRecipes({});
+                  }}
+                  className="absolute top-4 right-4 text-gray-600 hover:text-gray-900 text-xl font-bold"
+                  aria-label="Close modal"
+                >
+              className="bg-gradient-to-r from-indigo-50 to-purple-50 p-6 rounded-xl border border-indigo-200 hover:shadow-lg transition-all duration-300 hover:scale-[1.02]"
+                </button>
+              <div className="flex items-start justify-between mb-3">
+                <h4 className="text-2xl font-bold text-indigo-800">{game.name}</h4>
+                <span className="bg-indigo-100 text-indigo-700 px-3 py-1 rounded-full text-sm font-medium">
+                  {game.category}
