@@ -347,6 +347,7 @@ Instructions:
           <div className="text-center mb-12">
             <h1 className="text-4xl font-bold text-slate-800 mb-4">Personal Interests & Hobbies</h1>
             <p className="text-xl text-gray-600">What I enjoy doing in my free time</p>
+            <p className="text-l text-gray-600">...amongst other things</p>
           </div>
 
           {/* Hobbies Grid */}
