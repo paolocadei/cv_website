@@ -9,7 +9,7 @@ const Experience = () => {
           {/* Header */}
           <div className="text-center mb-12">
             <h1 className="text-4xl font-bold text-slate-800 mb-4">Professional Experience</h1>
-            <p className="text-xl text-gray-600">My Career Journey in Data Science & Analytics</p>
+            <p className="text-xl text-gray-600">My Career Journey</p>
           </div>
 
           {/* Career Summary */}
