@@ -44,7 +44,7 @@ const About = () => {
               </p>
               
               <p className="text-lg">
-                What really makes me tick is the sweet spot between tech and business. I care about the code, but I care just as much about why it’s being written and who it's helping. Add in a few languages (spoken, not just programming) and a love for clear communication, and you’ve got someone who can talk SQL and stakeholder strategy in the same conversation — without anyone falling asleep.
+                What really makes me tick is the sweet spot between tech and business. I care about the code, but I care just as much about why it’s being written and who it's helping. Add in a few languages (spoken, not just programming) and a love for clear communication, and you’ve got someone who can talk Python and stakeholder strategy in the same conversation — without anyone falling asleep.
               </p>
             </div>
           </div>
