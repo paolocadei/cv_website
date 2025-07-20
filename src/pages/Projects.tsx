@@ -48,8 +48,8 @@ const Projects = () => {
       githubAccess: true,
       githubLink: "https://github.com/paolocadei/Spider2.0-Thesis",
       images: [
-        "/images/Master_Thesis/overview.png",
-        "/images/Master_Thesis/question_answering_phase.png"
+        "CV/images/Master_Thesis/overview.png",
+        "CV/images/Master_Thesis/question_answering_phase.png"
       ],
       detailedDescription: {
         overview: "This project addresses the challenge of translating natural language questions into SQL queries on large-scale, enterprise-grade databases. It introduces a lightweight Retrieval-Augmented Generation (RAG) pipeline optimized for the Spider 2.0-Snow benchmark using schema-aware vector search, a dual-agent architecture, and minimal model usage.",
