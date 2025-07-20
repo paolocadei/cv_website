@@ -37,7 +37,7 @@ const Hobbies = () => {
         description: "Daily meditation helps me maintain focus and mental clarity. I practice mindfulness and breathing techniques for a calm daily life.",
         icon: Brain,
         color: "purple",
-        image: "CV/images/boat.jpeg",
+        image: "CV/images/meditation.jpeg",
         activities: ["Mindfulness", "Breathing exercises", "Daily practice"]
       },
       {
