@@ -1,7 +1,6 @@
 import React from 'react';
 import { Code, Globe, MapPin, Phone, Mail, Linkedin } from 'lucide-react';
-import paoloPhoto from '/CV/images/IMG_20210627_131204.jpg';
-import corsica from '/CV/images/corsica.jpeg';
+import portogallo from '/CV/images/portogallo.jpeg';
 
 const About = () => {
   return (
@@ -13,7 +12,7 @@ const About = () => {
             <div className="flex flex-col lg:flex-row items-center gap-8">
               <div className="w-48 h-48 rounded-full overflow-hidden shadow-lg">
                 <img 
-                  src={corsica} 
+                  src={portogallo} 
                   alt="Paolo Cadei" 
                   className="w-full h-full object-cover"
                 />
