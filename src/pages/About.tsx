@@ -32,7 +32,7 @@ const About = () => {
             <h3 className="text-2xl font-bold text-slate-800 mb-6">What Sets Me Apart</h3>
             <div className="space-y-6 text-gray-700 leading-relaxed">
               <p className="text-lg">
-                What sets me apart in data science? Probably the fact that I get equally excited about writing a clean SQL query and explaining it in plain English to someone who thinks Python is just a snake. I’m not just here to crunch numbers, I love solving messy, complex problems and turning data chaos into insights that actually make sense (and maybe even drive smart decisions). Bridging the gap between the technical and the practical is kind of my thing.
+                What sets me apart? Probably the fact that I get equally excited about writing a clean SQL query and explaining it in plain English to someone who thinks Python is just a snake. I’m not just here to crunch numbers, I love solving messy, complex problems and turning data chaos into insights that actually make sense (and maybe even drive smart decisions). Bridging the gap between the technical and the practical is kind of my thing.
               </p>
               
               <p className="text-lg">
