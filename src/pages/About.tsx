@@ -104,7 +104,7 @@ const About = () => {
               <div className="flex items-center justify-between">
                 <span className="text-lg font-semibold text-slate-800">French</span>
                 <div className="flex space-x-1">
-                  {[1,2].map((dot) => (
+                  {[1,2,3].map((dot) => (
                     <div key={dot} className="w-3 h-3 rounded-full bg-orange-500"></div>
                   ))}
                   {[3,4,5].map((dot) => (
