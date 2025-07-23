@@ -107,7 +107,7 @@ const About = () => {
                   {[1,2,3].map((dot) => (
                     <div key={dot} className="w-3 h-3 rounded-full bg-orange-500"></div>
                   ))}
-                  {[3,4,5].map((dot) => (
+                  {[4,5].map((dot) => (
                     <div key={dot} className="w-3 h-3 rounded-full bg-gray-300"></div>
                   ))}
                 </div>
