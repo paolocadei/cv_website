@@ -144,6 +144,77 @@ const Projects = () => {
       }
     },
     {
+      title: "UTM Campaign Builder",
+      description: "Developed a Streamlit web application for generating UTM-compliant campaign names with encrypted campaign codes. Handles multi-field campaign tracking using dbt enrichment in Snowflake with Docker containerization.",
+      technologies: ["Python", "Streamlit", "Encryption", "Snowflake", "dbt", "Docker"],
+      year: "2024-2025",
+      category: "Data & Backend Engineering",
+      color: "green",
+      githubAccess: false,
+      detailedDescription: {
+        overview: "The UTM Campaign Builder is a production-grade Streamlit application designed to simplify campaign management by automating the creation of UTM-compliant campaign names and encrypted campaign identifiers. The system uses dropdown-based field selection to ensure naming conventions are followed correctly, while simultaneously generating encrypted codes that contain all campaign metadata for later enrichment in data pipelines.",
+        challenges: [
+          "Enforcing strict naming conventions across multiple campaign attributes",
+          "Creating reversible encryption for campaign metadata without exposing sensitive information",
+          "Integrating campaign data seamlessly with Snowflake and dbt pipelines",
+          "Managing Docker containerization and Snowflake service configuration",
+          "Ensuring encrypted codes remain compact for UTM string length limitations"
+        ],
+        solution: [
+          "Designed dropdown-based UI for controlled campaign attribute selection with real-time validation",
+          "Implemented symmetric encryption (AES-256) to encode all campaign fields into compact, reversible tokens",
+          "Created dbt pipelines to automatically decrypt and enrich campaign data within Snowflake for analytics",
+          "Containerized the entire application with Docker, including Snowflake service account configuration",
+          "Built a two-tier naming system: stakeholder-friendly campaign names + encrypted metadata for technical teams"
+        ],
+        impact: [
+          "Eliminated manual UTM creation errors by 100% through enforced naming standards",
+          "Enabled deep campaign tracking beyond standard UTM parameters without URL length penalties",
+          "Reduced campaign metadata enrichment time from manual lookup to automated dbt execution",
+          "Improved data consistency across Marketing, Analytics, and Product teams",
+          "Created audit trail of all campaign attributes through encrypted campaign codes"
+        ],
+        technicalDetails: "Built with Python and Streamlit for the frontend interface. Campaign codes use AES-256 symmetric encryption with base64 encoding for URL safety. Backend runs in Docker containers with Snowflake service account authentication. Campaign data flows into Snowflake where dbt models automatically decrypt and enrich the campaign records for consumption in Looker and Tableau dashboards. Supports multi-language campaign naming and maintains backward compatibility with existing UTM structures."
+      }
+    },
+    {
+      title: "Expense Tracker for Family Business",
+      description: "Full-stack expense management platform for family business with automated receipt scanning using Gemini AI, multi-currency support, and integration with Google Sheets and Drive for seamless financial reporting.",
+      technologies: ["Python", "Gemini AI", "Google Sheets API", "Google Drive API", "GCP", "Authentication"],
+      year: "2024-2025",
+      category: "Full Stack Development",
+      color: "blue",
+      githubAccess: false,
+      detailedDescription: {
+        overview: "The Expense Tracker is a comprehensive financial management solution built for a family business to streamline cash flow tracking and receipt management. It combines positive and negative cash flow recording with intelligent receipt digitization using Google's Gemini AI, enabling automated extraction of payment amounts and status. All data is stored in Google Sheets with receipt images automatically backed up to Google Drive, creating a centralized, auditable financial record.",
+        challenges: [
+          "Accurately extracting payment amounts from diverse receipt formats using computer vision",
+          "Handling partial payments and determining payment status automatically",
+          "Managing multi-currency transactions with real-time conversion rates",
+          "Securing API credentials for GCP services while maintaining ease of use",
+          "Integrating multiple Google APIs (Sheets, Drive) into a single seamless workflow",
+          "Ensuring data consistency between the application and Google Sheets"
+        ],
+        solution: [
+          "Integrated Gemini AI vision capabilities to automatically detect and extract payment amounts from receipt images",
+          "Implemented payment status logic to determine if expenses are fully paid, partially paid, or pending",
+          "Built real-time currency conversion using live exchange rate APIs for multiple currency pairs",
+          "Created secure GCP service account authentication with encrypted credential management",
+          "Developed dual-API integration: Google Sheets API for financial records, Google Drive API for receipt storage",
+          "Implemented login security page with role-based access control for family business users"
+        ],
+        impact: [
+          "Reduced receipt processing time from 15+ minutes per receipt to <30 seconds per image",
+          "Automated 95% of manual data entry for expense tracking, reducing human error",
+          "Provided real-time financial visibility with automatic Google Sheets updates",
+          "Eliminated need for physical receipt storage with automated Google Drive backup",
+          "Enabled multi-currency expense tracking without manual conversion calculations",
+          "Created auditable financial trail with receipt images linked to every transaction"
+        ],
+        technicalDetails: "Backend developed in Python with Flask for API routes. Computer vision powered by Google's Gemini 1.5 Flash API for receipt analysis. Google Sheets API handles all financial record storage with automatic formatting and calculations. Google Drive API manages receipt image storage with folder organization by date and category. GCP service account authentication with encrypted key management ensures security. Currency conversion integrated with live exchange rate feeds. Frontend includes secure login system with role-based access for different family members. Automated Google Sheets formulas calculate totals, balances, and generate monthly financial summaries."
+      }
+    },
+    {
       title: "Reinforcement Learning (Small Projects)",
       description: "Implemented and compared RL algorithms like Q-Learning, SARSA, and Monte Carlo to solve manually built Cliff Walking and OpenAI Gym's Taxi Driver environments.",
       technologies: ["Python", "NumPy", "OpenAI Gym (Taxi)", "Matplotlib", "RL Algorithms"],
