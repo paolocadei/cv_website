@@ -37,15 +37,15 @@ const Experience = () => {
           {/* Experience Timeline */}
           <div className="space-y-8">
 
-            {/* Business Intelligence Role */}
+            {/* Analytics Engineer Role */}
             <div className="bg-white rounded-xl shadow-lg p-8 border-l-4 border-orange-500">
               <div className="flex items-start mb-6">
                 <div className="bg-orange-100 p-3 rounded-lg mr-4 mt-1">
                   <Briefcase className="w-8 h-8 text-orange-600" />
                 </div>
                 <div>
-                  <h2 className="text-2xl font-bold text-slate-800">Business Intelligence</h2>
-                  <p className="text-orange-600 font-semibold text-lg">YOKOY - TRAVELPERK</p>
+                  <h2 className="text-2xl font-bold text-slate-800">Analytics Engineer</h2>
+                  <p className="text-orange-600 font-semibold text-lg">PERK - TRAVELPERK - YOKOY</p>
                   <div className="flex items-center text-gray-600 mt-2">
                     <Calendar className="w-4 h-4 mr-2" />
                     <span>June 2024 - Current</span>
@@ -56,8 +56,7 @@ const Experience = () => {
               <div className="mb-6">
                 <h3 className="text-lg font-semibold text-slate-800 mb-3">Role Description</h3>
                 <p className="text-gray-700">
-                  Working as part of the cross-functional Business Intelligence team, supporting multiple departments 
-                  with a particular focus on Marketing and HR operations.
+                  Part of a cross-functional BI/Analytics Engineer team supporting Marketing, HR, and website performance analytics.
                 </p>
               </div>
 
@@ -65,15 +64,15 @@ const Experience = () => {
                 <h3 className="text-lg font-semibold text-slate-800 mb-4">Key Responsibilities</h3>
                 <ul className="space-y-3 text-gray-700">
                   {[
-                    'Working as part of the cross-functional Business Intelligence team, supporting multiple departments with a particular focus on Marketing and HR',
-                    'Maintaining and developing data pipelines using dbt and PostgreSQL, ensuring efficient data transformation and integration',
-                    'Optimising data workflows to improve reliability, scalability, and performance in dbt',
-                    'Designing, building, and maintaining reporting and interactive dashboards in Tableau',
-                    'Creating and maintaining comprehensive documentation for data models, pipelines, and dashboards to ensure transparency and knowledge sharing',
+                    'Designed and maintained data models and <strong>dbt</strong> pipelines (<strong>PostgreSQL</strong>, <strong>Snowflake</strong>), improving data quality, reliability, scalability, and cost efficiency',
+                    'Owned end-to-end data workflows for website KPI reporting, from data quality assessment, modelling and transformation to consumption',
+                    'Built and maintained interactive dashboards in <strong>Looker (LookML)</strong> and <strong>Tableau</strong>',
+                    'Developed an internal app using <strong>Python</strong> and <strong>Streamlit</strong> to improve campaign tracking and multi-channel attribution for leads and opportunities',
+                    'Documented data models, pipelines, and dashboards to support transparency and long-term maintainability',
                   ].map((text, i) => (
                     <li key={i} className="flex items-start">
                       <span className="w-2 h-2 bg-orange-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                      <span dangerouslySetInnerHTML={{ __html: text.replace(/(dbt|PostgreSQL|Tableau|documentation|dashboards|Business Intelligence)/g, '<strong>$1</strong>') }} />
+                      <span dangerouslySetInnerHTML={{ __html: text }} />
                     </li>
                   ))}
                 </ul>
