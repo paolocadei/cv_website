@@ -42,7 +42,7 @@ const Contact: React.FC = () => {
                 <MapPin className="w-6 h-6 text-orange-600 mr-4" />
                 <div>
                   <p className="font-semibold text-slate-800">Location</p>
-                  <p className="text-gray-600">Amsterdam, Netherlands</p>
+                  <p className="text-gray-600">Amsterdam, Netherlands / Brussels, Belgium</p>
                 </div>
               </div>
               <a 

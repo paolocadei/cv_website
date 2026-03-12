@@ -20,7 +20,7 @@ const Footer = () => {
               </div>
               <div className="flex items-center">
                 <MapPin className="w-4 h-4 mr-2 text-orange-400" />
-                <span>Amsterdam, Netherlands</span>
+                <span>Amsterdam, Netherlands / Brussels, Belgium</span>
               </div>
               <div className="flex items-center">
                 <Linkedin className="w-4 h-4 mr-2 text-orange-400" />
