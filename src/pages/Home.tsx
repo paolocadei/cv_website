@@ -21,7 +21,7 @@ const Home = () => {
                 Paolo Cadei -  all things data & AI fan
               </p>
               <p className="text-lg md:text-xl mb-8 leading-relaxed opacity-90">
-                Love all things data, especially passionate about LLMs, AI, and anything that automates and makes life easier. Just finished a Master's in Data Science and Business Analytics at the University of Amsterdam, with hands-on experience in business intelligence, data engineering, machine learning, and RAG LLM frameworks.
+                I love all things data, especially LLMs, AI, and anything that automates and makes life easier. After completing a Master’s in Data Science and Business Analytics at the University of Amsterdam, I started working full-time as an Analytics Engineer at Perk. In my free time, I love reading, bouldering, meditating and playing board games, and of course travelling.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center sm:justify-start">
                 <a 
